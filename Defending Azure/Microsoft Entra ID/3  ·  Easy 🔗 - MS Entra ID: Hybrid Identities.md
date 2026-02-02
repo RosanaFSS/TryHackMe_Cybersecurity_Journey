@@ -3,7 +3,6 @@
 <p align="center"><img width="1200px" src="https://github.com/user-attachments/assets/c8ae3f01-1e14-44e3-969d-5f3c854514ab"><br>
 If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://github.com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20JAN%2020-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p>
 
-<br>
 <h2>Task 1 . Introduction</h2>
 <h3>What Is Hybrid Identity?</h3>
 <p>This is an approach that combines both on-premises and cloud-based identity management to provide a unified, secure, and seamless experience for users accessing various resources. It allows organizations to integrate their existing on-premises Active Directory (AD) infrastructure with cloud-based identity services like Microsoft Entra ID.<br>
