@@ -322,4 +322,38 @@ For this technique, you can also refer to the Azure Threat Research Matrix (ATRM
 <p>7.1. <em>I am ready to move on to the <a href="https://tryhackme.com/r/room/entraidzerotrust"> MS Entra ID: Zero Trust</a> room!</em><br>
 <code>No answer needed</code></p>
 
+<br>
+<h1 align="center">Completed</h1>
+
+<p align="center"><img width="900px" src=""><br>
+                  <img width="900px" src=""><br>
+                  <img width="900px" src=""></p>
+
+                
+<h1 align="center">My TryHackMe Journey ・ 2026, February</h1>
+
+<div align="center"><p>
+
+|Day<br><br><br> |Streak<br><br><br>|Level<br><br><br>|Type<br><br><br>|Name<br><br><br>                         |Rooms<br>Completed<br><br>|Points<br><br><br>|Badges<br><br><br>|Brazil<br>Monthly<br><br>|Brazil<br>All<br>Time|Global<br>Monthly<br><br>|Global<br>All<br>Time|
+|:--------------:|:----------------:|:---------------:|:--------------:|:----------------------------------------|-------------------------:|-----------------:|-----------------:|--------------------:|------------------------:|--------------------:|---------------:|
+|2<br><br>       |28<br><br>        |Easy<br><br>     |🔗<br><br>     |MS Entra ID: External ID                  |                    1,100<br><br>|        1111,1111<br><br>|               90<br><br>|                  60ᵗʰ<br><br>|                     3ʳᵈ<br><br>|                 67ᵗʰ<br><br>|             2ⁿᵈ<br><br>|     
+
+</p></div><br>
+
+<p align="center">
+Global All Time: &nbsp; <strong>60</strong>ᵗʰ<br>
+<img width="300px" src="https://github.com/user-attachments/assets/1f7641b6-5ad9-487d-8058-0557bf52663e"><br>
+Global All Time: &nbsp; <strong>60</strong>ᵗʰ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Brazil All Time: &nbsp; <strong>3</strong>ʳᵈ<br><img width="450px" hspace="20" src="https://github.com/user-attachments/assets/9527c0d3-78ff-4a1a-9719-18adf54dce74"><img width="450px" src="https://github.com/user-attachments/assets/9527c0d3-78ff-4a1a-9719-18adf54dce74"><br><br>
+Global Monthly: &nbsp; <strong>67</strong>ᵗʰ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Brazil Monthly: &nbsp; <strong>3</strong>ʳᵈ<br>
+<img width="450px" hspace="20" src="https://github.com/user-attachments/assets/9527c0d3-78ff-4a1a-9719-18adf54dce74">
+<img width="450px" src="https://github.com/user-attachments/assets/9527c0d3-78ff-4a1a-9719-18adf54dce74"></p>
+
+
+<h1 align="center">Thanks for coming!</h1>
+<p align="center">Follow me on <a href="https://medium.com/@RosanaFS">Medium</a>, here on <a href="https://github.com/RosanaFSS/TryHackMe">GitHub</a>, and on <a href="https://www.linkedin.com/in/rosanafssantos/">LinkedIN</a>.</p
+<br>
+
+
 
