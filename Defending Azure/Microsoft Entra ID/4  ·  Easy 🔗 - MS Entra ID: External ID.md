@@ -185,7 +185,17 @@ On the <strong>Environment</strong> tab, click the Join Lab button to deploy you
 <p>4.3. <em>Which setting, when enabled will allow users who don't have Microsoft Entra or Microsoft account to sign in without having to create an account?</em><br>
 <code>Email one-time passcode for guests</code></p>
 
+<h2 align="center">Lab-03: External Collaboration Settings</h2>
+<p align="center">Rosana´s hands on</p>
 
+<h6 align="center"><img width="1200px" src=""><br><br>
+                   <img width="1200px" src=""><br><br>
+                   <img width="1200px" src=""><br><br>
+                   <img width="1200px" src=""><br><br>
+                   <img width="1200px" src=""></h6>
+
+<br>
+<br>
 <h2>Task 5 . Lab-04: Inviting Guest Users</h2>
 <h4>Context</h4>
 <p>Your company hired some external penetration testers for a limited engagement. As part of this engagement, pentesters will need to evaluate the reconnaissance capabilities of a guest user and what kind of Entra ID directory objects are visible to a guest user based on the organization's current Entra ID configuration.</p>
@@ -260,6 +270,18 @@ Leave the previous Lab by clicking the <strong>Leave Lab</strong> button, then a
 
 <p>5.1. <em>Can you create a new internal user with your Guest Inviter role? (Yea/Nay)</em><br>
 <code>Nay</code></p>
+
+<h2 align="center">Lab-04: Inviting Guest Users</h2>
+<p align="center">Rosana´s hands on</p>
+
+<h6 align="center"><img width="1200px" src=""><br><br>
+                   <img width="1200px" src=""><br><br>
+                   <img width="1200px" src=""><br><br>
+                   <img width="1200px" src=""><br><br>
+                    <img width="1200px" src=""><br><br>
+                   <img width="1200px" src=""><br><br>
+                   <img width="1200px" src=""><br><br>
+                   <img width="1200px" src=""></h6>
 
 <h2>Task 6 . Security Best Practices: User Settings</h2>
 <p>Here are some security best practices for "User settings". Remembering the least privilege access principle and limiting certain actions for general users is essential.</p>
