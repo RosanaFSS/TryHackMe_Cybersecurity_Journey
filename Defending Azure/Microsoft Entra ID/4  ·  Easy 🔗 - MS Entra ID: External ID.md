@@ -1,8 +1,7 @@
 <h1 align="center"><a href="https://tryhackme.com/room/entraidexternalid">MS Entra ID: External ID</a></h1>
 <h3 align="center">Defending Azure Learning Path &nbsp;|&nbsp; Microsot Entra ID</h3>
-<p align="center"><img width="1200px" src=""><br>
+<p align="center"><img width="1200px" src="https://github.com/user-attachments/assets/10616a2d-ec47-47b3-b7fd-b7a0ba395cc1"><br>
 If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://github.com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20FEV%202-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p>
-
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  External Identity: [Guest Users](#1)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Inviting [External Users](#2)<br>
@@ -286,14 +285,11 @@ Leave the previous Lab by clicking the <strong>Leave Lab</strong> button, then a
 <h2 align="center">Lab-04: Inviting Guest Users</h2>
 <p align="center">Rosana´s hands on</p>
 
-<h6 align="center"><img width="1200px" src=""><br><br>
-                   <img width="1200px" src=""><br><br>
-                   <img width="1200px" src=""><br><br>
-                   <img width="1200px" src=""><br><br>
-                    <img width="1200px" src=""><br><br>
-                   <img width="1200px" src=""><br><br>
-                   <img width="1200px" src=""><br><br>
-                   <img width="1200px" src=""></h6>
+<h6 align="center"><img width="1200px" src="https://github.com/user-attachments/assets/725806a5-c79e-4213-bd56-176b1757a242"><br><br>
+                   <img width="1200px" src="https://github.com/user-attachments/assets/3a055708-48ca-465f-a5e3-b95258ea43df"><br><br>
+                   <img width="1200px" src="https://github.com/user-attachments/assets/540eba0a-e724-496e-8c43-7a544e690664"><br><br>
+                   <img width="1200px" src="https://github.com/user-attachments/assets/7d1645fc-29cc-404a-9491-50182e24c30a"><br><br>
+                   <img width="1200px" src="https://github.com/user-attachments/assets/864ac5a0-6de4-4a15-b93a-562db16d1024"></h6>
 
 <br><br>
 <h2>Task 6 . Security Best Practices: User Settings<a id='6'></a></h2>
@@ -339,30 +335,31 @@ For this technique, you can also refer to the Azure Threat Research Matrix (ATRM
 <br><br>
 <h1 align="center">Completed</h1>
 
-<p align="center"><img width="900px" src=""><br>
-                  <img width="900px" src=""><br>
-                  <img width="900px" src=""></p>
 
-                
+<p align="center"><img width="900px" src="https://github.com/user-attachments/assets/02e4cd02-6ac8-48f6-b474-15f02e79bb37"><br>
+                  <img width="900px" src="https://github.com/user-attachments/assets/9f1da769-9ccf-40e9-9c4a-2b06d8b8ac37"><br>
+                  <img width="900px" src="https://github.com/user-attachments/assets/a0dcdf87-251b-48a1-9d45-3c6c4d011fde"></p>
+              
 <h1 align="center">My TryHackMe Journey ・ 2026, February<a id='8'></a></h1>
 
 <div align="center"><p>
 
 |Day<br><br><br> |Streak<br><br><br>|Level<br><br><br>|Type<br><br><br>|Name<br><br><br>                         |Rooms<br>Completed<br><br>|Points<br><br><br>|Badges<br><br><br>|Brazil<br>Monthly<br><br>|Brazil<br>All<br>Time|Global<br>Monthly<br><br>|Global<br>All<br>Time|
 |:--------------:|:----------------:|:---------------:|:--------------:|:----------------------------------------|-------------------------:|-----------------:|-----------------:|--------------------:|------------------------:|--------------------:|---------------:|
-|2<br><br>       |28<br><br>        |Easy<br><br>     |🔗<br><br>     |MS Entra ID: External ID                  |                    1,100<br><br>|        1111,1111<br><br>|               90<br><br>|                  60ᵗʰ<br><br>|                     3ʳᵈ<br><br>|                 67ᵗʰ<br><br>|             2ⁿᵈ<br><br>|     
+|2<br><br>       |32<br><br>        |Easy<br><br>     |🔗<br><br>     |MS Entra ID: External ID                  |                    1,080<br><br>|       146,073<br><br>|               90<br><br>|                  35ᵗʰ<br><br>|                     3ʳᵈ<br><br>|                 2,403ʳᵈ<br><br>|             54ᵗʰ<br><br>|     
 
 </p></div><br>
 
+
 <p align="center">
-Global All Time: &nbsp; <strong>60</strong>ᵗʰ<br>
-<img width="300px" src="https://github.com/user-attachments/assets/1f7641b6-5ad9-487d-8058-0557bf52663e"><br>
-Brazil Monthly: &nbsp; <strong>60</strong>ᵗʰ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-Brazil All Time: &nbsp; <strong>3</strong>ʳᵈ<br><img width="450px" hspace="20" src="https://github.com/user-attachments/assets/9527c0d3-78ff-4a1a-9719-18adf54dce74"><img width="450px" src="https://github.com/user-attachments/assets/9527c0d3-78ff-4a1a-9719-18adf54dce74"><br><br>
-Global Montlhy: &nbsp; <strong>67</strong>ᵗʰ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-Global All Time: &nbsp; <strong>3</strong>ʳᵈ<br>
-<img width="450px" hspace="20" src="https://github.com/user-attachments/assets/9527c0d3-78ff-4a1a-9719-18adf54dce74">
-<img width="450px" src="https://github.com/user-attachments/assets/9527c0d3-78ff-4a1a-9719-18adf54dce74"></p>
+Global All Time: &nbsp; <strong>54</strong>ᵗʰ<br>
+<img width="300px" src="https://github.com/user-attachments/assets/3d0a93e3-7cc5-4f0b-acb1-b7ed26f0c151"><br>
+Brazil Monthly: &nbsp; <strong>35</strong>ᵗʰ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Brazil All Time: &nbsp; <strong>3</strong>ʳᵈ<br><img width="450px" hspace="20" src="https://github.com/user-attachments/assets/083e3d7b-57c0-44a9-ae8f-6269b9ce13cc"><img width="450px" src="https://github.com/user-attachments/assets/67bb57ca-716c-4a51-9fde-61038617d455"><br><br>
+Global Monthly: &nbsp; <strong>2,403</strong>ʳᵈ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Global All Time: &nbsp; <strong>54</strong>ᵗʰ<br>
+<img width="450px" hspace="20" src="https://github.com/user-attachments/assets/a0a7ad8c-f764-4cb6-a437-3455619e5a68">
+<img width="450px" src="https://github.com/user-attachments/assets/2face500-eb05-4986-ac9a-fb43001895c9"></p>
 
 
 <h1 align="center">Thanks for coming!</h1>
