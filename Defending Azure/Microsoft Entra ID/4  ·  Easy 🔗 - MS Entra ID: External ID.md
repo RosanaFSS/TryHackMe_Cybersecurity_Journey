@@ -3,7 +3,18 @@
 <p align="center"><img width="1200px" src=""><br>
 If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://github.com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20FEV%202-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p>
 
-<h2>Task 1 . External Identity: Guest Users</h2>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  External Identity: [Guest Users](#1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Inviting [External Users](#2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Lab [Instructions](#3)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Lab-03: &nbsp;&nbsp; [External Collaboration Settings](#4)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Lab-04: &nbsp;&nbsp; [Inviting Guest Users](#5)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Security Best Practices: [User Settings](#6)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [Conclusion](#7)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  My TryHackMe [Journey](#8)
+
+<br><br>
+<h2>Task 1 . External Identity: Guest Users<a id='1'></a></h2>
 <h3>What Are External Identities?</h3>
 <p>Microsoft Entra ID external users, or B2B (business-to-business) users, are individuals or user accounts that are not part of your organization's internal Active Directory but need to access resources or securely collaborate with your organization; you can collaborate with partners, distributors, suppliers, or vendors, you can share your resources and define how your internal users can access external organizations. In this case, the external user’s identity provider manages their identity, and you manage access to your apps with Microsoft Entra ID or Azure AD B2C to protect your organization's resources.<<br>
   
@@ -23,7 +34,8 @@ Here are some ways external identities are represented in MS Entra ID:<br>
 <p>1.2. <em>Which external identity option is best suited if users will be logging in with their social media accounts?</em><br>
 <code>Azure AD B2C</code></p>
 
-<h2>Task 2 . Inviting External Users</h2>
+<br><br>
+<h2>Task 2 . Inviting External Users<a id='2'></a></h2>
 <p>Guest users can be invited to an MS Entra ID directory, a group, or an application. Once invited, the user is added to MS Entra ID with the user type Guest.<br>
 
 The experience of adding guest users is similar to adding internal users, as seen below:</p>
@@ -83,7 +95,8 @@ Conditions when an email OTP becomes a sign-in option for guest users:<br>
 <p>2.4. <em>What can be used to invite guests if they have no other means of authenticating themselves?</em><br>
 <code>email one-time passcode</code></p>
 
-<h2>Task 3 . Lab Instructions</h2>
+<br><br>
+<h2>Task 3 . Lab Instructions<a id='3'></a></h2>
 <p>Kindly follow the instructions below to access your labs for the next tasks.<br>
 
 On your lab task (<strong>Lab-03: External Collaboration Settings</strong>: Task 4; <strong>Lab-04: Inviting Guest Users</strong>: Task 5), click the <strong>Cloud Details</strong> button.<br>
@@ -128,7 +141,8 @@ On the <strong>Environment</strong> tab, click the Join Lab button to deploy you
 <p>3.1. <em>I am ready to go hands-on!</em><br>
 <code>No answer needed</code></p>
 
-<h2>Task 4 . Lab-03: External Collaboration Settings</h2>
+<br><br>
+<h2>Task 4 . Lab-03: External Collaboration Settings<a id='4'></a></h2>
 <h4>Microsoft Entra ID Lab Rules</h4>
 <p>
 
@@ -194,9 +208,8 @@ On the <strong>Environment</strong> tab, click the Join Lab button to deploy you
                    <img width="1200px" src=""><br><br>
                    <img width="1200px" src=""></h6>
 
-<br>
-<br>
-<h2>Task 5 . Lab-04: Inviting Guest Users</h2>
+<br><br>
+<h2>Task 5 . Lab-04: Inviting Guest Users<a id='5'></a></h2>
 <h4>Context</h4>
 <p>Your company hired some external penetration testers for a limited engagement. As part of this engagement, pentesters will need to evaluate the reconnaissance capabilities of a guest user and what kind of Entra ID directory objects are visible to a guest user based on the organization's current Entra ID configuration.</p>
 
@@ -283,7 +296,8 @@ Leave the previous Lab by clicking the <strong>Leave Lab</strong> button, then a
                    <img width="1200px" src=""><br><br>
                    <img width="1200px" src=""></h6>
 
-<h2>Task 6 . Security Best Practices: User Settings</h2>
+<br><br>
+<h2>Task 6 . Security Best Practices: User Settings<a id='6'></a></h2>
 <p>Here are some security best practices for "User settings". Remembering the least privilege access principle and limiting certain actions for general users is essential.</p>
 
 <h3>Default User Role Permissions</h3>
@@ -308,7 +322,8 @@ For this technique, you can also refer to the Azure Threat Research Matrix (ATRM
 <p>6.1. <em>Which user account type is a common entry for malicious actors to get initial access?</em><br>
 <code>Guest</code></p>
 
-<h2>Task 7 . Conclusion</h2>
+<br><br>
+<h2>Task 7 . Conclusion<a id='7'></a></h2>
 <h3>Summary</h3>
 <p>In this room, we covered how external identities are represented and implemented in Microsoft Entra ID. Next, we will learn how to secure identities. We have specifically covered the following topics:<br>
 
@@ -322,7 +337,7 @@ For this technique, you can also refer to the Azure Threat Research Matrix (ATRM
 <p>7.1. <em>I am ready to move on to the <a href="https://tryhackme.com/r/room/entraidzerotrust"> MS Entra ID: Zero Trust</a> room!</em><br>
 <code>No answer needed</code></p>
 
-<br>
+<br><br>
 <h1 align="center">Completed</h1>
 
 <p align="center"><img width="900px" src=""><br>
@@ -330,7 +345,7 @@ For this technique, you can also refer to the Azure Threat Research Matrix (ATRM
                   <img width="900px" src=""></p>
 
                 
-<h1 align="center">My TryHackMe Journey ・ 2026, February</h1>
+<h1 align="center">My TryHackMe Journey ・ 2026, February<a id='8'></a></h1>
 
 <div align="center"><p>
 
