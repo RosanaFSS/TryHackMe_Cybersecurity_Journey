@@ -202,11 +202,10 @@ On the <strong>Environment</strong> tab, click the Join Lab button to deploy you
 <h2 align="center">Lab-03: External Collaboration Settings</h2>
 <p align="center">Rosana´s hands on</p>
 
-<h6 align="center"><img width="1200px" src=""><br><br>
-                   <img width="1200px" src=""><br><br>
-                   <img width="1200px" src=""><br><br>
-                   <img width="1200px" src=""><br><br>
-                   <img width="1200px" src=""></h6>
+<h6 align="center"><img width="1200px" src="https://github.com/user-attachments/assets/c4ed7745-103e-4468-b1f4-177a375261f4"><br><br>
+                   <img width="1200px" src="https://github.com/user-attachments/assets/dadbeca7-c0e0-43a3-8c71-26fc09cbca42"><br><br><br>
+                   <img width="1200px" src="https://github.com/user-attachments/assets/d8703b7d-4ec3-439b-942d-a91bb7864642"><br><br>
+                   <img width="1200px" src="https://github.com/user-attachments/assets/66f5419d-0b94-4e3a-9d72-01dc0ffc69fd"></h6>
 
 <br><br>
 <h2>Task 5 . Lab-04: Inviting Guest Users<a id='5'></a></h2>
