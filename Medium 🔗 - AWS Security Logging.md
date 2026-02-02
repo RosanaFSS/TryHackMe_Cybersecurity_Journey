@@ -1,5 +1,5 @@
 <h1 align="center"><a href="https://tryhackme.com/room/awssecuritylogging">AWS Security Logging</a></h1>
-<p align="center">Dive into various AWS log sources and learn how they can help your SOC team.<br><br><img width="1200px" src=""><br>
+<p align="center">Dive into various AWS log sources and learn how they can help your SOC team.<br><br><img width="1200px" src="https://github.com/user-attachments/assets/d80a12aa-0342-4a8d-8fe1-7558533d7245"><br>
 If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://github.com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20FEV%202-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p>
 
 <br><br>
@@ -227,5 +227,42 @@ index=aws source="s3.json" command=GetObject
 
 
 
+Completed
+
+<img width="1888" height="844" alt="image" src="https://github.com/user-attachments/assets/168b0f7c-bb91-4819-8e26-d9a6ec7f8ae0" />
+
+<img width="719" height="193" alt="image" src="https://github.com/user-attachments/assets/76beb2a7-37b2-4721-882f-d6c5b118b052" />
+
+<img width="1902" height="892" alt="image" src="https://github.com/user-attachments/assets/c70cf342-e978-47a1-a581-ea2988d3fd24" />
 
 
+<br><br>
+<h1 align="center">Completed</h1>
+
+<p align="center"><img width="900px" src="https://github.com/user-attachments/assets/a6ad26e1-0c4e-4c69-b6b7-d4f89096efbf"><br>
+                  <img width="900px" src="https://github.com/user-attachments/assets/5e4c37ce-4e32-4473-a486-177fa6a7e296"><br>
+                  <img width="900px" src="https://github.com/user-attachments/assets/ec0b95e4-ba1e-43f2-baf2-33fac76c0041"></p>
+
+            
+<h1 align="center">My TryHackMe Journey ・ 2026, February<a id='9'></a></h1>
+
+<div align="center"><h6>
+
+|Day<br><br><br> |Streak<br><br><br>|Level<br><br><br>|Type<br><br><br>|Name<br><br><br>                         |Rooms<br>Completed<br><br>|Points<br><br><br>|Badges<br><br><br>|Brazil<br>Monthly<br><br>|Brazil<br>All<br>Time|Global<br>Monthly<br><br>|Global<br>All<br>Time|
+|:--------------:|:----------------:|:---------------:|:--------------:|:----------------------------------------|-------------------------:|-----------------:|-----------------:|--------------------:|------------------------:|--------------------:|---------------:|
+|2<br><br>       |32<br><br>        |Medium<br><br>   |🔗<br><br>     |AWS Security Logging<br>                 |                    1,081<br><br>|       146,193<br><br>|               90<br><br>|                  22ⁿᵈ<br><br>|                     3ʳᵈ<br><br>|                 1,372ⁿᵈ<br><br>|             54ᵗʰ<br><br>|
+|2<br><br>       |32<br><br>        |Medium<br><br>   |🔗<br><br>     |MS Entra ID: Authentication<br>          |                    1,081<br><br>|       146,081<br><br>|               90<br><br>|                  36ᵗʰ<br><br>|                     3ʳᵈ<br><br>|                 2,469ᵗʰ<br><br>|             54ᵗʰ<br><br>|     
+|2<br><br>       |32<br><br>        |Easy<br><br>     |🔗<br><br>     |MS Entra ID: External ID<br>              |                    1,080<br><br>|       146,073<br><br>|               90<br><br>|                  35ᵗʰ<br><br>|                     3ʳᵈ<br><br>|                 2,403ʳᵈ<br><br>|             54ᵗʰ<br><br>|     
+
+</h6></div><br>
+
+<p align="center">
+Global All Time: &nbsp; <strong>54</strong>ᵗʰ<br><img width="300px" src="https://github.com/user-attachments/assets/856a0215-017b-4be7-b2c9-abe62b9b79ea"><br>Brazil Monthly: &nbsp; <strong>22</strong>ⁿᵈ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Brazil All Time: &nbsp; <strong>3</strong>ʳᵈ<br><img width="450px" hspace="20" src="https://github.com/user-attachments/assets/9df63d3f-0752-4b41-ac06-3e02b1d38643"><img width="450px" src="https://github.com/user-attachments/assets/8b3fdc2b-4878-4c13-b5f2-67a13804f821"><br><br>Global Monthly: &nbsp; <strong>1,372</strong>ⁿᵈ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Global All Time: &nbsp; <strong>54</strong>ᵗʰ<br>
+<img width="450px" hspace="20" src="https://github.com/user-attachments/assets/7c917f96-2b7a-4d68-bd10-17b6a6d14439">
+<img width="450px" src="https://github.com/user-attachments/assets/91d37f3b-aae1-45f8-b246-b4d4ce4bb88e"></p>
+
+
+<h1 align="center">Thanks for coming!</h1>
+<p align="center">Follow me on <a href="https://medium.com/@RosanaFS">Medium</a>, here on <a href="https://github.com/RosanaFSS/TryHackMe">GitHub</a>, and on <a href="https://www.linkedin.com/in/rosanafssantos/">LinkedIN</a>.</p>
