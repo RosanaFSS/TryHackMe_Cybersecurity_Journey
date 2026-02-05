@@ -1523,6 +1523,30 @@ Hey, your password has been changed, dc647eb65e6711e155375218212b3964.
 Knock yourself in!
 ```
 
+<p>
+
+- Identify dev1´s hash type using <strong>hash-identifier</strong><br>
+- Crack the hash using <a>https://crackstation.net/CrackStation</a></p>
+
+```bash
+:~# sudo apt install hash-identifier
+```
+
+```bash
+:~# sudo snap install hash-id
+```
+
+```bash
+:~# pip install hashid
+```
+
+```bash
+:~# hash-id dc647eb65e6711e155375218212b3964
+```
+
+```bash
+:~# echo -n "Your-String-Here" | md5sum
+```
 
 ```bash
 www-data@incognito:/tmp$ knockd -v 5020 6120 7340
@@ -1541,6 +1565,8 @@ hitting tcp 10.10.162.158:7340
 ```bash
 :~# ssh dev1@incognito.com
 ```
+
+Password
 
 ```bash
 dev1@incognito:~$ sudo -l
