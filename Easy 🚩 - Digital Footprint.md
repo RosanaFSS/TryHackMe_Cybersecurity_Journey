@@ -1,6 +1,10 @@
 
 <h1>Digital Footprint</h1>
 
+
+<img width="1898" height="391" alt="image" src="https://github.com/user-attachments/assets/f596a6f8-ce64-470c-aa86-3e3fe7c0e33f" />
+
+
 https://tryhackme.com/room/osintchallengeiv
 
 :~/DigitalFootprint# exiftool edited-house-1763031553617.jpg
@@ -124,4 +128,32 @@ Task 4
 
 
 
-  
+<h1>Completed</h1>
+
+<img width="1890" height="536" alt="image" src="https://github.com/user-attachments/assets/1ce9f7f8-37b7-4e49-8bdc-767cd0ce9430" />
+
+<img width="1891" height="204" alt="image" src="https://github.com/user-attachments/assets/d1da8e08-e5a5-4e2a-83d6-55ae34c242c5" />
+
+
+<img width="1907" height="891" alt="image" src="https://github.com/user-attachments/assets/76d3a6c6-b1c0-456e-8df2-07bf15fa1d28" />
+
+
+<h1></h1>
+
+<img width="329" height="88" alt="image" src="https://github.com/user-attachments/assets/73f88084-8ddf-434e-9147-232d739c23a9" />
+
+
+
+<img width="1890" height="898" alt="image" src="https://github.com/user-attachments/assets/37ede220-2a78-4db4-a7b5-43316288a9c4" />
+
+
+
+<img width="1880" height="892" alt="image" src="https://github.com/user-attachments/assets/e6eb110a-f364-4e5c-8fdd-f3560fd2cb71" />
+
+<img width="1899" height="892" alt="image" src="https://github.com/user-attachments/assets/62d88dc0-39e2-496a-9775-8ff6c93cd3e4" />
+
+
+
+
+<img width="1893" height="890" alt="image" src="https://github.com/user-attachments/assets/87f60c20-e3d9-4e14-9ec8-bdce3dc54930" />
+
