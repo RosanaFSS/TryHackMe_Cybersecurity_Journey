@@ -3,7 +3,7 @@
 If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://github.com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20FEV%205-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p>
 
 <br>
-<h1 align="center">Read my walkthrough in Medium clicking<br> <a href=""> Client-Server Basics</a>.</h1>
+<h1 align="center">Read my walkthrough in Medium clicking<br> <a href="https://medium.com/@RosanaFS/client-server-basics-tryhackme-walkthrough-a9f812eadf2b"> Client-Server Basics</a>.</h1>
 
 <br>
 <h1 align="center">Completed</h1>
@@ -19,7 +19,7 @@ If you find it helpful, consider coming back for research.<br><p align="center">
 
 |Day<br><br><br> |Streak<br><br><br>|Level<br><br><br>|Type<br><br><br>|Name<br><br><br>                         |Rooms<br>Completed<br><br>|Points<br><br><br>|Badges<br><br><br>|Brazil<br>Monthly<br><br>|Brazil<br>All<br>Time|Global<br>Monthly<br><br>|Global<br>All<br>Time|
 |:--------------:|:----------------:|:---------------:|:--------------:|:----------------------------------------|-------------------------:|-----------------:|-----------------:|--------------------:|------------------------:|--------------------:|---------------:|
-|5<br><br>       |35<br><br>        |Easy<br><br>     |🔗<br><br>     |Client-Server Basics<br><br>              |                    1,087<br><br>|       146,585<br><br>|               90<br><br>|                   4ᵗʰ<br><br>|                     3ʳᵈ<br><br>|                    88ᵗʰ<br><br>|             52ⁿᵈ<br><br>|
+|5<br><br>       |35<br><br>        |Easy<br><br>     |🔗<br><br>     |Client-Server Basics<br><br>              |                    1,087<br><br>|       146,737<br><br>|               90<br><br>|                   4ᵗʰ<br><br>|                     3ʳᵈ<br><br>|                    88ᵗʰ<br><br>|             52ⁿᵈ<br><br>|
 |5<br><br>       |35<br><br>        |Easy<br><br>     |🚩<br><br>     |Digital Footprint<br><br>                  |                    1,086<br><br>|       146,705<br><br>|               90<br><br>|                   4ᵗʰ<br><br>|                     3ʳᵈ<br><br>|                    91ˢᵗ<br><br>|             52ⁿᵈ<br><br>|
 |4<br><br>       |34<br><br>        |Easy<br><br>     |🔗<br><br>     |Virtualisation Basics<br><br>             |                    1,085<br><br>|       146,585<br><br>|               90<br><br>|                   3ʳᵈ<br><br>|                     3ʳᵈ<br><br>|                    80ᵗʰ<br><br>|             52ⁿᵈ<br><br>|
 |4<br><br>       |34<br><br>        |Easy<br><br>     |🔗<br><br>     |Cloud Computing Fundamentals<br><br>      |                    1,084<br><br>|       146,521<br><br>|               90<br><br>|                   3ʳᵈ<br><br>|                     3ʳᵈ<br><br>|                    81ˢᵗ<br><br>|             53ʳᵈ<br><br>|
