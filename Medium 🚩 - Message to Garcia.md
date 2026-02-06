@@ -1,12 +1,12 @@
 
 <h1>Message to Garcia</h1>
+https://tryhackme.com/room/messagetogarcia
 <p></p>Encryption and Key Management Challenge.</p>
 
+<img width="1896" height="393" alt="image" src="https://github.com/user-attachments/assets/942128d6-48ec-45ac-92aa-1e804fa6f0d6" />
 
 
-
-
-https://tryhackme.com/room/messagetogarcia
+<br>
 
 <img width="920" height="152" alt="image" src="https://github.com/user-attachments/assets/d25cea7b-23f3-4d84-9eb2-e4c5b2d65342" />
 
@@ -94,5 +94,15 @@ file://create_message.py
 <h1>Completed</h1>
 
 <img width="1891" height="448" alt="image" src="https://github.com/user-attachments/assets/a480c382-b9d0-41c0-8633-1a49ad3687cb" />
+
+<img width="1891" height="197" alt="image" src="https://github.com/user-attachments/assets/5008b8a5-24b0-42d0-bd66-33bf79ff6bbc" />
+
+<img width="1901" height="769" alt="image" src="https://github.com/user-attachments/assets/9b625ce5-608f-463c-ad4a-1b2f48b38958" />
+
+<h1>Journey</h1>
+
+
+
+
 
 
