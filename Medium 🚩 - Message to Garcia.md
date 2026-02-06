@@ -3,15 +3,18 @@
 https://tryhackme.com/room/messagetogarcia
 <p></p>Encryption and Key Management Challenge.</p>
 
+<p>Nmap</p>
+
+<p>Gobuster</p>
+
+<p>...</p>
+
 <img width="1896" height="393" alt="image" src="https://github.com/user-attachments/assets/942128d6-48ec-45ac-92aa-1e804fa6f0d6" />
 
 
 <br>
 
 <img width="920" height="152" alt="image" src="https://github.com/user-attachments/assets/d25cea7b-23f3-4d84-9eb2-e4c5b2d65342" />
-
-<img width="1321" height="518" alt="image" src="https://github.com/user-attachments/assets/f2eb6469-a8df-4ae5-825d-66fbbd33d46f" />
-
 
 
 <img width="1330" height="358" alt="image" src="https://github.com/user-attachments/assets/287ccce1-f7c9-4746-b38d-f2e57d21d9a5" />
@@ -21,14 +24,14 @@ https://tryhackme.com/room/messagetogarcia
 
 
 :~# python3 message.py
-[*] Message to encrypt: Garcia, it seems I've cracked the code!! I need you to meet me at coordinates: 40.4168° N, 3.7038° W. The cipher is: TRACK
-[*] Encryption key: TUVTU0FHRVRPR0FSQ0lBMjAyNF9LRVkhISEhISEhISE=
+[*] Message to encrypt: Garcia, ...
+[*] Encryption key: ...
 
 [+] Encrypted message saved to: message.enc
 [+] File size: 248 bytes
 
 [*] Testing decryption...
-[+] Decrypted: Garcia, it seems I've cracked the code!! I need you to meet me at coordinates: 40.4168° N, 3.7038° W. The cipher is: TRACK
+[+] Decrypted: Garcia, ...
 [+] Match: True
 
 ============================================================
@@ -50,7 +53,7 @@ file://create_message.py
 
 
 
-:~# curl -c cookies.txt -F "file=@message.enc" http://10.81.138.23/upload
+:~# curl -c cookies.txt -F "file=@message.enc" http://MACHINE_IP/upload
 <!doctype html>
 <html lang=en>
 <title>Redirecting...</title>
@@ -59,7 +62,7 @@ file://create_message.py
 
 
 
-:~# curl -b cookies.txt http://10.81.138.23/success
+:~# curl -b cookies.txt http://MACHINE_IP/success
  
 <!DOCTYPE html>
 <html lang="en">
@@ -100,6 +103,18 @@ file://create_message.py
 <img width="1901" height="769" alt="image" src="https://github.com/user-attachments/assets/9b625ce5-608f-463c-ad4a-1b2f48b38958" />
 
 <h1>Journey</h1>
+
+
+
+<img width="329" height="88" alt="image" src="https://github.com/user-attachments/assets/587c4eb7-42f4-4c79-9e60-31803441e9af" />
+
+<img width="1900" height="900" alt="image" src="https://github.com/user-attachments/assets/7b1fc5cb-1ab8-47d5-9d04-25adf4d8232c" />
+
+<img width="1896" height="890" alt="image" src="https://github.com/user-attachments/assets/5c4fac9d-b600-4170-82a3-514d4c162786" />
+
+<img width="1889" height="888" alt="image" src="https://github.com/user-attachments/assets/9db76b9c-7e5f-4859-abeb-47e33dc77860" />
+
+<img width="1889" height="895" alt="image" src="https://github.com/user-attachments/assets/7b898afd-6d5f-4042-a925-78bd01093689" />
 
 
 
