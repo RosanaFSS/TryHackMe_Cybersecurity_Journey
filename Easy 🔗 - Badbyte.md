@@ -1,4 +1,6 @@
-
+<h1 align="center"><a href="https://tryhackme.com/room/badbyte">Badbyte</a></h1>
+<p align="center"><img width="1200px" src="https://github.com/user-attachments/assets/49ec0af3-fdc9-4e9c-bfc6-e28a16e11ba2"><br>
+If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://github.com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20FEV%207-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p>
 
 
 <h2>Task 1 . Deploy the machine</h2>
@@ -403,7 +405,16 @@ root@...:~#
 
 <br>
 <br>
+<h1 align="center">Completed</h1>
 
-<h1>Completed</h1>
+<p align="center"><br><img width="1200px" src="https://github.com/user-attachments/assets/12925841-b29c-40e7-a917-2b2df6863995"></h6>
 
+<p align="center">Global All Time:    47ᵗʰ<br><img width="250px" src="https://github.com/user-attachments/assets/7bf5fa6d-db8f-419b-8de0-616f9ccdcae2"><br>
+                                              <img width="1200px" src="https://github.com/user-attachments/assets/48189c86-25a0-4e1b-8a44-a3494d6e6c32"><br><br>
+                  Brazil All Time:      3ʳᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/381cc61f-f14c-4340-8fbc-c455d0c8a2f5"><br><br>
+                  Global monthly:     53ʳᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/e13530dd-5176-4c74-b798-d361649d8eda"><br><br>
+                  Brazil monthly:       3ʳᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/5a694215-8098-4ca6-a2ca-e70ba920ff16"></p>
+
+<h1 align="center">Thanks for coming!</h1>
+<p align="center">Follow me on <a href="https://medium.com/@RosanaFS">Medium</a>, here on <a href="https://github.com/RosanaFSS/TryHackMe">GitHub</a>, and on <a href="https://www.linkedin.com/in/rosanafssantos/">LinkedIN</a>.</p
 
