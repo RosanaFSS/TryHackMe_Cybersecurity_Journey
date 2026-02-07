@@ -99,9 +99,14 @@ helloworld.c  malicious.c
 ```
 
 ```bash
-:~/LinuxFunctionHooking# ls
-helloworld.c  malicious.c
+:~/LinuxFunctionHooking# gcc helloworld.c -o helloworld
 ```
+
+```bash
+:~/LinuxFunctionHooking# ls
+helloworld  helloworld.c  malicious.c
+```
+
 
 <br>
 <h2>Task 5 . Let's Gooooooooo</h2>
@@ -114,22 +119,20 @@ helloworld.c  malicious.c
 <p>5.2. <em>Can hooking libc functions affect the behavior of Python3? (Yay/Nay)</em><br>
 <code>Yay</code></p>
 
-
 ```bash
-:~/LinuxFunctionHooking# gcc -ldl malicious.c -fPIC -shared -D_GNU_SOURCE -o malicious.so
+~/LinuxFunctionHooking# gcc malicious.c -fPIC -shared -D_GNU_SOURCE -o malicious.so -ldl
 ```
 
 ```bash
-:~/LinuxFunctionHooking# ls
-first  helloworld.c  malicious.c  malicious.so
+:~/LinuxFunctionHooking# LD_PRELOAD=./malicious.so ./helloworld
+Hello World                
+Hacked 1337
 ```
 
-```bash
-:~/LinuxFunctionHooking# export LD_PRELOAD=$(pwd)/malicious.so
-```
+<img width="1118" height="158" alt="image" src="https://github.com/user-attachments/assets/5076908b-453f-44ac-bc2b-ec443fddbd55" />
 
-<img width="1300" height="422" alt="image" src="https://github.com/user-attachments/assets/0b4ba90f-c062-4253-a4ed-83999257c3c4" />
-
+<br>
+<br>
 
 <br>
 <h2>Task 6 . Hiding Files From Is</h2>
