@@ -146,7 +146,7 @@ Hacked 1337
 <code>No answer needed</code></p>
 
 
-<p><em>Task 6... files</em></p>
+<p><em>malicious.c</em></p>
 
 ```bash
 #include <string.h>
@@ -183,18 +183,13 @@ struct dirent64 *readdir64(DIR *dirp)
 ```
 
 
+```bash
+gcc malicious.c -fPIC -shared -D_GNU_SOURCE -o malicious.so -ldl
+```
+
+
 <br>
 <br>
-<h1 align="center">Completed</h1>
+<h1 align="center">In Progress</h1>
 
-<p align="center"><br><img width="1200px" src="https://github.com/user-attachments/assets/12925841-b29c-40e7-a917-2b2df6863995"></h6>
-
-<p align="center">Global All Time:    47ᵗʰ<br><img width="250px" src="https://github.com/user-attachments/assets/7bf5fa6d-db8f-419b-8de0-616f9ccdcae2"><br>
-                                              <img width="1200px" src="https://github.com/user-attachments/assets/48189c86-25a0-4e1b-8a44-a3494d6e6c32"><br><br>
-                  Brazil All Time:      3ʳᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/381cc61f-f14c-4340-8fbc-c455d0c8a2f5"><br><br>
-                  Global monthly:     53ʳᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/e13530dd-5176-4c74-b798-d361649d8eda"><br><br>
-                  Brazil monthly:       3ʳᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/5a694215-8098-4ca6-a2ca-e70ba920ff16"></p>
-
-<h1 align="center">Thanks for coming!</h1>
-<p align="center">Follow me on <a href="https://medium.com/@RosanaFS">Medium</a>, here on <a href="https://github.com/RosanaFSS/TryHackMe">GitHub</a>, and on <a href="https://www.linkedin.com/in/rosanafssantos/">LinkedIN</a>.</p
 
