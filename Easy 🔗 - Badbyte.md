@@ -207,6 +207,25 @@ PORT     STATE SERVICE
 <p>5.2. <em>What protocols are used for these ports?</em><br>
 <code>http, mysql</code></p>
 
+<p>5.3. <em>What is the CVE number for directory traversal vulnerability?</em><br>
+<code>CVE-2020-11738</code></p>
+
+
+<p>5.4. <em>What is the CVE number for remote code execution vulnerability?</em><br>
+<code>CVE-2020-25213</code></p>
+
+<p>5.5. <em>There is a metasploit module for the exploit. You can use it to get the reverse shell. If you are feeling lucky you can follow any POC( Proof of Concept).</em><br>
+<code>http, mysql</code></p>
+[CVE-20XX-XXXXX](https://github.com/electronforce/py2to3/blob/main/CVE-2020-25213.py)
+
+<p>5.6. <em>What is the name of user that was running CMS?</em><br>
+<code>http, mysql</code></p>
+
+<p>5.6. <em>What is the user flag?</em><br>
+<code>http, mysql</code></p>
+
+
+
 ```bash
 :~/Badbytes# nmap -sC -sV -p8000 127.0.0.1
 ...
@@ -242,5 +261,27 @@ PORT     STATE SERVICE  REASON
 
 <br>
 <br>
+
+<img width="1165" height="499" alt="image" src="https://github.com/user-attachments/assets/3b13ae0f-dbeb-44e6-bafb-54b08ba1fef0" />
+
+<br>
+<br>
+
+
+<img width="1165" height="499" alt="image" src="https://github.com/user-attachments/assets/9be68f3a-0f97-4f92-8f74-34f21ed834f1" />
+
+<br>
+<br>
+
+<img width="1154" height="568" alt="image" src="https://github.com/user-attachments/assets/36c18637-2019-46f4-b75c-605d6f1a37ba" />
+
+
+<br>
+<br>
+
+```bash
+:~/Badbytes#  msfconsole -q
+```
+
 <h2>Task 6 . Privilege Escalation</h2>
 
