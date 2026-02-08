@@ -670,8 +670,18 @@ root:$6$./Fh3mWMsk8X29kq$6CvaDzV7zlXKn1MMQjXtO.abB4/7ecNKBFkQvEWsLkgM8raAZeuSHZu
 
 <h1>Completed</h1>
 
-
 <img width="1890" height="895" alt="image" src="https://github.com/user-attachments/assets/f6ce9325-b512-46b9-a9ef-fe0e746f5414" />
 
 
+<br>
+<br>
 
+<p align="center">Global All Time:    47ᵗʰ<br><img width="300px" src="https://github.com/user-attachments/assets/e8e62d77-d998-46da-b482-91292e1d4078"><br>
+                                              <img width="300px" src="https://github.com/user-attachments/assets/035cced9-cadf-48c5-adeb-8fe41a6acaed"><br>
+	                                          <img width="1200px" src="https://github.com/user-attachments/assets/13671e29-0c67-4e03-a14b-fe02e2c911a1"><br><br>
+                  Brazil All Time:      3ʳᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/df75d9c2-0a8a-41d5-88fe-5d39a7effb56"><br><br>
+                  Global monthly:      62ⁿᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/0b5ff86c-82d3-435d-b972-634e3f8ee7d1"><br><br>
+                  Brazil monthly:       3ʳᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/179853c0-e799-45cb-84f1-44f4fcc7523a"></p>
+
+<h1 align="center">Thanks for coming!</h1>
+<p align="center">Follow me on <a href="https://medium.com/@RosanaFS">Medium</a>, here on <a href="https://github.com/RosanaFSS/TryHackMe">GitHub</a>, and on <a href="https://www.linkedin.com/in/rosanafssantos/">LinkedIN</a>.</p>
