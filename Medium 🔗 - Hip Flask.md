@@ -344,8 +344,73 @@ from libs.db.stats import StatsConn
 
 
 ```bash
+:~/lesson# curl -k https://hipper.hipflasks.thm/data/users.db -o users.db
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 12288  100 12288    0     0   307k      0 --:--:-- --:--:-- --:--:--  315k
+```
+
+```bash
+:~/lesson# ls -lah
+total 20K
+drwxr-xr-x  2 root root 4.0K Feb  8 19:13 .
+drwxr-xr-x 53 root root 4.0K Feb  8 19:13 ..
+-rw-r--r--  1 root root  12K Feb  8 19:13 users.db
+```
+
+
+```bash
+:~/lesson# curl -k https://hipper.hipflasks.thm/data/stats.db -o stats.db
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 12288  100 12288    0     0   631k      0 --:--:-- --:--:-- --:--:--  631k
+```
+
+
+```bash
+:~/lesson# ls -lah
+total 32K
+drwxr-xr-x  2 root root 4.0K Feb  8 19:14 .
+drwxr-xr-x 53 root root 4.0K Feb  8 19:13 ..
+-rw-r--r--  1 root root  12K Feb  8 19:14 stats.db
+-rw-r--r--  1 root root  12K Feb  8 19:13 users.db
+```
+
+```bash
+:~/lesson# ls -lah
+total 52K
+drwxr-xr-x  2 root root 4.0K Feb  8 19:18 .
+drwxr-xr-x 53 root root 4.0K Feb  8 19:13 ..
+-rw-r--r--  1 root root 4.8K Feb  8 19:17 admin.py
+-rw-r--r--  1 root root  435 Feb  8 19:18 auth.py
+-rw-r--r--  1 root root  100 Feb  8 19:16 __init__.py
+-rw-r--r--  1 root root  862 Feb  8 19:18 main.py
+-rw-r--r--  1 root root  12K Feb  8 19:14 stats.db
+-rw-r--r--  1 root root  12K Feb  8 19:13 users.db
 
 ```
+
+
+```bash
+:~/lesson# python3 -m venv poc-venv
+```
+
+
+```bash
+:~/lesson# source poc-venv/bin/activate
+(poc-venv) r...:~/lesson# 
+```
+
+
+```bash
+(poc-venv) r...:~/lesson# pip3 install flask requests waitress
+```
+
+
+```bash
+
+```
+
 
 
 ```bash
@@ -356,4 +421,28 @@ from libs.db.stats import StatsConn
 ```bash
 
 ```
+
+
+
+```bash
+
+```
+
+
+```bash
+
+```
+
+
+
+```bash
+
+```
+
+
+```bash
+
+```
+
+
 
