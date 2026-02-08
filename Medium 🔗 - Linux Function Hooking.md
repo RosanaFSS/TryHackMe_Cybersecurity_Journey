@@ -1,6 +1,6 @@
 <h1 align="center"><a href="https://tryhackme.com/room/linuxfunctionhooking">Linux Function Hooking</a></h1>
-<p align="center"><img width="1200px" src=""><br>
-If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://github.com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20FEV%207-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p>
+<p align="center"><img width="1200px" src="https://github.com/user-attachments/assets/3b72823a-87ae-4c42-b09b-f6dcdd765917"><br>
+If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://github.com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20FEV%208-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p>
 
 
 <h2>Task 1 . Introduction</h2>
@@ -190,6 +190,22 @@ gcc malicious.c -fPIC -shared -D_GNU_SOURCE -o malicious.so -ldl
 
 <br>
 <br>
-<h1 align="center">In Progress</h1>
+<h1 align="center">Completed</h1>
 
+
+<img width="1907" height="878" alt="image" src="https://github.com/user-attachments/assets/5ffc2cf8-e441-4499-8597-b3add1557412" />
+
+
+<br>
+<br>
+
+<p align="center">Global All Time:    48ᵗʰ<br><img width="250px" src="https://github.com/user-attachments/assets/2ecf2c47-faaf-49e7-beeb-0d2ac217fbde"><br>
+                                              <img width="250px" src="https://github.com/user-attachments/assets/921ae36f-bc41-43d8-9986-e7e4e65b7526"><br>
+	                                          <img width="1200px" src="https://github.com/user-attachments/assets/d7d627b1-f379-4c10-97a4-7e7bda82f075"><br><br>
+                  Brazil All Time:      3ʳᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/56696495-5944-4631-abb9-85b5439af4b0"><br><br>
+                  Global monthly:     59ᵗʰ<br><img width="1200px" src="https://github.com/user-attachments/assets/0d766389-db72-4467-8532-50442ff71259"><br><br>
+                  Brazil monthly:       3ʳᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/d970fc41-927a-4b50-821e-9bc999fb648b"></p>
+
+<h1 align="center">Thanks for coming!</h1>
+<p align="center">Follow me on <a href="https://medium.com/@RosanaFS">Medium</a>, here on <a href="https://github.com/RosanaFSS/TryHackMe">GitHub</a>, and on <a href="https://www.linkedin.com/in/rosanafssantos/">LinkedIN</a>.</p>
 
