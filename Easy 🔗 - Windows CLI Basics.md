@@ -2,6 +2,13 @@
 <p align="center">Explore what Windows CLI is, how to navigate, and interact with the system using Windows CLI.<br><br><img width="1200px" src="https://github.com/user-attachments/assets/75c442a8-625b-43b3-8564-bfc24b0d85ae"><br>
 If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://github.com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20FEV%210-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p>
 
+<br>
+<h1 align="center">Read my walkthrough in Medium clicking<br> <a href="https://medium.com/@RosanaFS/windows-cli-basics-tryhackme-34b8afc7102b"> Windows CLI Basic</a>.</h1>
+
+<br>
+<br>
+<br>
+
 <img width="1333" height="639" alt="image" src="https://github.com/user-attachments/assets/ed7ecc42-7e57-4165-b7fd-c8d97f678ca3" />
 
 <p><code>C:\Users\Administrator\Documents\Notes\research_yn6\exports_imv\screenshots\notes_wi6</code></p>
