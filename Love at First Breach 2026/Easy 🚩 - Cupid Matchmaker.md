@@ -12,13 +12,12 @@ If you find it helpful, consider coming back for research.<br><p align="center">
 <br>
 <h1 align="center">My TryHackMe Journey ・ 2026, February</h1>
 
-<p align="center">Global All Time:    45ᵗʰ<br><img width="250px" src="https://github.com/user-attachments/assets/80d0b085-876c-4752-997d-1c9409f9a753"><br>
-                                              <img width="1200px" src="https://github.com/user-attachments/assets/8a6c2d1c-b40c-44a2-9167-47300fc0f422"><br><br>
-                  Brazil All Time:      2ⁿᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/b4586b14-c44a-4f9c-8228-3e60cf7bca06"><br><br>
-                  Global monthly:      60ᵗʰ<br><img width="1200px" src="https://github.com/user-attachments/assets/d3d27897-2f9d-43c0-a896-dca5095a2eec"><br><br>
-                  Brazil monthly:       4ᵗʰ<br><img width="1200px" src="https://github.com/user-attachments/assets/1eb8f4d3-9a88-40e4-bd2b-fa59901bddfd"></p>
+<p align="center">Global All Time:    44ᵗʰ<br><img width="250px" src="https://github.com/user-attachments/assets/b3fb6e0c-3817-4ea8-97dd-fb3b53f252ce"><br>
+                                              <img width="1200px" src="https://github.com/user-attachments/assets/cdad980c-0cd4-466b-b45a-9a9cd3f5d7ff"><br><br>
+                  Brazil All Time:      2ⁿᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/a7497549-137b-4834-8f90-50043d02b686"><br><br>
+                  Global Monthly:      56ᵗʰ<br><img width="1200px" src="https://github.com/user-attachments/assets/d4828f95-d5f9-4da8-a15e-b8ae68ac1769"><br><br>
+                  Brazil Monthly:       3ʳᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/5d067eaa-f8bb-4d79-8579-27426a986474"></p>
+
                   
 <h1 align="center">Thanks for coming!</h1>
-
-
 
