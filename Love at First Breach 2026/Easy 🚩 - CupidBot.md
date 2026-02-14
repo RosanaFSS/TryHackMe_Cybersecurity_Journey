@@ -14,9 +14,8 @@ If you find it helpful, consider coming back for research.<br><p align="center">
 
 <p align="center">Global All Time:    43ʳᵈ<br><img width="250px" src="https://github.com/user-attachments/assets/104261ef-fd36-457d-a279-8eb802a0e5d7"><br>
                                               <img width="1200px" src="https://github.com/user-attachments/assets/4a718f59-181d-4bdc-8bc3-45639a81ac13"><br><br>
-                  Brazil All Time:      2ⁿᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/b4586b14-c44a-4f9c-8228-3e60cf7bca06"><br><br>
-                  Global monthly:      60ᵗʰ<br><img width="1200px" src="https://github.com/user-attachments/assets/1eb8f4d3-9a88-40e4-bd2b-fa59901bddfd"><br><br>
-                  Brazil monthly:       4ᵗʰ<br><img width="1200px" src="https://github.com/user-attachments/assets/d3d27897-2f9d-43c0-a896-dca5095a2eec"></p>
+                  Brazil All Time:      2ⁿᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/e951da41-0a74-4655-ae97-3b0bf9a58dea"><br><br>
+                  Global monthly:      53ʳᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/8a37651c-1c4d-4eb0-bccd-a8f3dd7f1819"><br><br>
+                  Brazil monthly:       3ʳᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/c2253a03-deda-4121-9d7e-107521f03a92"></p>
                   
-<h1 align="center">Thanks for coming!</h1
-
+<h1 align="center">Thanks for coming!</h1>
