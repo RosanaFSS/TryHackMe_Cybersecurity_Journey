@@ -1,3 +1,5 @@
+# Script to Forge Digital Signature specific for TryHackMe Signed Messages algorithm
+
 import hashlib
 from sympy import nextprime
 from Crypto.PublicKey import RSA
