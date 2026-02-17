@@ -24,8 +24,6 @@ Chief Inspector Valentine 💕
 <p></p>
 
 
-<br>
-<br>
 <h1 align="center">Reconnaissance · Static Domain Resolution</h1>
 <p>
 
@@ -44,7 +42,6 @@ Chief Inspector Valentine 💕
 :~/# echo "MACHINE_IP nova.thm" >> /etc/hosts
 ```
 
-<br>
 <h1 align="center">Reconnaissance · Port & Service Enumeration</h1>
 
 ```bash
@@ -70,7 +67,6 @@ PORT   STATE SERVICE VERSION
 |_http-title: Site doesn't have a title (text/html; charset=utf-8).```
 ```
 
-<br>
 <h1 align="center">Reconnaissance · Directory & File Enumeration</h1>
 
 ```bash
@@ -109,12 +105,10 @@ app.py                  [Status: 200, Size: 3364, Words: 669, Lines: 133]
 
 <br>
 <br>
-<br>
 <h1 align="center">Reconnaissance · Web Interface Inspection</h1>
 
 <img width="1275" height="820" alt="image" src="https://github.com/user-attachments/assets/e830c941-5a7c-43b3-b510-daca2f175d63" />
 
-<br>
 <br>
 
 <img width="1337" height="532" alt="image" src="https://github.com/user-attachments/assets/517713d5-ba0d-46f7-8cb0-d9f9530cf98f" />
@@ -122,7 +116,6 @@ app.py                  [Status: 200, Size: 3364, Words: 669, Lines: 133]
 <br>
 <br>
 <p>About</p>
-
 
 <img width="1342" height="386" alt="image" src="https://github.com/user-attachments/assets/07bd1035-b6e7-45de-872f-fd928604d711" />
 
@@ -275,8 +268,6 @@ if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000)
 ```
 
-<br>
-<br>
 <h1 align="center">Reconnaissance · Web Vulnerability Scanning</h1>
 
 ```bash
@@ -299,8 +290,6 @@ if __name__ == "__main__":
 + 1 host(s) tested
 ```
 
-<br>
-<br>
 <h1 align="center">Reconnaissance · Subdomain Enumeration</h1>
 
 ```bash
@@ -336,15 +325,12 @@ internal                [Status: 403, Size: 162, Words: 4, Lines: 8]
 
 <br>
 <br>
-<br>
 <h1 align="center">Reconnaissance · Static Host Mapping</h1>
 
 ```bash
 MACHINE_IP nova.thm internal.nova.thm
 ```
 
-<br>
-<br>
 <h1 align="center">Weaponization & Delivery & Exploitation · SSRF to RCE</h1>
 
 <img width="1210" height="542" alt="image" src="https://github.com/user-attachments/assets/8da1f9da-ab3e-4879-8aa7-21bf196df183" />
@@ -399,9 +385,18 @@ MACHINE_IP nova.thm internal.nova.thm
 
 <img width="1890" height="314" alt="image" src="https://github.com/user-attachments/assets/fa7929f7-0144-458c-9573-eb66af0a31ef" />
 
-<br>
-<br>
 <h1 align="center">Actions on Objectives</h1>
+<p align="center"><img width="1200px" src="https://github.com/user-attachments/assets/8631b6cd-eb55-41e4-b2f0-17a154dce6fb"></p>
 
+<h1 align="center">Completed</h1>
+<p align="center"><img width="1200px" src="https://github.com/user-attachments/assets/56f5f111-e5f8-488f-9b6c-b06bba41e7af"></p>
 
-<img width="1366" height="376" alt="image" src="https://github.com/user-attachments/assets/8631b6cd-eb55-41e4-b2f0-17a154dce6fb" />
+<h1 align="center">My TryHackMe Journey ・ 2026, February</h1>
+<p align="center">Global All Time:     39ᵗʰ<br><img width="250px" src="https://github.com/user-attachments/assets/d968b6c7-b801-4ee9-bb64-20b9217d0349"><br>
+                                               <img width="1200px" src="https://github.com/user-attachments/assets/96ae6a14-ac2c-4d09-9020-f78e1fcc2db6"><br><br>
+                  Brazil All Time:      2ⁿᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/5f0bb0c4-63ae-4a13-babe-015a6065cf23"><br><br>
+                  Global Monthly:      39ᵗʰ<br><img width="1200px" src="https://github.com/user-attachments/assets/847b6535-e2f5-4598-8e58-2eb95acb97fe"><br><br>
+                  Brazil Monthly:       1ˢᵗ<br><img width="1200px" src="https://github.com/user-attachments/assets/683bfb0e-cee8-4968-a67c-cc88ac4bdd00"></p>
+
+                  
+<h1 align="center">Thanks for coming!</h1>
