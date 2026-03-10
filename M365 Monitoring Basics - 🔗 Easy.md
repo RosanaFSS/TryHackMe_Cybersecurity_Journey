@@ -1,6 +1,5 @@
 <h1 align="center"><a href="https://tryhackme.com/room/m365monitoringbasics">M365 Monitoring Basics</a></h1>
-  
-<p align="center"><img width="1200px" src=""><br>
+<p align="center"><img width="1200px" src="https://github.com/user-attachments/assets/5688ea0c-3ccd-4732-81de-8c3052498f1f"><br>
 If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://githubhttps://github.com/user-attachments/assets/f9d56f26-bf87-4309-b5d8-f98cbb0302b0com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20MAR%2010-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p
 
 <br>
@@ -806,27 +805,55 @@ In the next room, Entra ID Monitoring (coming soon), you'll learn about multiple
 <br>
 <h1 align="center">Completed</h1>
 
-<p align="center"><img width="900px" src=""><br>
-                  <img width="900px" src=""><br>
-                  <img width="900px" src=""></p>
+<p align="center"><img width="500px" src="https://github.com/user-attachments/assets/4eb3c47b-f6ff-4726-a43d-be6a6876b541"><br>
+                  <img width="900px" src="https://github.com/user-attachments/assets/bda15984-ffe5-42c0-bc8b-4c9c5a5a13b1"><br>
+                  <img width="900px" src="https://github.com/user-attachments/assets/65b03159-a6b9-4ff3-a939-ecfcc628d433"></p>
 
             
 <h1 align="center">My TryHackMe Journey ・ 2026, March<a id='9'></a></h1>
 
 <div align="center"><h6>
 
-|Day<br><br><br> |Streak<br><br><br>|Level<br><br><br>|Type<br><br><br>|Name<br><br><br>                         |Rooms<br>Completed<br><br>|Points<br><br><br>|Badges<br><br><br>|Brazil<br>Monthly<br><br>|Brazil<br>All<br>Time|Global<br>Monthly<br><br>|Global<br>All<br>Time|
-|:---------------|:-----------------|:----------------|:---------------|:----------------------------------------|-------------------------:|-----------------:|-----------------:|--------------------:|------------------------:|--------------------:|---------------:|
-|10<br><br>      |68<br><br>        |Medium<br><br>   |🔗<br><br>     |M365 Monitoring Basics<br><br>           |             1,023<br><br>|   xxx,xxxx<br><br>|       91<br><br>|          xxx<br><br>|               2ⁿᵈ<br><br>|          xxx<br><br>|    xxx<br><br>|
+|Day<br><br><br> |Streak<br><br><br>|Room Name<br><br><br>|Level<br><br><br>|Type<br><br><br>|Rooms<br>Completed<br><br>|Points<br><br><br>|Badges<br><br><br>|Global<br>All<br>Time<br>|Global<br>Monthly<br><br>|Brazil<br>All<br>Time<br>|Brazil<br>Monthly<br><br>|League<br><br><br>|
+|---------------:|-----------------:|:----------------|:---------------|:----------------------------------------:|-------------------------:|-----------------:|-----------------:|--------------------:|------------------------:|--------------------:|---------------:|---------------:|
+|10<br><br>      |68<br><br>        |M365 Monitoring Basics<br><br>   |Medium<br><br> |🔗<br><br>| 1,144<br><br>| 160,016<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 8ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|9<br><br>       |67<br><br>        |Advent of Cyber 2022<br><br>     |Easy  <br><br> |🔗<br><br>| 1,143<br><br>| 159,880<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 8ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|8<br><br>       |66<br><br>        |Windows Reversing Intro<br>      |Medium<br><br> |🔗<br><br>| 1,142<br><br>|        <br><br>| 91<br><br>|     <br><br>|    <br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|8<br><br>       |66<br><br>        |Advent of Cyber 2 [2020]<br>     |Easy<br><br>   |🔗<br><br>| 1,141<br><br>| 159,164<br><br>| 91<br><br>| 20ᵗʰ<br><br>| 7ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|8<br><br>       |66<br><br>        |25 Days of Cyber Security<br>    |Easy<br><br>   |🔗<br><br>| 1,140<br><br>| 159,068<br><br>| 91<br><br>| 20ᵗʰ<br><br>| 7ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|7<br><br>       |65<br><br>        |25 Days of Cyber Security<br>    |Easy<br><br>   |🔗<br><br>| 1,139<br><br>|        <br><br>| 91<br><br>| 20ᵗʰ<br><br>| 7ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|6<br><br>       |64<br><br>        |25 Days of Cyber Security<br>    |Easy<br><br>   |🔗<br><br>| 1,139<br><br>|        <br><br>|   <br><br>|     <br><br>|    <br><br>|    <br><br>|    <br><br>|<br><br>|
+|6<br><br>       |64<br><br>        |Persistence: T1053<br>           |Easy<br><br>   |🔗<br><br>| 1,139<br><br>|        <br><br>|   <br><br>|     <br><br>|    <br><br>|    <br><br>|    <br><br>|<br><br>|
+|5<br><br>       |63<br><br>        |LOVELETTER.EXE<br><br>           |Hard<br><br>   |🚩<br><br>| 1,139<br><br>| 158,294<br><br>| 90<br><br>| 20ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|5<br><br>       |63<br><br>        |Monitoring AWS Workloads<br>     |Medium<br><br> |🔗<br><br>| 1,139<br><br>| 157,994<br><br>| 90<br><br>| 20ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|5<br><br>       |63<br><br>        |Kernel Blackout<br><br>          |Medium<br><br> |🚩<br><br>| 1,138<br><br>| 157,978<br><br>| 90<br><br>| 20ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|5<br><br>       |63<br><br>        |Operation Endgame<br><br>        |Hard<br><br>   |🚩<br><br>| 1,137<br><br>| 157,578<br><br>| 90<br><br>| 23ʳᵈ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|7ᵗʰ<br><br>|
+|4<br><br>       |62<br><br>        |Monitoring Active Directory<br>  |Medium<br><br> |🔗<br><br>| 1,136<br><br>| 157,396<br><br>| 90<br><br>| 22ⁿᵈ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|3<br><br>       |61<br><br>        |Monitoring AWS Services<br>      |Medium<br><br> |🔗<br><br>| 1,135<br><br>|        <br><br>| 90<br><br>| 22ⁿᵈ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|2<br><br>       |60<br><br>        |<br><br>                         |      <br><br> |  <br><br>|      <br><br>|        <br><br>|   <br><br>|     <br><br>|    <br><br>|    <br><br>|    <br><br>|<br><br>|
+|1<br><br>       |59<br><br>        |<br><br>                         |      <br><br> |  <br><br>|      <br><br>|        <br><br>|   <br><br>|     <br><br>|    <br><br>|    <br><br>|    <br><br>|<br><br>|
+
 
 </h6></div><br>
 
-<p align="center">
-Global All Time: &nbsp; <strong>54</strong>ᵗʰ<br><img width="300px" src=""><br>Brazil Monthly: &nbsp; <strong>22</strong>ⁿᵈ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-Brazil All Time: &nbsp; <strong>3</strong>ʳᵈ<br><img width="450px" hspace="20" src="https://github.com/user-attachments/assets/9df63d3f-0752-4b41-ac06-3e02b1d38643"><img width="450px" src="https://github.com/user-attachments/assets/8b3fdc2b-4878-4c13-b5f2-67a13804f821"><br><br>Global Monthly: &nbsp; <strong>1,372</strong>ⁿᵈ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-Global All Time: &nbsp; <strong>54</strong>ᵗʰ<br>
-<img width="450px" hspace="20" src="https://github.com/user-attachments/assets/7c917f96-2b7a-4d68-bd10-17b6a6d14439">
-<img width="450px" src="https://github.com/user-attachments/assets/91d37f3b-aae1-45f8-b246-b4d4ce4bb88e"></p>
+
+<h1 align="center">My TryHackMe Journey ・ 2026, March</h1>
+<p align="center">Global All Time:     16ᵗʰ<br><img width="250px" src="https://github.com/user-attachments/assets/eceb501f-8a48-4f0d-a959-350e9a08929c"><br>
+                                               <img width="1200px" src="https://github.com/user-attachments/assets/40755500-6e20-4bb2-8deb-05eaae2fbe15"><br><br>
+                  Global Monthly:       8ᵗʰ<br><img width="1200px" src="https://github.com/user-attachments/assets/8daba691-a940-4405-9b01-6fd571be0e5c"><br><br>
+                  Brazil All Time:      2ⁿᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/3d6b87e4-c7df-430b-b00c-554358d04617"><br><br>
+                  Brazil Monthly:       1ˢᵗ<br><img width="1200px" src="https://github.com/user-attachments/assets/df19994d-3982-4ef5-af99-4b2de08d960c"></p>
+
+
+<h1 align="center">Skills</h1>
+<p align="center">All:               <br><img width="1200px" src="https://github.com/user-attachments/assets/fe770192-1689-4afb-a35f-5820ce7119ff"><br><br>
+                  SECURITY ANALYST<br>Security Analysis(73) - Digital Forensics (75) - Incident Response (72) - Security Operations (74) - Threat Hunting (79) - Dectection Engineering(71)<br><img width="1200px" src="https://github.com/user-attachments/assets/71c46ffe-ff1c-4071-8da9-2d91d2f601f6"><br><br>
+                  PENETRATION TESTER:<br>Penetration Testing (90) - Red Teaming (84) - Exploitation (80) - Enumeration (84) - Privilege Escalation (88) - Vulnerability Analysis(73)<br><img width="1200px" src="https://github.com/user-attachments/assets/161c592d-3baa-469c-991e-538788a99d55"><br><br>
+                  SECURITY ENGINEER:<br>Security Architecture (72) - Threat Management (81) - Incident Response (71) - Identity Security (75) - Security Automation (84)<br><img width="1200px" src="https://github.com/user-attachments/assets/369afa87-a986-48b4-bdde-10b8375cc924"><br><br>
+                  FOUNDATIONAL<br>Security Operations (85) - Incident Response (74) - Malware Analysis (88) - Penetration Testing (85) - Exploitation (86) - Red Teaming (83)<br><img width="1200px" src="https://github.com/user-attachments/assets/7d6b6d86-8ef6-4dc1-ad41-ba4695e943b3"><br><br>
+</p>
+
+
 
 
 <h1 align="center">Thanks for coming!</h1>
