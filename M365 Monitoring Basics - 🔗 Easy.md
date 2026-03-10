@@ -372,13 +372,122 @@ index=scenario sourcetype="azure:aad:signin" "status.errorCode"=0 ipAddress="280
 > <em>What is the first application the attacker accessed after the office home page? Answer Format: The exact value of the <code>appDisplayName</code> field.</em><br><a id='4.4'></a>
 >> <strong><code>One Outlook Web</code></strong><br>
 
-
 <img width="1349" height="431" alt="image" src="https://github.com/user-attachments/assets/e1e9829b-c84d-4737-8619-b9e0dba2bc5e" />
 
 <br>
 <br>
 <br>
 <h2>Task 5 &nbsp;・&nbsp; Entra ID Audit Logs</h2> 
+
+<p>After confirming a compromised account, the next step is to identify the changes the attacker made to it. This is where you should use Audit Logs.<br>
+
+Audit logs capture administrative actions and changes made within the Entra ID environment. Below are some examples of post-compromise activities an attacker can perform, and you can hunt with logs:
+
+- Resetting passwords to maintain access<br>
+- Adding new MFA methods or devices<br>
+- Assigning privileged roles to escalate access<br>
+- Modifying user attributes<br>
+- Registering malicious applications</p>
+
+<h3>Hunting for Post-Compromise Activity</h3>
+<p>Within the same Splunk instance, you can use the following query to filter for Entra ID audit logs and see account or environment changes:</p>
+
+<br>
+<div align="center"><p>
+
+| List all Audit logs                                               |  
+|:-----------------------------------------------------------------:|
+
+</p></div>
+
+```bash
+index=scenario sourcetype="azure:aad:audit"
+```
+
+<p>Each event has its own particular properties, but you should pay additional attention to the fields below, since they appear in all events and can reveal what was changed, who changed, and the target:<br>
+
+- <code>activityDisplayName</code>: The detailed activity or action that was performed by a user or app. All activities that generate logs are documented on this Microsoft page (e.g., "Change user password", "Disable account").<br>
+- <code>initiatedBy</code>: The account or app that performed the action. When the source of the action is a user account, this field contains its email address. In the case of an app, it will have the app name.</p>
+
+```bash
+initiatedBy: {
+ app: {
+   appId: null
+   displayName: Microsoft password reset service // An app executed the change.
+   servicePrincipalId: d6871dee-b91e-42a7-b98e-beeb5357dfff
+   servicePrincipalName: null
+ }
+ user: null
+ }
+```
+
+<p>
+  
+- <code>targetResources</code>: The account or object that has been changed or affected by an action</p>
+
+```bash
+ targetResources: [
+ {
+   displayName: null
+   groupType: null
+   id: d15f0e8c-80f7-41c0-b861-207d79cbb734
+   modifiedProperties: [
+ {
+   displayName: ForceChangePassword
+   newValue: "True"
+   oldValue: "False"
+ }
+ {
+   displayName: Password // The Resource that was changed
+   newValue: null
+   oldValue: null
+ }
+   ]
+   type: User
+   userPrincipalName: email@example.thm // The target identity
+ }
+ ]
+```
+
+<p>With that context, you can query specifically for the changes related to the compromised account you found in the previous task by using its user email address and changing the <code>ADD-USER-EMAIL</code> placeholder in the following queries:</p>
+
+<br>
+<div align="center"><p>
+
+| List changes targeting a specific user                            |  
+|:-----------------------------------------------------------------:|
+
+</p></div>
+
+```bash
+index=scenario sourcetype="azure:aad:audit" targetResources{}.userPrincipalName="<ADD-USER-EMAIL>" 
+| eval initiator=coalesce('initiatedBy.user.userPrincipalName', 'initiatedBy.app.displayName')
+| sort - _time
+| table _time, initiator, activityDisplayName, result, targetResources{}.userPrincipalName
+```
+
+<br>
+<div align="center"><p>
+
+| List changes performed by a user                                  |  
+|:-----------------------------------------------------------------:|
+
+</p></div>
+
+```bash
+index=scenario sourcetype="azure:aad:audit" initiatedBy.user.userPrincipalName="<ADD-USER-EMAIL>" 
+| sort - _time
+| table _time, initiatedBy.user.userPrincipalName, activityDisplayName, result, targetResources{}.userPrincipalName
+```
+
+<p>You've now briefly learned how to leverage Entra ID logs to identify suspicious activity in a user account by checking its Sign-In logs and post-compromise activity using Audit logs.<br>
+
+In the next task, we'll explore Microsoft 365 (M365) logs to see what the attacker did after gaining access to cloud services like Outlook, Teams, and SharePoint.</p>
+
+<h4>Practice</h4>
+<p>For this task, you will answer a few questions about changes to the compromised account.<br>
+With the filter <code>index="scenario" sourcetype="azure:aad:audit"</code>, you will be able to see all Audit logs, but feel free to use any other queries you learned in this task.<br>
+Remember to search for <strong>All Time</strong> to find all log activity.</p>
 
 <h3 align="left"> $$\textcolor{#f00c17}{\textnormal{Answer the questions below}}$$ </h3>
 
@@ -427,7 +536,7 @@ index=scenario sourcetype="azure:aad:audit" initiatedBy.user.userPrincipalName="
 <br>
 
 > <em>What is the second change made in the account? Answer Format: Paste the exact value of the <code>activityDisplayName</code> field.</em> Hint: Remember that one change can generate multiple logs.<br><a id='5.3'></a>
->> <strong><code>   </code></strong><br>
+>> <strong><code>Reset password (self-service)</code></strong><br>
 
 ```bash
 index=scenario sourcetype="azure:aad:audit" targetResources{}.userPrincipalName="allan.smith@finegalo.thm"
@@ -455,36 +564,171 @@ index=scenario sourcetype="azure:aad:audit" initiatedBy.user.userPrincipalName="
 <br>
 <br>
 <h2>Task 6 &nbsp;・&nbsp; M365 Introduction</h2> 
+<p>You've confirmed the account is compromised through Entra ID logs. Now, the investigation shifts to what the attacker did with that access. While Entra ID tells you who authenticated, <strong>Microsoft 365 logs tell you what they did after</strong>.</p>
+
+<p>Microsoft 365 (M365) is a collection of cloud-based productivity and collaboration services tied to Entra ID identities. Once a user authenticates through Entra ID, they gain access to services like:<br>
+
+- <strong>Exchange Online (Outlook)</strong>: Email, calendars, and mailbox management<br>
+- <strong>SharePoint Online</strong>: Document storage, file sharing, and team sites.<br>
+- <strong>OneDrive</strong>: Personal cloud storage.<br>
+- <strong>Teams</strong>: Chat, meetings, and collaboration.<br>
+- <strong>Other services</strong>: Power BI, Dynamics, and various Microsoft apps.</p>
+
+<h6 align="center"><img width="900px" src="https://github.com/user-attachments/assets/63e34df5-0197-4e6d-9a45-dc7d962399d7"><br>This image and all the theoretical content of the present article is TryHackMe´s property.</h6>
+
+<h3>Why M365 is a High-Value Target</h3>
+<p>For an attacker with valid credentials, M365 services provide:<br>
+
+- <strong>Access to sensitive communications</strong>: Email contains business decisions, credentials, financial information, and confidential discussions.<br>
+- <strong>Document repositories</strong>: SharePoint and OneDrive store the company's intellectual property, customer data, and strategic plans.<br>
+- <strong>Persistence mechanisms</strong>: Mailbox rules, forwarding rules, and application permissions allow attackers to maintain access even after password changes.<br>
+- <strong>Further credential harvesting</strong>: Attackers can search for credentials, API keys, or sensitive information in emails and files.</p>
+
+<h3>M365 Relevant Logs</h3>
+<p>M365 generates detailed audit logs for user and administrative actions across all services. These logs are centralized in the <strong>Unified Audit Log</strong>, which captures events from Exchange, SharePoint, OneDrive, Teams, and other M365 services.<br>
+
+Below are some key log categories relevant to investigations:</p>
+
+<h4>Exchange (Mailbox) Logs:</h4>
+<p>
+
+- Mailbox access and email operations (read, send, delete)<br>
+- Mailbox rule creation (often used for persistence or email exfiltration)<br>
+- Mailbox permission changes<br>
+- Forwarding rule creation</p>
+
+
+<h4>SharePoint and OneDrive Logs:</h4>
+<p>
+  
+- File accessed, downloaded, or modified<br>
+- File sharing and permission changes<br>
+- Folder operations</p>
+
+<h4>General M365 Activity:</h4>
+<p>
+
+- Application permissions granted<br>
+- Service configurations changed<br>
+- Administrative actions performed</p>
+
+<p>The complete reference for M365 audit logs can be found <a href="https://learn.microsoft.com/en-us/purview/audit-log-activities">here</a>.</p>
 
 <h3 align="left"> $$\textcolor{#f00c17}{\textnormal{Answer the question below}}$$ </h3>
 
 > <em>Let's explore M365 logs!</em><br><a id='6.1'></a>
->> <strong><code>Prevention</code></strong><br>
+>> <strong><code>No answer needed</code></strong><br>
 <br>
 
 <br>
 <h2>Task 7 &nbsp;・&nbsp; M365 Audit Logs</h2> 
+<h3>Exploring M365 Logs</h3>
+<p>In the Splunk instance, you can filter M365 unified audit logs with:</p>
+
+<br>
+<div align="center"><p>
+
+| List all M365 Audit logs                                          |  
+|:-----------------------------------------------------------------:|
+
+</p></div>
+
+```bash
+index="scenario" sourcetype="o365:management:activity"
+```
+
+<p>Again, each event has its own specific structure, but below are key fields in M365 audit logs that appear in all log types:<br>
+
+- <code>Operation</code>: The specific action performed (e.g., "New-InboxRule", "FileAccessed", "Send").<br>
+- <code>UserId</code>: The account that performed the action, usually an email address.<br>
+- <code>ClientIP</code> or <code>ClientIPAddress</code>: The source IP address (Note that sometimes this information can be an Office 365 IP address. Ensure you always check the registrant for ClientIP).<br>
+- <code>Workload</code>: The M365 service where the action occurred (Exchange, SharePoint, OneDrive).<br>
+- <code>ObjectId</code>: The target resource (email address, file path, mailbox).</p>
+
+<h6 align="center"><img width="900px" src="https://github.com/user-attachments/assets/75e6ea81-f2a0-42ed-b1c3-9ada9f390b4c"><br>This image and all the theoretical content of the present article is TryHackMe´s property.</h6>
+
+<h3>Hunting for Post-Compromise M365 Activities</h3>
+<p>For your investigation into M365 logs, identifying suspicious activities on the compromised account is essential. You will further explore these attackers' techniques in this module. For now, here are some common post-compromise activities you should be aware of:</p>
+
+<h4>Mailbox Manipulation:</h4>
+<p>
+
+- Creation of inbox rules to delete, forward, or move emails<br>
+- Mass email deletion or moves to the deleted items<br>
+- Emails sent to external addresses<br>
+- Access from unusual IP addresses or locations</p>
+
+<h4>File Operations:</h4>
+<p>
+
+- Mass file downloads from SharePoint or OneDrive<br>
+- Access to sensitive or executive-level documents<br>
+- File sharing to external domains<br>
+- Downloads of files the user wouldn't normally access</p>
+
+<p>Below is an enhanced Splunk query that might help you as a starting point to identify what the attacker did with the user account you found in task 4 by replacing the <code>ADD-USER=EMAIL</code> placeholder:</p>
+
+<br>
+<div align="center"><p>
+
+| List actions performed by a user                                  |  
+|:-----------------------------------------------------------------:|
+
+</p></div>
+
+```bash
+index="scenario" sourcetype="o365:management:activity" UserId="<ADD-USER-EMAIL>"
+| sort - _time
+| eval sourceIP=coalesce('ClientIP', 'ClientIPAddress')
+| table _time, Operation, UserId, sourceIP, Workload, ObjectId
+```
+
+<h4>Practice</h4>
+<p>For this task, you will answer a few questions about the activities on the compromised account.<br>
+With the filter <code>index="scenario" sourcetype="o365:management:activity"</code>, you will be able to see all M365 audit logs, but feel free to use any other queries you learned in this task.<br>
+Remember to search for All Time to find all log activity.</p>
 
 <h3 align="left"> $$\textcolor{#f00c17}{\textnormal{Answer the questions below}}$$ </h3>
 
 > <em>What is the application used by the attacker? Answer Format: Paste the exact value of the <code>Workload</code> field.</em><br><a id='7.1'></a>
->> <strong><code>    </code></strong><br>
+>> <strong><code>Exchange</code></strong><br>
 
 ```bash
-mm
+index="scenario" sourcetype="o365:management:activity" UserId="allan.smith@finegalo.thm"
+| table _time Workload Operation Item.Subject ClientIPAddress ClientIP ClientAppId Folders{}.Path
+| sort by +_time
 ```
 
+<img width="1346" height="470" alt="image" src="https://github.com/user-attachments/assets/c35c2a1c-8f5e-4517-8f9f-ca5007666c6c" />
+
+
+<br>
+<br>
+<br>
+
+```bash
+index="scenario" sourcetype="o365:management:activity" UserId="allan.smith@finegalo.thm"
+| sort +_time
+| eval sourceIP=coalesce('ClientIP', 'ClientIPAddress')
+| table _time, Operation, UserId, sourceIP, Workload, ObjectId
+```
+
+<img width="1352" height="436" alt="image" src="https://github.com/user-attachments/assets/22e3b01d-e19b-4de2-bc92-8c4f749df83d" />
 
 <br>
 <br>
 <br>
 
 > <em>What is the change made in the user application by the attacker? Answer Format: Paste the exact value of the <code>Operation</code> field.</em><br><a id='7.2'></a>
->> <strong><code>    </code></strong><br>
+>> <strong><code>New-InboxRule</code></strong><br>
 
 ```bash
-mm
+index="scenario" sourcetype="o365:management:activity" UserId="allan.smith@finegalo.thm"
+| table _time Workload Operation Item.Subject ClientIPAddress ClientIP ClientAppId Folders{}.Path
+| sort by +_time
 ```
+
+<img width="1346" height="470" alt="image" src="https://github.com/user-attachments/assets/2018d2eb-5f88-45a2-8405-04a1bc917ffa" />
 
 
 <br>
@@ -492,36 +736,45 @@ mm
 <br>
 
 > <em>What is the subject of the email message sent by the attacker?</em><br><a id='7.3'></a>
->> <strong><code>    </code></strong><br>
+>> <strong><code>URGENT: Approval for new internal VPN Access</code></strong><br>
 
 ```bash
-mm
+index="scenario" sourcetype="o365:management:activity" UserId="allan.smith@finegalo.thm"
+| table _time Workload Operation Item.Subject ClientIPAddress ClientIP ClientAppId Folders{}.Path
+| sort by +_time
 ```
 
+<img width="1346" height="470" alt="image" src="https://github.com/user-attachments/assets/932aff09-1ff2-4d75-9710-5ecb2128e02c" />
 
 <br>
 <br>
 <br>
 
 > <em>When did the attacker access the response to the message? Answer Format: 1/12/25 1:15:00.000 PM (Exact Splunk <code>Time</code> value)</em> Hint: Explore the logs content beyond the queries you learned in this task. For example, remove the table function to explore raw logs.<br><a id='7.4'></a>
->> <strong><code>    </code></strong><br>
+>> <strong><code>2/11/26 6:20:09.000 PM</code></strong><br>
 
 ```bash
-mm
+index="scenario" sourcetype="o365:management:activity" 
+|  table _time user Folders{}.FolderItems{}.Subject Workload Operation Item.Subject ClientIPAddress ClientIP Folders{}.Path
+|  sort by +_time
 ```
 
+<img width="1347" height="556" alt="image" src="https://github.com/user-attachments/assets/82cb5ad7-4952-4580-acad-f76c4d21cb92" />
 
 <br>
 <br>
 <br>
 
 > <em>Which path was the response stored in? Answer Format: \PathName</em> HInt: Email answers usually starts with "Re:" in English conversations in outlook.<br><a id='7.5'></a>
->> <strong><code>    </code></strong><br>
+>> <strong><code>\Deleted Items</code></strong><br>
 
 ```bash
-mm
+index="scenario" sourcetype="o365:management:activity" UserId="allan.smith@finegalo.thm"
+| table _time Workload Operation Item.Subject ClientIPAddress ClientIP ClientAppId Folders{}.Path
+| sort by +_time
 ```
 
+<img width="1346" height="470" alt="image" src="https://github.com/user-attachments/assets/d878712c-5ca3-42ac-abd1-d91a32374969" />
 
 <br>
 <br>
