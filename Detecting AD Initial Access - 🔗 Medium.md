@@ -51,7 +51,7 @@ Active Directory changes the equation. In an AD environment, services like web a
 
 The diagram below illustrates the difference in impact between compromising a standalone server versus a service connected to Active Directory.</p>
 
-<img width="1101" height="444" alt="image" src="https://github.com/user-attachments/assets/4483002a-6b7a-4ddb-9fca-2642039f8e32" />
+<h6 align="center"><img width="900px" src="https://github.com/user-attachments/assets/4483002a-6b7a-4ddb-9fca-2642039f8e32"><br>This image and all the theoretical content of the present article is TryHackMe´s property.</h6>
 
 <p>We'll see how attacks can occur at the application layer before they ever reach Active Directory.</p>
 
@@ -60,29 +60,29 @@ The diagram below illustrates the difference in impact between compromising a st
 
 When a user logs into an IIS-hosted application, IIS passes the credentials to Active Directory for validation. Windows logs the result as Event 4624 (An account was successfully logged on) or Event 4625 (An account failed to log on). This means IIS authentication generates events in both the IIS access logs and the Windows Security logs on the web server, while the Domain Controller logs Event 4776 for credential validation, as shown in the diagram below.</p>
 
-<img width="776" height="218" alt="image" src="https://github.com/user-attachments/assets/23211d8b-fc3e-490a-a157-a4b2535dd8a9" />
+<h6 align="center"><img width="900px" src="https://github.com/user-attachments/assets/23211d8b-fc3e-490a-a157-a4b2535dd8a9"><br>This image and all the theoretical content of the present article is TryHackMe´s property.</h6>
 
 <h3>IIS Log Basics</h3>
 <p>IIS stores access logs in C:\inetpub\logs\LogFiles\W3SVC1 by default. Each log file contains one line per HTTP request.</p>
 
-<img width="2206" height="1066" alt="image" src="https://github.com/user-attachments/assets/0daf441b-9448-4b0c-86b7-afbc237bbd58" />
+<h6 align="center"><img width="600px" src="https://github.com/user-attachments/assets/0daf441b-9448-4b0c-86b7-afbc237bbd58"><br>This image and all the theoretical content of the present article is TryHackMe´s property.</h6>
 
-<img width="3492" height="1122" alt="image" src="https://github.com/user-attachments/assets/9323d650-a2b3-48bc-ae10-b454fdbede86" />
+<h6 align="center"><img width="900px" src="https://github.com/user-attachments/assets/9323d650-a2b3-48bc-ae10-b454fdbede86"><br>This image and all the theoretical content of the present article is TryHackMe´s property.</h6>
 
 <p> Important note: IIS records all timestamps in UTC, regardless of the server's local time zone. This matters when we correlate IIS entries with Windows Security events, which use the machine's local time zone.<br>
 
 Not every field in the log is relevant for us, so here are the ones worth focusing on</p>
+
+<h6 align="center"><img width="900px" src="https://github.com/user-attachments/assets/d7efa56f-ec6b-4dad-a9de-460964a4ddd3"><br>This image and all the theoretical content of the present article is TryHackMe´s property.</h6>
 
 <p>We don't need to memorize them as we'll use them in the following investigation tasks.</p>
 
 <h3>Normal vs Suspicious IIS Patterns</h3>
 <p>Before we move on, this table shows what normal IIS traffic looks like compared to patterns that should raise our attention:</p>
 
-
+<h6 align="center"><img width="900px" src="https://github.com/user-attachments/assets/54b328b4-3d02-4692-9fd8-de9c8dcc4015"><br>This image and all the theoretical content of the present article is TryHackMe´s property.</h6>
 
 <p>When analyzing IIS logs, we should first look for deviations from these normal patterns. For example, a flood of authentication failures from a single IP or POST requests to files in unexpected directories are both red flags and require investigation.</p>
-
-
 
 <br>
 
