@@ -25,7 +25,7 @@ Each scenario uses a different application log source, but they share a common p
   
 - <strong>Active Directory</strong>: How users, groups, and authentication work (<a href="https://tryhackme.com/room/winadbasics">Active Directory Basics</a> room)<br>
 - <strong>Windows Event Logs</strong>: Reading and filtering Security events (<a href="https://tryhackme.com/room/windowseventlogs">Windows Event Logs</a> room)<br>
-- <strong>Splunk</strong>: Writing SPL queries to search and filter log data (<a href="hhttps://tryhackme.com/room/splunkexploringspl">Splunk: Exploring SPL</a> room)<br>
+- <strong>Splunk</strong>: Writing SPL queries to search and filter log data (<a href="https://tryhackme.com/room/splunkexploringspl">Splunk: Exploring SPL</a> room)<br>
 - <strong>AD Monitoring</strong>: Understanding the main Event IDs needed to know what's normal in AD to detect abnormal (<a href="https://tryhackme.com/room/monitoringactivedirectory">Monitoring Active Directory</a> room)</p>
 
 <h3>Machine Access</h3>
@@ -43,6 +43,47 @@ https://LAB_WEB_URL.p.thmlabs.com</p>
 
 <br>
 <h2>Task 2 &nbsp;・&nbsp; Understanding IIS and Its Logs</h2> 
+
+<h3>Why AD Changes the Attack Surface</h3>
+<p>Consider a standalone web server. An attacker can exploit a vulnerability in the web application, brute-force an exposed login page, or phish an admin for credentials. All of these are serious, but the damage stays on that one machine.<br>
+
+Active Directory changes the equation. In an AD environment, services like web applications, Exchange email, and VPN gateways all authenticate users against the same central directory. Each of these services becomes a potential entry point, not just to the service itself, but to every resource in the domain.<br>
+
+The diagram below illustrates the difference in impact between compromising a standalone server versus a service connected to Active Directory.</p>
+
+<img width="1101" height="444" alt="image" src="https://github.com/user-attachments/assets/4483002a-6b7a-4ddb-9fca-2642039f8e32" />
+
+<p>We'll see how attacks can occur at the application layer before they ever reach Active Directory.</p>
+
+<h3>What IIS Is and Why It Matters</h3>
+<p>Internet Information Services (IIS) is Microsoft's web server platform. Exchange, SharePoint, ADFS, and many internal business applications all run on IIS. Any of these applications can become an initial access point if an attacker finds a vulnerability to exploit.<br>
+
+When a user logs into an IIS-hosted application, IIS passes the credentials to Active Directory for validation. Windows logs the result as Event 4624 (An account was successfully logged on) or Event 4625 (An account failed to log on). This means IIS authentication generates events in both the IIS access logs and the Windows Security logs on the web server, while the Domain Controller logs Event 4776 for credential validation, as shown in the diagram below.</p>
+
+<img width="776" height="218" alt="image" src="https://github.com/user-attachments/assets/23211d8b-fc3e-490a-a157-a4b2535dd8a9" />
+
+<h3>IIS Log Basics</h3>
+<p>IIS stores access logs in C:\inetpub\logs\LogFiles\W3SVC1 by default. Each log file contains one line per HTTP request.</p>
+
+<img width="2206" height="1066" alt="image" src="https://github.com/user-attachments/assets/0daf441b-9448-4b0c-86b7-afbc237bbd58" />
+
+<img width="3492" height="1122" alt="image" src="https://github.com/user-attachments/assets/9323d650-a2b3-48bc-ae10-b454fdbede86" />
+
+<p> Important note: IIS records all timestamps in UTC, regardless of the server's local time zone. This matters when we correlate IIS entries with Windows Security events, which use the machine's local time zone.<br>
+
+Not every field in the log is relevant for us, so here are the ones worth focusing on</p>
+
+<p>We don't need to memorize them as we'll use them in the following investigation tasks.</p>
+
+<h3>Normal vs Suspicious IIS Patterns</h3>
+<p>Before we move on, this table shows what normal IIS traffic looks like compared to patterns that should raise our attention:</p>
+
+
+
+<p>When analyzing IIS logs, we should first look for deviations from these normal patterns. For example, a flood of authentication failures from a single IP or POST requests to files in unexpected directories are both red flags and require investigation.</p>
+
+
+
 <br>
 
 <h3 align="left"> $$\textcolor{#f00c17}{\textnormal{Answer the question below}}$$ </h3>
@@ -130,7 +171,7 @@ index=iis cs_uri_stem="*aspnet_client/*"
 <h3 align="left"> $$\textcolor{#f00c17}{\textnormal{Answer the questions below}}$$ </h3>
 
 > <em>How many failed login attempts occurred during the OWA brute-force attack?</em><br><a id='5.1'></a>
->> <code>   </code></strong><br>
+>> <code>15</code></strong><br>
 
 ```bash
 index=iis cs_uri_stem="/owa/auth.owa" cs_method=POST
@@ -141,6 +182,27 @@ index=iis cs_uri_stem="/owa/auth.owa" cs_method=POST
 ```
 
 <img width="1270" height="334" alt="image" src="https://github.com/user-attachments/assets/20544de9-a1b7-49fe-8da0-e8df23f6d31e" />
+
+
+```bash
+index=win EventCode=4625 Logon_Type=8
+| table _time, EventCode, user, Process_Name, Logon_Type
+| sort _time
+```
+
+<img width="1283" height="644" alt="image" src="https://github.com/user-attachments/assets/988cbedb-089a-42bf-88f9-97294bb69263" />
+
+<br>
+<br>
+
+```bash
+index=win EventCode=4625 Logon_Type=8
+| stats count by user
+| sort -count
+```
+
+<img width="1279" height="294" alt="image" src="https://github.com/user-attachments/assets/49d3f7ca-ee01-434d-ba23-e34688b6df47" />
+
 
 <br>
 <br>
@@ -153,6 +215,9 @@ index=win EventCode=4625
 | stats count by user, Logon_Type
 | sort - count
 ```
+
+<img width="1283" height="644" alt="image" src="https://github.com/user-attachments/assets/f8e72568-4208-488d-907e-46dbe25a1b83" />
+
 
 <img width="1267" height="369" alt="image" src="https://github.com/user-attachments/assets/58915438-ae67-44a3-baac-f0583e0d1429" />
 
