@@ -185,8 +185,8 @@ index=iis cs_uri_stem="/owa/auth.owa" cs_method=POST
 
 
 ```bash
-index=win EventCode=4625 Logon_Type=8
-| table _time, EventCode, user, Process_Name, Logon_Type
+index=win EventCode=4625 <code>Logon_Type</code>=8
+| table _time, EventCode, user, Process_Name, <code>Logon_Type</code>
 | sort _time
 ```
 
@@ -196,7 +196,7 @@ index=win EventCode=4625 Logon_Type=8
 <br>
 
 ```bash
-index=win EventCode=4625 Logon_Type=8
+index=win EventCode=4625 <code>Logon_Type</code>=8
 | stats count by user
 | sort -count
 ```
@@ -212,7 +212,7 @@ index=win EventCode=4625 Logon_Type=8
 
 ```bash
 index=win EventCode=4625
-| stats count by user, Logon_Type
+| stats count by user, <code>Logon_Type</code>
 | sort - count
 ```
 
@@ -226,7 +226,7 @@ index=win EventCode=4625
 
 ```bash
 index=win EventCode=4625
-| stats count by user, Logon_Type
+| stats count by user, <code>Logon_Type</code>
 | sort - count
 ```
 
@@ -236,8 +236,8 @@ index=win EventCode=4625
 <br>
 
 ```bash
-index=win EventCode IN (4624, 4625) user="sarah.kim" Logon_Type=8
-| table _time, EventCode, user, Process_Name, Logon_Type
+index=win EventCode IN (4624, 4625) user="sarah.kim" <code>Logon_Type</code>=8
+| table _time, EventCode, user, Process_Name, <code>Logon_Type</code>
 | sort +_time
 ```
 
@@ -413,9 +413,33 @@ index=iis cs_method="POST"
 <br>
 
 > <em>At what time was the web shell file created on the server? (Answer Format: HH:MM:SS)</em> Hint: Check Sysmon file creation events<br><a id='8.4'></a>
->> <code>david.chen2</code></strong><br>
+>> <code>10:40:33</code></strong><br>
+
+```bash
+index=win SourceName=Microsoft-Windows-Sysmon EventCode=11 "error.aspx"
+```
+
+<img width="1284" height="526" alt="image" src="https://github.com/user-attachments/assets/f344cf25-35af-4c50-8a8a-72a230b8841c" />
 
 
+<br>
+<h2>Task 9 &nbsp;・&nbsp; Conclusion</h2> 
+<p>This room covered three attack surfaces, three application log sources, and a consistent investigation approach. Every service we looked at, whether it was IIS, Exchange, or VPN, authenticates against Active Directory. And every attack left traces in both the application logs and the Windows Security logs.</p>
 
+<h3>Takeaways</h3>
+
+<p>
+
+- IIS logs capture source IPs, URI paths, and request patterns that Windows Security events miss, making them essential for detecting web shell interaction and credential attacks against OWA.<br>
+- The <code>w3wp.exe</code> spawning <code>cmd.exe</code> or <code>powershell.exe</code> pattern catches web shell activity regardless of the vulnerability exploited.<br>
+- NPS Events 6272/6273 exhibit the same failed/succeeded pattern for VPN authentication as IIS does for web applications, so the investigation methodology transfers directly.<br>
+- VPN credential attacks aren't always brute force. Stolen credentials produce no failure cluster, making post-authentication activity the primary detection opportunity.<br>
+- Correlation across application logs, Windows Security events, and post-authentication checks on internal hosts builds the complete picture from initial attack to impact.<br>
+- The <code>Logon_Type</code> field in Event 4624 helps work backwards from AD alerts: Type 8 points to IIS, Type 3 from unexpected sources can indicate VPN compromise.</p>
+
+<h3 align="left"> $$\textcolor{#f00c17}{\textnormal{Answer the questions below}}$$ </h3>
+
+> <em>Great work! You have completed the Detecting AD Initial Access room.</em><br><a id='9.1'></a>
+>> <code>No answer needed/code></strong><br>
 
 
