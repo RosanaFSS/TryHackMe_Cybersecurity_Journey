@@ -229,7 +229,7 @@ $_SERVER['REQUEST_TIME']| 1773602644
 <br>
 <p> 
 
-- Click <code>pass.txt</code></p>
+- Click <code>pass.txt</code>.</p>
 
 ```bash
 Admin password hint :-
@@ -245,7 +245,7 @@ admin__admin
 <br>
 <p>
 
-- Register tour account in safezone.thm/register.php</p>
+- Register tour account in safezone.thm/register.php.</p>
 
 <img width="996" height="463" alt="image" src="https://github.com/user-attachments/assets/d96daf64-4b6b-4380-830a-d876667136fe" />
 
@@ -253,7 +253,7 @@ admin__admin
 <br>
 <p>
 
-- Log in safezone.thm/index.php</p>
+- Log in safezone.thm/index.php.</p>
 
 <img width="1004" height="278" alt="image" src="https://github.com/user-attachments/assets/592e08ba-c279-4809-9124-2dd4e00407d8" />
 
@@ -261,7 +261,7 @@ admin__admin
 <br>
 <p>
 
-- Inspect HTTP history in Burp Suite</p>
+- Inspect HTTP history in Burp Suite.</p>
 
 <img width="1071" height="404" alt="image" src="https://github.com/user-attachments/assets/3932eaf8-660b-4ff5-9648-3b3d9a32000c" />
 
@@ -269,13 +269,13 @@ admin__admin
 <br>
 <p>
 
-- Send Request to Intruder<br>
-- Add <code>admin</code> as username<br>
-- Add <code>admin&a&admin</code><br>
-- Select <code>Simple list</code> as Payload type<br>
-- Click <code>Load...</code><br>
-- Browse and Open the <code>list.txt</code> created previously<br>
-- Click <code>Start attack</code></p>
+- Send Request to Intruder.<br>
+- Add <code>admin</code> as username.<br>
+- Add <code>admin&a&admin</code>.<br>
+- Select <code>Simple list</code> as Payload type.<br>
+- Click <code>Load...</code>.<br>
+- Browse and Open the <code>list.txt</code> created previously.<br>
+- Click <code>Start attack</code>.</p>
 
 <img width="1069" height="328" alt="image" src="https://github.com/user-attachments/assets/16d39cd4-e180-4562-b7d0-656f3fefe30d" />
 
@@ -283,9 +283,9 @@ admin__admin
 <br>
 <p>
 
-- Check the <strong>Results</strong><br>
-- Log out<br>
-- Log in as <code>admin</code> and the password just discovered</p>
+- Check the <strong>Results</strong>.<br>
+- Log out.<br>
+- Log in as <code>admin</code> and the password just discovered.</p>
 
 <img width="999" height="256" alt="image" src="https://github.com/user-attachments/assets/d624bcfc-3f9b-47c6-9c6c-ee6c6acde232" />
 
@@ -293,7 +293,7 @@ admin__admin
 <br>
 <p>
 
-- Select <code>Details</code></p>
+- Select <code>Details</code>.</p>
 
 <img width="1003" height="349" alt="image" src="https://github.com/user-attachments/assets/6742614f-3de5-4d47-ba9d-2828e3387f14" />
 
@@ -301,10 +301,10 @@ admin__admin
 <br>
 <p>
 
-- Enter <code>admin</code><br>
-- Hit <code>whoami</code><br>
-- Check Burp Suite´s HTTP history<br>
-- Identify that <code>dashboard.php</code> is active</p>
+- Enter <code>admin</code>.<br>
+- Hit <code>whoami</code>.<br>
+- Check Burp Suite´s HTTP history.<br>
+- Identify that <code>dashboard.php</code> is active.</p>
 
 <img width="1005" height="375" alt="image" src="https://github.com/user-attachments/assets/b301029a-e589-4c94-92a1-6f8f00a8ea25" />
 
@@ -321,7 +321,7 @@ admin__admin
 
 <br>
 <br>
-<p>http://safezone.thm/detail.php?page=index.html</p>
+<p>safezone.thm/detail.php?page=index.html</p>
 
 <img width="1012" height="515" alt="image" src="https://github.com/user-attachments/assets/429a3909-49b6-447a-96a3-8afc4a13d145" />
 
@@ -329,8 +329,8 @@ admin__admin
 <br>
 <p>
 
-- Navigate to safezone.thm/detail.php?page=/etc/passwd<br>
-- Discover users <code>root</code>, <code>files</code>, and <code>ubuntu</code></p>
+- Navigate to safezone.thm/detail.php?page=/etc/passwd.<br>
+- Discover users <code>root</code>, <code>files</code>, and <code>ubuntu</code>.</p>
 
 <img width="1120" height="584" alt="image" src="https://github.com/user-attachments/assets/7370f182-2857-4e8a-a8fe-d78f86d54328" />
 
@@ -346,7 +346,7 @@ admin__admin
 <br>
 <p>
 
-- Decode the output via <code>CyberChef</code></p>
+- Decode the output via <code>CyberChef</code>.</p>
 
 ```bash
 php://filter/convert.base64-encode/resource=detail.phpPCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KDQo8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9InN0eWxlLmNzcyI+DQoNCjx0aXRsZT5VU0VSPC90aXRsZT4NCjxzdHlsZT4NCg0KLmF2YXRhciB7DQogICBtYXJnaW4tbGVmdDoxMHB4Ow0KICAgbWFyZ2luLXRvcDo4MHB4Ow0KICAgdmVydGljYWwtYWxpZ246IG1pZGRsZTsNCiAgIHdpZHRoOiA1MHB4Ow0KICAgaGVpZ2h0OiA1MHB4Ow0KICAgYm9yZGVyLXJhZGl1czogNTAlOw0KICAgYm9yZGVyOjNweCBzb2xpZCBibGFjazsNCn0NCnVsIHsNCiAgbGlzdC1zdHlsZS10eXBlOiBub25lOw0KICBtYXJnaW46IDA7DQogIHBhZGRpbmc6IDA7DQogIG92ZXJmbG93OiBoaWRkZW47DQogIGJhY2tncm91bmQtY29sb3I6ICMzMzM7DQp9DQoNCmxpIHsNCiAgZmxvYXQ6IGxlZnQ7DQp9DQoNCmxpIGEgew0KICBkaXNwbGF5OiBibG9jazsNCiAgY29sb3I6IHdoaXRlOw0KICB0ZXh0LWFsaWduOiBjZW50ZXI7DQogIHBhZGRpbmc6IDE0cHggMTZweDsNCiAgdGV4dC1kZWNvcmF0aW9uOiBub25lOw0KfQ0KDQpsaSBhOmhvdmVyIHsNCiAgYmFja2dyb3VuZC1jb2xvcjogIzExMTsNCg0KDQp9DQo8L3N0eWxlPg0KDQo8L2hlYWQ+DQo8Ym9keSBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjpibGFjayI+DQo8dWw+DQogIDxsaT48YSBjbGFzcz0iYWN0aXZlIiBocmVmPSJkYXNoYm9hcmQucGhwIj5Ib21lPC9hPjwvbGk+DQogIDxsaT48YSBocmVmPSJuZXdzLnBocCI+TmV3czwvYT48L2xpPg0KICA8bGk+PGEgaHJlZj0iY29udGFjdC5waHAiPkNvbnRhY3Q8L2E+PC9saT4NCiAgPGxpPjxhIGhyZWY9ImRldGFpbC5waHAiPkRldGFpbHM8L2E+PC9saT4NCiAgPGxpPjxhIGhyZWY9ImxvZ291dC5waHAiPkxvZ291dDwvYT48L2xpPg0KPC91bD4NCg0KDQo8YnI+PGJyPjxicj48YnI+PGJyPg0KPC9ib2R5Pg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCjwhLS0gdHJ5IHRvIHVzZSAicGFnZSIgYXMgR0VUIHBhcmFtZXRlci0tPg0KPC9odG1sPg0KDQo8P3BocA0KJGNvbj1teXNxbGlfY29ubmVjdCgibG9jYWxob3N0Iiwicm9vdCIsIm15cm9vdHBhc3MiLCJkYiIpOw0Kc2Vzc2lvbl9zdGFydCgpOw0KaWYoaXNzZXQoJF9TRVNTSU9OWydJU19MT0dJTiddKSkNCnsNCiRpc19hZG1pbj0kX1NFU1NJT05bJ2lzYWRtaW4nXTsNCmVjaG8gIjxoMiBzdHlsZT0nY29sb3I6VG9tYXRvO21hcmdpbi1sZWZ0OjEwMHB4O21hcmdpbi10b3A6LTgwcHgnPkZpbmQgb3V0IHdobyB5b3UgYXJlIDopIDwvaDI+IjsNCmVjaG8gIjxicj48YnI+PGJyPiI7DQppZigkaXNfYWRtaW49PT0idHJ1ZSIpDQp7DQplY2hvICc8ZGl2IHN0eWxlPSJhbGlnbjpjZW50ZXI7IiBjbGFzcz0iZGl2ZiI+JzsNCmVjaG8gJzxmb3JtIGNsYXNzPSJib3giIG1ldGhvZD0iUE9TVCIgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyIj4nOw0KZWNobyAnPGlucHV0IHJlcXVpcmVkIEFVVE9DT01QTEVURT0iT0ZGIiBzdHlsZT0idGV4dC1hbGlnbjpjZW50ZXI7IiB0eXBlPSJ0ZXh0IiBwbGFjZWhvbGRlcj0idXNlciIgbmFtZT0ibmFtZSI+PGJyPjxicj4nOw0KZWNobyAnPGlucHV0IHR5cGU9InN1Ym1pdCIgdmFsdWU9Indob2FtaSIgbmFtZT0ic3ViIj4nOw0KZWNobyAnPC9mb3JtPic7DQplY2hvICc8L2Rpdj4nOw0KaWYoaXNzZXQoJF9HRVRbInBhZ2UiXSkpDQp7DQoJCSRwYWdlPSRfR0VUWyJwYWdlIl07DQoJCSRmaWxlID0gc3RyX3JlcGxhY2UoYXJyYXkoICIuLi8iLCAiLi5cIiIgKSwgIiIsICRwYWdlICk7DQoJCWVjaG8gJGZpbGU7DQoJCWluY2x1ZGUoJGZpbGUpOw0KfQ0KJGZvcm11c2VyPW15c3FsaV9yZWFsX2VzY2FwZV9zdHJpbmcoJGNvbiwkX1BPU1RbJ25hbWUnXSk7DQppZihpc3NldCgkX1BPU1RbJ3N1YiddKSkNCgl7DQoJCSRzcWw9InNlbGVjdCAqIGZyb20gdXNlciB3aGVyZSB1c2VybmFtZT0nJGZvcm11c2VyJyI7DQogICAgICAgICAgICAgICAgJGRldGFpbHMgPSBteXNxbGlfZmV0Y2hfYXNzb2MobXlzcWxpX3F1ZXJ5KCRjb24sJHNxbCkpOw0KCQkkZGV0PWpzb25fZW5jb2RlKCRkZXRhaWxzKTsNCgkJZWNobyAiPHByZSBzdHlsZT0nY29sb3I6cmVkO2ZvbnQtc2l6ZToxNHB4Jz4kZGV0PC9wcmU+IjsNCgkJJG1zZz0iRGV0YWlscyBhcmUgc2F2ZWQgaW4gYSBmaWxlIjsNCgkJZWNobyAiPHNjcmlwdD5hbGVydCgnZGV0YWlscyBzYXZlZCBpbiBhIGZpbGUnKTwvc2NyaXB0PiI7DQoJfQ0KfQ0KZWxzZQ0Kew0KZWNobyAiPGgzIHN0eWxlPSdjb2xvcjpyZWQ7dGV4dC1hbGlnbjpjZW50ZXInPllvdSBjYW4ndCBhY2Nlc3MgdGhpcyBmZWF0dXJlISc8L2gzPiI7DQp9DQp9DQplbHNlDQp7DQpoZWFkZXIoJ0xvY2F0aW9uOiBpbmRleC5waHAnKTsNCn0NCg0KPz4NCg==
@@ -358,7 +358,7 @@ php://filter/convert.base64-encode/resource=detail.phpPCFET0NUWVBFIGh0bWw+DQo8aH
 <br>
 <p>
 
-- Note that the message <code>details saved in a file</code> is provided for some inputs you submit<br>
+- Note that the message <code>details saved in a file</code> is provided for some inputs you submit.<br>
 - The files are NOT saved anywhere.</p>
 
 ```bash
