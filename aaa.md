@@ -28,7 +28,20 @@ Nmap done: 1 IP address (1 host up) scanned in 7.40 seconds
 ```
 
 <br>
+<h1>Vulnerability Scanning</h1>
+
+```bash
+:~/challenge# nikto -h http://safezone.thm
+...
+```
+
+<br>
 <h1>Directory and File Enumeration</h1>
+
+```bash
+:~/challenge# gobuster dir -u http://safezone.thm/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x .php,.html,.txt,.bak
+
+```
 
 ```bash
 :~/challenge# gobuster dir -u http://safezone.thm/ -w /usr/share/dirb/wordlists/common.txt -t 60 -q -x php,html --exclude-length 277
@@ -124,7 +137,9 @@ Finished
 <h1>Web Discovery</h1>
 
 <br>
-<p>safezone.thm</p>
+<p>
+	
+- Navigate to <code>safezone.thm</code></p>
 
 ```bash
 <html>
@@ -146,7 +161,8 @@ ___/ / /_/ / __/  __/ / /_/ /_/ / / / /  __/
 ```
 
 <br>
-<p>safezone.thm/note.txt</p>
+
+- Navigate to <code>safezone.thm/note.txt</code></p>
 
 ```bash
 :~/challenge# curl http://safezone.thm/note.txt
@@ -155,12 +171,16 @@ Message from admin :-
 I can't remember my password always , that's why I have saved it in /home/files/pass.txt file .
 ```
 
+<br>
+
 ```bash
 :~/challenge# pip3 install html2text
 ```
 
 <br>
-<p>safezone.thm/test.php</p>
+<p>
+	
+- Navigate to <code>safezone.thm/test.php</code></p>
 
 ```bash
 :~/challenge# curl http://safezone.thm/test.php | html2text > test.txt
@@ -168,6 +188,8 @@ I can't remember my password always , that's why I have saved it in /home/files/
                                  Dload  Upload   Total   Spent    Left  Speed
 100 72852    0 72852    0     0   197k      0 --:--:-- --:--:-- --:--:--  197k
 ```
+
+<br>
 
 ```bash
 :~/challenge# grep -i "/var/www/" test.txt
@@ -178,6 +200,8 @@ $_SERVER['DOCUMENT_ROOT']| /var/www/html
 $_SERVER['CONTEXT_DOCUMENT_ROOT']| /var/www/html  
 $_SERVER['SCRIPT_FILENAME']| /var/www/html/test.php  
 ```
+
+<br>
 
 ```bash
 :~/challenge# grep -i "SERVER" test.txt
@@ -221,7 +245,10 @@ $_SERVER['REQUEST_TIME_FLOAT']| 1773602644.143
 $_SERVER['REQUEST_TIME']| 1773602644  
 ```
 
-<p>safezone.thm/~files/</p>
+<br>
+<p>
+	
+- Navigate to <code>safezone.thm/~files/</code></p>
 
 <img width="1017" height="284" alt="image" src="https://github.com/user-attachments/assets/9589e87b-d618-4ffe-9a27-396bfda5d27e" />
 
@@ -245,7 +272,7 @@ admin__admin
 <br>
 <p>
 
-- Register tour account in safezone.thm/register.php.</p>
+- Register an account in safezone.thm/register.php.</p>
 
 <img width="996" height="463" alt="image" src="https://github.com/user-attachments/assets/d96daf64-4b6b-4380-830a-d876667136fe" />
 
@@ -253,7 +280,8 @@ admin__admin
 <br>
 <p>
 
-- Log in safezone.thm/index.php.</p>
+- Log in safezone.thm/index.php.<br>
+- Note <code>Welcome YOUR_USERNAME!</code></p>
 
 <img width="1004" height="278" alt="image" src="https://github.com/user-attachments/assets/592e08ba-c279-4809-9124-2dd4e00407d8" />
 
@@ -261,15 +289,24 @@ admin__admin
 <br>
 <p>
 
-- Inspect HTTP history in Burp Suite.</p>
+- Access <code>News</code> and get <code>I have something to tell you, it´s about LFI or is it RCE or something else?</code><br>
+- Access <code>Details</code> (detail.php) and get <code>Find out who you are :)</code>  -> <code>You can´t access this feature!'</code>.  Note the <code>'</code>.<br>
+- View the source code of <code>detail.php</code> and discover <code>try to use "page" as GET parameter</code>.</p>
+
+<br>
+<p>
+
+- Inspect your account login in Burp Suite´s HTTP history.</p>
 
 <img width="1071" height="404" alt="image" src="https://github.com/user-attachments/assets/3932eaf8-660b-4ff5-9648-3b3d9a32000c" />
 
 <br>
 <br>
+
+
 <p>
 
-- Send Request to Intruder.<br>
+- Send your login Request to Burp Suite´s Intruder.<br>
 - Add <code>admin</code> as username.<br>
 - Add <code>admin&a&admin</code>.<br>
 - Select <code>Simple list</code> as Payload type.<br>
