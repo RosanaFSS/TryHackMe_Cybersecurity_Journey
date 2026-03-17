@@ -3,7 +3,7 @@
 <em>Introducing defensive security, what it involves and looks like within the real-world, as well as the technologies involved.</em>.<br>
 <img width="80px" src="https://github.com/user-attachments/assets/16659329-ae98-4af2-aed2-fa857366c5dd"><br>
 Access it <a href="https://tryhackme.com/room/defensivesecurityintroQR">here</a>.<br>
-<img width="1200px" src="https://github.com/user-attachments/assets/da650cff-25e9-46ac-a522-24a93776fa8e"></p>
+<img width="1200px" src="https://github.com/user-attachments/assets/da650cff-25e9-46ac-a522-24a93776fa8e"></p> 
 
 <h2>Task 1 . Introduction to Defensive Security</h2>
 
