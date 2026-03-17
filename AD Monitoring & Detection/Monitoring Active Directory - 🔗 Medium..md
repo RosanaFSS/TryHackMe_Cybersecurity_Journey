@@ -1,6 +1,6 @@
 <h1 align="center"><a href="https://tryhackme.com/room/monitoringactivedirectory">Monitoring Active Directory</a></h1>
 <p align="center">If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://githubhttps://github.com/user-attachments/assets/f9d56f26-bf87-4309-b5d8-f98cbb0302b0com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20MAR%204-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p>
-<p align="center"><img width="585px" src="https://github.com/user-attachments/assets/ae434338-1afa-4cfd-945d-6b67421bce4a"><br>It´s a premium medium-level walkthrough. Let's get started!</p>
+<p align="center"><img width="585px" src="https://github.com/user-attachments/assets/ae434338-1afa-4cfd-945d-6b67421bce4a"><br>It´s a premium medium-level walkthrough. Let's get started!</p> 
 
 
 <h2>Task 1 &nbsp;・&nbsp; Introduction</h2> 
