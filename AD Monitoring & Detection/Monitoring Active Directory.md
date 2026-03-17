@@ -43,20 +43,44 @@ This room answers that question by teaching us to monitor AD from a defender's p
 <p>2.1. Read the above and click Check.<br>
 <code>No answer needed</code></p>
 
+<br>
+
+```bash
+index=* EventCode=4720
+| table _time, SAM_Account_Name, Subject_Account_Name
+```
+
 <img width="1270" height="283" alt="image" src="https://github.com/user-attachments/assets/8307e640-6aa1-4139-8f04-d6371b99ea84" />
 
 <br>
 <br>
+
+```bash
+index=* EventCode=4624
+| stats count by Logon_Type
+| sort -count
+```
 
 <img width="1272" height="399" alt="image" src="https://github.com/user-attachments/assets/4506e197-e2ef-40d5-83c0-ffd8b685a628" />
 
 <br>
 <br>
 
+```bash
+index=* (EventCode=4728 OR EventCode=4732 OR EventCode=4756)
+| table _time, Member_Account_Name, Group_Name, Subject_Account_Name
+```
+
 <img width="1275" height="293" alt="image" src="https://github.com/user-attachments/assets/56ee950c-0327-4177-b598-1b05669a194e" />
 
 <br>
 <br>
+
+```bash
+index=task2 (HeadObject OR GetObject) requestParameters.bucketName=secretbucket userIdentity.accountId=anonymous
+| fillnull value=Success erroMessage
+| timechart span=30s count by errorMessage
+```
 
 <img width="1342" height="630" alt="image" src="https://github.com/user-attachments/assets/9213d2bd-7c4c-44d5-bfbd-22c3e87c4cf1" />
 
@@ -91,15 +115,33 @@ This room answers that question by teaching us to monitor AD from a defender's p
 <p>4.2. A local user authenticates to a workstation. Will this generate any events on the Domain Controller? (Answer Format: Yea or Nay)<br>
 <code>3</code></p>
 
+<br>
+
+```bash
+index=* EventCode=4720
+| table _time, SAM_Account_Name, Subject_Account_Name
+```
+
 <img width="1276" height="290" alt="image" src="https://github.com/user-attachments/assets/22197e06-54b0-4ee4-8bf7-03ed612b4e8d" />
 
 <br>
 <br>
 
+```bash
+index=* (EventCode=4728 OR EventCode=4732 OR EventCode=4756)
+| table _time, Member_Account_Name, Group_Name, Subject_Account_Name
+```
+
 <img width="1274" height="285" alt="image" src="https://github.com/user-attachments/assets/09dfa88a-cb56-4e85-954d-2249c4607254" />
 
 <br>
 <br>
+
+```bash
+index=* EventCode=4624
+| stats count by Logon_Type
+| sort -count
+```
 
 <img width="1276" height="394" alt="image" src="https://github.com/user-attachments/assets/0372d211-fafa-4abb-959b-456d6bf16ce2" />
 
@@ -116,15 +158,36 @@ This room answers that question by teaching us to monitor AD from a defender's p
 <p>5.2. Using Event ID 4769, what is the MOST frequently requested service?<br>
 <code>THM-DC$</code></p>
 
+<br>
+
+```bash
+index=* EventCode IN (4624, 4768, 4769)
+| eval AccountType=if(like(Account_Name, "%$%"), "Computer Account", "User Account")
+| stats count by AccountType, EventCode
+| sort AccountType, -count
+```
+
 <img width="1277" height="443" alt="image" src="https://github.com/user-attachments/assets/d67c0d0b-60f6-4547-b647-88c3ed4855a7" />
 
 <br>
 <br>
 
+```bash
+index=* EventCode=4769 NOT Account_Name="*$*"
+| stats count by Account_Name
+| sort -count
+```
+
 <img width="1273" height="422" alt="image" src="https://github.com/user-attachments/assets/11e43769-d389-401c-8df6-52e16f8faa50" />
 
 <br>
 <br>
+
+```bash
+index=*
+| stats count by Service_Name, EventCode
+| sort -count
+```
 
 <img width="1278" height="598" alt="image" src="https://github.com/user-attachments/assets/90398484-2a6b-40ee-a9f6-2c98630aefe0" />
 
@@ -155,15 +218,29 @@ This room answers that question by teaching us to monitor AD from a defender's p
 <p>7.4.What was the source IP address of nathan.brooks's first TGT request?<br>
 <code>10.5.50.12</code></p>
 
+<br>
+
+```bash
+index=* EventCode=4720
+```
+
 <img width="1268" height="459" alt="image" src="https://github.com/user-attachments/assets/1eb70984-65b9-4d0a-bf41-8e417a84bb73" />
 
 <br>
 <br>
 
+```bash
+index=* EventCode=4728
+```
+
 <img width="1281" height="388" alt="image" src="https://github.com/user-attachments/assets/1e7d5de6-db0b-49d3-a24e-a03d24516c70" />
 
 <br>
-<br
+<br>
+
+```bash
+index=* EventCode=4768 Account_Name=nathan.brooks
+```
 
 <img width="1264" height="392" alt="image" src="https://github.com/user-attachments/assets/d7bc79af-fefe-4678-a432-e1219b4c86ee" />
 
