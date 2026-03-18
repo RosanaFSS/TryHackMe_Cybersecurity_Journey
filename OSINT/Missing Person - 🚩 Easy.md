@@ -11,32 +11,161 @@ Download the zip file attached to this task and start your investigation!</P>
 
 
 <p><em>Answer the questions below</em></p>
+<br>
 
 <p>1.1 What is the commercial name of this circuit? Format: English, full commercial name.<br>
-<code>  </code></p>
+<code>Pertamina Mandalika International Street Circuit</code></p>
+<p>
+
+- Use <a href="https://yandex.com/">Yandex</a> to reverse the <strong>MotoGP.jpg</strong>.</p>
+
+<img width="1338" height="357" alt="image" src="https://github.com/user-attachments/assets/83b09474-ee84-411c-ad00-00ab017769e0" />
+
+<br>
+<p>
+
+- Use <code>Google</code>.</p>
+
+<img width="902" height="238" alt="image" src="https://github.com/user-attachments/assets/123424f8-10b2-41d2-a29c-9dcb047de46d" />
+
+<br>
+<br>
+<br>
 
 <p>1.2. When did the event take place? Format: DD-DD/MM/YYYY.<br>
-<code>   </code></p>
+<code>03-05/10/2025</code></p>
+<p>
+
+- Use <code>exfitool</code> to inspect <strong>MotoGP.jpg</strong>´s properties.</p>
+
+```bash
+$ exiftool MotoGP.jpg
+...
+File Name                       : MotoGP.jpg
+...
+Date/Time Original              : 2025:10:05 12:33:12
+Create Date                     : 2025:10:05
+```
+
+<p>
+
+- Use <code>Google</code>.</p>
+
+<img width="908" height="156" alt="image" src="https://github.com/user-attachments/assets/dd36f7ac-dae4-40cd-8721-b6008a815013" />
+
+<br>
+<br>
+<br>
 
 <p>1.3. He told me he ate delicious Mexican food. What is the name of the restaurant?<br>
-<code>   </code></p>
+<code>Cantina Mexicana</code></p>
+
+<p>
+  
+- Use <code>Google</code> to reverse the <strong>food.jpg</strong>.</p>
                             
+<img width="971" height="203" alt="image" src="https://github.com/user-attachments/assets/d6e8db84-1988-4e5b-869c-a4f50bd1fb50" />
 
+<br>
+<p>
+
+- Check <strong>Cantina Mexicana</strong>´s address.<br>
+- Identify <strong>Kuta Lombok</strong>.</p>
+
+<img width="1305" height="153" alt="image" src="https://github.com/user-attachments/assets/a5462668-4b1a-45cd-90ed-dcb01d2c8b1c" />
+
+<br>
+
+<img width="382" height="185" alt="image" src="https://github.com/user-attachments/assets/a3399b56-ffae-4936-8efd-825cbfd188b9" />
+
+<br>
+<br>
+<br>
 <p>1.4. At what time was this photo taken? Format: HH:MM:SS.<br>
-<code>   </code></p>
+<code>19:55:30</code></p>
+<p>
 
+- Use <code>exfitool</code> to inspect <strong>food.jpg</strong>´s properties.</p>
+
+```bash
+$ exiftool food.jpg
+...
+File Name                       : food.jpg
+...
+Date/Time Original              : 2025:10:05 19:55:30
+```
+
+<br>
 <p>1.5. He sent me a message, this is the last I heard from him: ”Went to this cool MotoGP after party, and became friends with one of the local DJs who played that night. We’re going to visit a cave tomorrow.” What is the full address of the bar’s location?<br>
-<code>   </code></p>
+<code>Jl. Raya Kuta, Kuta, Kec. Pujut, Kabupaten Lombok Tengah, Nusa Tenggara Bar</code></p>
+
+<p>
+
+- Use <code>Google</code> to search for <code>MOTOGP</code> AND <code>2025</code> AND <code>party</code> AND <code>DJ</code> AND <code>Mandalika</code>.<br>
+- Navigate to <strong>Expeience and exclusive athmosphere, premium vibes ... party side by side with MotoGP riders. After Race Party - Mandalika GP Vol.3 ...</strong>.<br>
+- Navigate to the <strong>https://megatix.co.id/events/mandalika-moto-gp=after-race-party</strong> link provided by the <strong>themandalikabeachblub</strong> profile in Instagram.<br>
+- Identify <strong>Kuta, Pujut, Central Lombok Regency, <code>West Nusa Tengarra</code>.<br>
+- Use <code>Tripadvisor</code> to search restaurants in <code>West Nusa Tengarra</code> > <code>Lombok</code> > <code>Kuta</code>.<br>
+- Discover <code>KRNK Restaurant & Bar</code>´s address</p>
 
 
+<img width="1060" height="277" alt="image" src="https://github.com/user-attachments/assets/daf9baa3-000f-40a3-8d25-9e512ef4df39" />
+
+<br>
+<br>
+
+<img width="1232" height="509" alt="image" src="https://github.com/user-attachments/assets/05ee6abe-6c66-48ae-a689-94f76f72dc83" />
+
+<br>
+<br>
+
+<img width="1869" height="855" alt="image" src="https://github.com/user-attachments/assets/c0fc6935-3db5-43b0-8c5d-1c7fed6a4282" />
+
+<br>
+<br>
+
+<img width="1080" height="826" alt="image" src="https://github.com/user-attachments/assets/6c1c2766-d032-4de7-b81d-0c13fba18b17" />
+
+<br>
+<br>
+<br>
 <p>1.6. What is the DJ's stage name?<br>
-<code>   </code></p>
+<code>Bong Leleh</code></p>
+<p>
 
+- Use <code>Google</code> to search for <code>MOTOGP</code> AND <code>2025</code> AND <code>party</code> AND <code>DJ</code> AND <code>Mandalika</code>.<br>
+- Navigate to <strong>Get ready for the biggest party after the Moto GP race!</strong>.</p>
+
+<img width="1284" height="579" alt="image" src="https://github.com/user-attachments/assets/3f7ab82d-a3f7-4c86-8a4f-80dc13df934c" />
+
+<br>
+<br>
+<br>
 <p>1.7. What is the name of the cave?<br>
-<code>   </code></p>
+<code>Gua Sumur</code></p>
 
+<p>
+
+- Use <code>Google</code> to search for <code>Caves close to Jl. Raya Kuta, Kuta, Kec. Pujut, Kabupaten Lombok Tengah, Nusa Tenggara Bar</code>.</p>
+
+
+<img width="1282" height="471" alt="image" src="https://github.com/user-attachments/assets/1270e406-4103-4501-a981-0fca18c552a2" />
+
+<br>
+<br>
+<br>
 <p>1.7.What is the phone number linked to his old business? Format: Full number, no country code.<br>
-<code>   </code></p>
+<code>85333137345</code></p>
+<p>
+
+- Use <code>Google</code> to search for <code>bongleleh lombok</code>.<br>
+- Navigate to <code>Gua Sumur Lombok (@bongleleh)</code> profile in <strong>Facebook</strong>.</p>
+
+<img width="1210" height="463" alt="image" src="https://github.com/user-attachments/assets/95235106-a779-45f2-9358-4478ad62e3f1" />
+
+<img width="1876" height="709" alt="image" src="https://github.com/user-attachments/assets/2d473a0e-92fc-4e95-8936-aa42657c35a4" />
+
+<br>
 <br>
 <br>
 <h1 align="center">Completed</h1>
@@ -53,7 +182,7 @@ Download the zip file attached to this task and start your investigation!</P>
 |Day<br><br><br> |Streak<br><br><br>|Room Name<br><br><br>|Level<br><br><br>|Type<br><br><br>|Rooms<br>Completed<br><br>|Points<br><br><br>|Badges<br><br><br>|Global<br>All<br>Time<br>|Global<br>Monthly<br><br>|Brazil<br>All<br>Time<br>|Brazil<br>Monthly<br><br>|League<br><br><br>|
 |---------------:|-----------------:|:----------------|:---------------|:----------------------------------------:|-------------------------:|-----------------:|-----------------:|--------------------:|------------------------:|--------------------:|---------------:|---------------:|
 |17<br><br>      |75<br><br>        |Missing Person<br><br>           |Medium<br><br> |🚩<br><br>| 1,150<br><br>| 161,123<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|1ˢᵗ<br><br>|
-|17<br><br><br>  |75<br><br><br>    |Detecting AD Lateral Movement    |Medium<br><br><br>|🔗<br><br><br>| 1,149<br><br><br>| 160,883<br><br><br>| 91<br><br><br>| 16ᵗʰ<br><br><br>| 9ᵗʰ<br><br><br>| 2ⁿᵈ<br><br><br>| 1ˢᵗ<br><br><br>|-<br><br><br>|
+|17<br><br><br>  |75<br><br><br>    |Detecting AD Lateral Movement<br><br>|Medium<br><br><br>|🔗<br><br><br>| 1,149<br><br><br>| 160,883<br><br><br>| 91<br><br><br>| 16ᵗʰ<br><br><br>| 9ᵗʰ<br><br><br>| 2ⁿᵈ<br><br><br>| 1ˢᵗ<br><br><br>|-<br><br><br>|
 |12<br><br>      |70<br><br>        |Entra ID Monitoring<br><br>      |Medium<br><br> |🔗<br><br>| 1,147<br><br>| 160,479<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 8ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|5ᵗʰ<br><br>|
 |12<br><br>      |70<br><br>        |Introduction to Phishing<br>     |Easy<br><br>   |⚙️<br><br>| 1,146<br><br>| 160,343<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 8ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|6ᵗʰ<br><br>|
 |11<br><br>      |69<br><br>        |Detecting AD Initial Access<br>  |Medium<br><br> |🔗<br><br>| 1,146<br><br>| 160,195<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|4ᵗʰ<br><br>|
@@ -86,4 +215,3 @@ Download the zip file attached to this task and start your investigation!</P>
 
 <h1 align="center">Thanks for coming!</h1>
 <p align="center">Follow me on <a href="https://medium.com/@RosanaFS">Medium</a>, here on <a href="https://github.com/RosanaFSS/TryHackMe">GitHub</a>, and on <a href="https://www.linkedin.com/in/rosanafssantos/">LinkedIN</a>.</p>
-
