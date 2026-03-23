@@ -1,5 +1,10 @@
 <h1 align="center">TryHack3M: Burg3r Bytes</h1>
-<p align="center">2026, Mar 22<br><img width="1200px" src="https://github.com/user-attachments/assets/4d065dd8-711f-4179-bbb8-33f5920b0304"><br>
+<p>
+
+- Business Logic Exploitation    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Race Conditions<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exploit the transaction sequence to bypass credit validation.
+- Initial Access    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SSTI (Server-Side Template Injection)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gain Remote Code Execution (RCE) via the Jinja2 template engine.
+- Post-Exploitation & Lateral Movement &nbsp;= &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Container Escape<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pivoting from the restricted Docker container to a host via mTLS analysis.</p><br>
+<p align="center">2026, Mar 22<br><img width="1200px" src="https://github.com/user-attachments/assets/4d065dd8-711f-4179-bbb8-33f5920b0304"><br><br>
 2025, July 19<br><img width="80px" src="https://github.com/user-attachments/assets/05f1224c-0546-497c-a1bb-d7ef4ceb1de6"><br> Hey there, fellow lifelong learner! I´m <a href="https://www.linkedin.com/in/rosanafssantos/">Rosana</a>, 
 and I’m excited to join you on this adventure, part of my <code>438</code>-day-streak in<a href="https://tryhackme.com">TryHackMe</a>.<br>
 <em>They say these burgers are worth every penny. Can you buy one?</em>.<br>
@@ -868,8 +873,8 @@ THM{••••••••••••••••}
 | Date              | Streak   | All Time     | All Time     | Monthly     | Monthly    | Points   | Rooms     | Badges    |
 | :---------------: | :------: | :----------: | :----------: | :---------: | :--------: | ------:  | -------: | :-------: |
 |                   |          |    Global    |    Brazil    |    Global   |   Brazil   |          | Completed |           |
-| March 22, 2026    | 80       |      14ᵗʰ    |      2nd     |      4ᵗʰ    |     1st    | 115,419  |  1,156    |    91     |
-| July 19, 2025     | 439      |     155ᵗʰ    |      5ᵗʰ     |    170ᵗʰ    |     7ᵗʰ    | 115,419  |    865    |    72     |
+| 2026, March 22    | 80       |      14ᵗʰ    |      2ⁿᵈ     |      4ᵗʰ    |     1st    | 163,403  |  1,156    |    91     |
+| 2025, July 19     | 439      |     155ᵗʰ    |      5ᵗʰ     |    170ᵗʰ    |     7ᵗʰ    | 115,419  |    865    |    72     |
 
 
 </h6></div><br>
@@ -883,9 +888,10 @@ THM{••••••••••••••••}
 
 |Day<br><br><br> |Streak<br><br><br>|Room Name<br><br><br>|Level<br><br><br>|Type<br><br><br>|Rooms<br>Completed<br><br>|Points<br><br><br>|Badges<br><br><br>|Global<br>All<br>Time<br>|Global<br>Monthly<br><br>|Brazil<br>All<br>Time<br>|Brazil<br>Monthly<br><br>|League<br><br><br>|
 |---------------:|-----------------:|:----------------|:---------------|:----------------------------------------:|-------------------------:|-----------------:|-----------------:|--------------------:|------------------------:|--------------------:|---------------:|---------------:|
-|22<br><br>      |80<br><br>        |TryHack3M: Burg3r Bytes<br>  |Hard<br><br>   |🚩<br><br>| 1,156<br><br>| 163,403<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 4ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|-<br><br>
+|22<br><br>      |80<br><br>        |TryHack3M: Burg3r Bytes<br>      |Hard<br><br>   |🚩<br><br>| 1,156<br><br>| 163,403<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 4ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|-<br><br>
 |22<br><br>      |80<br><br>        |St3alMyH34rt<br><br>             |Hard<br><br>   |🚩<br><br>| 1,155<br><br>| 162,873<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 4ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
-|21<br><br>      |79<br><br>        |Typo Snare<br><br>               |Medium<br><br> |⚙️<br><br>|     -<br><br>| 162,541<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 4ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|21<br><br>      |79<br><br>        |Typo Snare<br><br>               |Medium<br><br> |⚔️<br><br>| 1,155<br><br>| 162,541<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 4ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|20<br><br>      |78<br><br>        |DockMagic<br><br>                |Medium<br><br> |🚩<br><br>| 1,155<br><br>| 161,755<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
 |20<br><br>      |78<br><br>        |Microsoft Intune Monitoring<br>  |Medium<br><br> |🔗<br><br>| 1,154<br><br>| 161,725<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
 |20<br><br>      |78<br><br>        |SharePoint Online Monitoring<br> |Medium<br><br> |🔗<br><br>| 1,153<br><br>| 161,629<br><br>| 91<br><br>| 14ᵗʰ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
 |19<br><br>      |77<br><br>        |Detecting AD Post-Exploitation<br>|Hard<br><br>  |🔗<br><br>| 1,152<br><br>| 161,517<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
