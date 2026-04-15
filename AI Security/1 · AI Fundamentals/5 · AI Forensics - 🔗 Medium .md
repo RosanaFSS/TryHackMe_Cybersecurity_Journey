@@ -15,7 +15,7 @@ Access it <a href="https://tryhackme.com/room/defadversarialattacks"</a>here.<br
 |[LLM Output<br>Handling and<br>Privacy Risks](https://github.com/RosanaFSS/Cybersecurity-Journey-TryHackMe/blob/CTFs-%26-Infos/Easy%20%F0%9F%94%97%20-%20LLM%20Output%20Handling%20and%20Privacy%20Risks.md)       |         |   ✔<br><br><br><br><br>    |         |         |    ✔<br><br><br><br><br>    |         |         |         |         |         |
 |[Data Integrity<br>& Model Poisoning<br><br>](https://github.com/RosanaFSS/Cybersecurity-Journey-TryHackMe/blob/CTFs-%26-Infos/Medium%20%F0%9F%94%97%20-%20Data%20Integrity%20%26%20Model%20Poisoning.md)       |         |         | ✔<br><br><br><br><br>        |✔<br><br><br><br><br>         |         |         |         |         |         |         |
 |                                                                                                                                                                           |
-|Defensive AI<br><br>[AI/ML<br>Security<br>Threats<br>](https://github.com/RosanaFSS/Cybersecurity-Journey-TryHackMe/blob/CTFs-%26-Infos/Easy%20%F0%9F%94%97%20-%20AI-ML%20Security%20Threats.md)<br>[Detecting<br>Adversarial<br>Attacks<br>](https://github.com/RosanaFSS/Cybersecurity-Journey-TryHackMe/blob/CTFs-%26-Infos/Medium%20%F0%9F%94%97%20-%20Detecting%20Adversarial%20Attacks.md)<br>[Defending<br>Adversarial<br>Attacks<br>](https://github.com/RosanaFSS/Cybersecurity-Journey-TryHackMe/blob/CTFs-&-Infos/Medium%20%F0%9F%94%97%20-%20Defending%20Adversarial%20Attacks.md)<br>[AI Forensics<br>](https://github.com/RosanaFSS/Cybersecurity-Journey-TryHackMe/blob/CTFs-&-Infos/Medium%20%F0%9F%94%97%20-%20AI%20Forensics.md)<br>[ContAinment<br>](https://github.com/RosanaFSS/Cybersecurity-Journey-TryHackMe/blob/CTFs-&-Infos/Medium%20%F0%9F%9A%A9%20-%20ContAInment.md)| | | | | | | | | | |
+|Defensive AI<br><br>[AI/ML<br>Security<br>Threats<br>](https://github.com/RosanaFSS/TryHackMe_Cybersecurity_Journey/blob/CTFs-%26-Infos/AI%20Security/1%20%C2%B7%20AI%20Fundamentals/2%20%C2%B7%20AI-ML%20Security%20Threats%20-%20%F0%9F%94%97%20Easy.md)<br>[Detecting<br>Adversarial<br>Attacks<br>](https://github.com/RosanaFSS/Cybersecurity-Journey-TryHackMe/blob/CTFs-%26-Infos/Medium%20%F0%9F%94%97%20-%20Detecting%20Adversarial%20Attacks.md)<br>[Defending<br>Adversarial<br>Attacks<br>](https://github.com/RosanaFSS/Cybersecurity-Journey-TryHackMe/blob/CTFs-&-Infos/Medium%20%F0%9F%94%97%20-%20Defending%20Adversarial%20Attacks.md)<br>[AI Forensics<br>](https://github.com/RosanaFSS/Cybersecurity-Journey-TryHackMe/blob/CTFs-&-Infos/Medium%20%F0%9F%94%97%20-%20AI%20Forensics.md)<br>[ContAinment<br>](https://github.com/RosanaFSS/Cybersecurity-Journey-TryHackMe/blob/CTFs-&-Infos/Medium%20%F0%9F%9A%A9%20-%20ContAInment.md)| | | | | | | | | | |
 
 </h6></div>
 
@@ -238,16 +238,14 @@ drwxr-xr-x 3 j.morgan j.morgan 4096 May 16 10:02 ..
 
 <br>
 <br>
-
-
-<h1 align="center">Room Completed</h1>
+<h2 align="center">Room Completed</h2>
 <p align="center"> <img width="1000px" src="https://github.com/user-attachments/assets/649fc42e-6c50-4e34-8614-e672ff6e11e3"><br>
 <p align="center"> <img width="1000px" src="https://github.com/user-attachments/assets/c8922d8e-4017-4d12-ab7a-12e88e291cce"><br>
 
 <h1 align="center">Module Completed</h1>
 <p align="center"> <img width="1000px" src="https://github.com/user-attachments/assets/52991b53-b68b-439c-a9f2-e7f77a73b6ea"><br>
 
-<h1 align="center">My TryHackMe Journey</h1>
+<h2 align="center">My TryHackMe Journey</h2>
 
 <div align="center">
 
@@ -262,4 +260,6 @@ drwxr-xr-x 3 j.morgan j.morgan 4096 May 16 10:02 ..
                                               <img width="1000px" src="https://github.com/user-attachments/assets/529f9960-82ef-4962-9508-e76d8da56670"><br><br>
                    Brazil All Time:   5ᵗʰ<br><img width="1000px" src="https://github.com/user-attachments/assets/a0819bba-9c92-4dc0-9871-0a0b194d5eef"><br><br>
                    Global monthly:  236ᵗʰ<br><img width="1000px" src="https://github.com/user-attachments/assets/dfa85a7b-d5c3-4314-b114-3b7a41b8b08"><br><br>
-                   Brazil monthly:    8ᵗʰ<br><img width="1000px" src="https://github.com/user-attachments/assets/a0c333db-cdc9-483e-92a3-3cea126b8414"><br><br></p>
+                   Brazil monthly:    8ᵗʰ<br><img width="1000px" src="https://github.com/user-attachments/assets/a0c333db-cdc9-483e-92a3-3cea126b8414"></p>
+<h2 align="center">Thanks for coming!</h2>
+<p align="center">Follow me on <a href="https://medium.com/@RosanaFS">Medium</a>, here on <a href="https://github.com/RosanaFSS/TryHackMe">GitHub</a>, and on <a href="https://www.linkedin.com/in/rosanafssantos/">LinkedIN</a>.</p>
