@@ -389,7 +389,7 @@ THM{•••••••_•_••••_•_••}
 
 |Day<br><br><br> |Capability<br>Score<br><br>|Room<br>Name<br><br>|Level<br><br><br>|Type<br><br><br>|Rooms<br>Completed<br><br>|Points<br><br><br>|Badges<br><br><br>|Global<br>All<br>Time<br>|Global<br>Monthly<br><br>|Brazil<br>All<br>Time<br>|Brazil<br>Monthly<br><br>|
 |---------------:|-----------------:|:----------------|:---------------|:----------------------------------------:|-------------------------:|-----------------:|-----------------:|--------------------:|------------------------:|--------------------:|---------------:|
-|16<br><br>      |109<br><br>       |Plant Photographer<br>              |Easy<br><br>   |🔗<br><br>| 1,168<br><br>| 165,373<br><br>| 92<br><br>| 15ᵗʰ<br><br>| 3ʳᵈ<br><br>| 2ⁿᵈ<br><br>| 17ᵗʰ<br><br>|
+|16<br><br>      |109<br><br>       |Plant Photographer<br><br>             |Easy<br><br>   |🔗<br><br>| 1,168<br><br>| 165,373<br><br>| 92<br><br>| 15ᵗʰ<br><br>| 3ʳᵈ<br><br>| 2ⁿᵈ<br><br>| 17ᵗʰ<br><br>|
 |16<br><br><br>      |109<br><br><br>       |Introduction to the World of OT/ICS<br>|Easy<br><br><br>   |🔗<br><br><br>| 1,166<br><br><br>| 165,343<br><br><br>| 92<br><br><br>| 15ᵗʰ<br><br><br>| -<br><br><br>| 2ⁿᵈ<br><br><br>| 12ⁿᵈ<br><br><br>|
 |15<br><br>      |109<br><br>       |Prompt Engineering<br>              |Easy<br><br>   |🔗<br><br>| 1,165<br><br>| 165,209<br><br>| 92<br><br>| 14ᵗʰ<br><br>| 3ʳᵈ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|
 |15<br><br>      |109<br><br>       |AI Models & Data<br>                |Medium<br><br> |🔗<br><br>| 1,164<br><br>| 165,081<br><br>| 92<br><br>| 14ᵗʰ<br><br>| 3ʳᵈ<br><br>| 2ⁿᵈ<br><br>| 1ˢᵗ<br><br>|
