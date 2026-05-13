@@ -1,6 +1,6 @@
-
-<img width="1891" height="448" alt="image" src="https://github.com/user-attachments/assets/2d67db5a-6c56-487b-9972-89f156e24f32" />
-
+<h1 align="center"><a href="https://tryhackme.com/room/introductiontoactivedirectorybreaching">Intro to AD Breaching</a></h1>
+<p align="center"><img width="1200px" src="https://github.com/user-attachments/assets/2d67db5a-6c56-487b-9972-89f156e24f32"><br>
+If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://githubhttps://github.com/user-attachments/assets/f9d56f26-bf87-4309-b5d8-f98cbb0302b0com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20MAY%2013-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a><br></p>
 
 <br>
 <br>
@@ -46,8 +46,7 @@
 
 <br>
 <br>
-<h2>Room Completed</h2>
-
+<h2 align="center">Room Completed</h2> 
 <img width="1905" height="879" alt="image" src="https://github.com/user-attachments/assets/023e8f11-2020-4868-8072-34da02b1095b" />
 
 <img width="1891" height="263" alt="image" src="https://github.com/user-attachments/assets/cb3ce84a-ecd2-4be5-9f25-b2a8e4b9c25f" />
@@ -55,12 +54,17 @@
 
 <img width="779" height="803" alt="image" src="https://github.com/user-attachments/assets/d29d90a5-0b41-4799-9c6d-d5c9e980b33c" />
 
+<h2 align="center">My TryHackMe Journey &nbsp; · &nbsp; 2026, May</h2>
+<div align="center"><h6>
 
+|Day<br><br><br> |Capability<br>Score<br><br>|Room<br>Name<br><br>|Level<br><br><br>|Type<br><br><br>|Rooms<br>Completed<br><br>|Points<br><br><br>|Badges<br><br><br>|Global<br>All<br>Time<br>|Global<br>Monthly<br><br>|Brazil<br>All<br>Time<br>|Brazil<br>Monthly<br><br>|
+|---------------:|-----------------:|:----------------|:---------------|:----------------------------------------:|-------------------------:|-----------------:|-----------------:|--------------------:|------------------------:|--------------------:|---------------:|
+|13<br><br>  |109<br><br>   |Intro do AD Breaching<br><br>|Medium<br><br>   |🔗<br><br>| 1,208<br><br>| 175,668<br><br>| 95<br><br>| 7ᵗʰ<br><br>| 27ᵗʰ<br><br>| 1ˢᵗ<br><br>| 1ˢᵗ<br><br>|
+
+</h6></div><br>
 
 <img width="1880" height="886" alt="image" src="https://github.com/user-attachments/assets/3081e911-6a08-4e78-8fe1-9708cf73d227" />
 
-<br>
-<br>
 
 <img width="465" height="308" alt="image" src="https://github.com/user-attachments/assets/978da7fe-8ed7-43bd-9488-af8be643e754" />
 
