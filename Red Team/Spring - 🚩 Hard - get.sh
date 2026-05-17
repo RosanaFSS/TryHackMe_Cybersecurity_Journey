@@ -18,3 +18,4 @@ curl --data-urlencode "name=$pubkey" https://localhost/ -k
 sleep 5s
 
 ssh  -o "StrictHostKeyChecking=no" -i ./key root@localhost
+
