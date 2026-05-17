@@ -56,3 +56,4 @@ inject_payload "$PAYLOAD"
 restart_app
 
 echo -e "\n[+]                         DONE."
+
