@@ -1,7 +1,7 @@
 <h1 align="center"><a href="https://tryhackme.com/room/spring">Spring</a></h1>
 <p align="center"><img width="1200px" src="https://github.com/user-attachments/assets/5a76ffb7-81da-49de-97f6-3f6212cbe01a"><br>
 If you find it helpful, consider coming back for research.<br><p align="center"><a href="https://github.com/RosanaFSS"><img src="https://img.shields.io/github/followers/RosanaFSS?label=Follow&style=for-the-badge&logo=github&color=24292e" alt="Follow Rosana on GitHub"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/COMPLETED-2026%2C%20JAN%2016-444444?style=for-the-badge&logo=calendar-check" alt="Completion Date"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/in/rosanafssantos/"><img src="https://img.shields.io/badge/Connect-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn"></a></p>
-
+  
 <br> 
 <h2>Task 1 . Introduction</h2>
 <p>This machine may take up to 5 minutes to fully deploy.<br>
