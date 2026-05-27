@@ -1,6 +1,6 @@
 <p>2024, September 26 - Day 142</p>
 <h1>Intro to SSRF</h1>
-
+ 
 <br>
 
 <img width="1094" height="749" alt="Captura de tela 2024-09-25 230152" src="https://github.com/user-attachments/assets/fc989c18-573d-4aeb-9ba6-014a5c60114f" />
