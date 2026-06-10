@@ -1,4 +1,4 @@
-<h2>Jr Penetration Tester Learning Path &nbsp; > &nbsp; 1 · Start Your Cyber Security Journey</h2>
+<h2>Jr Penetration Tester Learning Path &nbsp; > &nbsp; 1 · Start Your Cyber Security Journey</h2> 
 <h1><a href="https://tryhackme.com/room/offensivesecurityintro">Offensive Security Intro</a></h1>
 <br>
 <h2>Task 1 · What is Offensive Security?</h2>
