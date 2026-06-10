@@ -61,7 +61,7 @@ Security operations cover various tasks to ensure protection; one such task is <
 >> <code>Data</code> is <code>collected</code> from local sources such as network logs and public sources such as forums.<br><br>
 >> <code>Data</code> <code>processing</code> arranges it into a format suitable for <code>analysis</code>.<br><br>
 >> The <code>analysis</code> phase seeks to find more information about the attackers and their motives; moreover, it aims to create a list of <code>recommendations</code> and <code>actionable steps</code>.<br><br>
->> Learning about your adversaries lets you know their <code>tactics</code>, <code>techniques</code>, and <code>peocedured</code>.<br><br>
+>> Learning about your adversaries lets you know their <code>tactics</code>, <code>techniques</code>, and <code>procedures</code>.<br><br>
 >> As a <code>result</code> of <code>threat intelligence</code>, we identify the threat actor (adversary) and predict their activity.<br><br>
 >> Consequently, we can mitigate their attacks and prepare a response strategy.</p>
 
@@ -94,20 +94,20 @@ Security operations cover various tasks to ensure protection; one such task is <
 >> - <code>Preparation</code> : This requires a team trained and ready to handle incidents. Ideally, various measures are put in place to prevent incidents from happening in the first place.<br>
 >> - <code>Detection</code> : The team has the necessary resources to detect any incident; moreover, it is essential to analyze any detected incident further to learn about its severity.<br>
 >> - <code>Containment, Eradication, and Recovery</code> : Once an incident is detected, it is crucial to stop it from affecting other systems, eliminate it, and recover the affected systems. For instance, when we notice that a system is infected with a computer virus, we would like to stop (contain) the virus from spreading to other systems, clean (eradicate) the virus, and ensure proper system recovery.<br>
->> - <code>Post-Incident Actovity</code> : After a successful recovery, a report is produced, and the lesson learned is shared to prevent similar future incidents.<br>
+>> - <code>Post-Incident Activity</code> : After a successful recovery, a report is produced, and the lesson learned is shared to prevent similar future incidents.<br>
 
 <br>
 
 > <strong>Malware Analysis</strong>
->> <code>Malware</code> stands for malicious software.<br><br>
->> <code>Software</code> refers to programs, documents, and files you can save on a disk or send over the network.<br><br>
->> <code>Malware</code> includes many types, such as:<br>
->> - A <code>virus</code> is a piece of code (part of a program) that attaches itself to a program. It is designed to spread from one computer to another and works by altering, overwriting, and deleting files once it infects a computer. The result ranges from the computer becoming slow to unusable.<br>
->> - <code>Trojan</code> <code>Horse</code> is a program that shows one desirable function but hides a malicious function underneath. For example, a victim might download a video player from a shady website that gives the attacker complete control over their system.<br>
+>> <code>Malware</code> stands for malicious software.
+>> <code>Software</code> refers to programs, documents, and files you can save on a disk or send over the network.
+>> <code>Malware</code> includes many types, such as:
+>> - A <code>virus</code> is a piece of code (part of a program) that attaches itself to a program. It is designed to spread from one computer to another and works by altering, overwriting, and deleting files once it infects a computer. The result ranges from the computer becoming slow to unusable.
+>> - <code>Trojan</code> <code>Horse</code> is a program that shows one desirable function but hides a malicious function underneath. For example, a victim might download a video player from a shady website that gives the attacker complete control over their system.
 >> - <code>Ransomware</code> is a malicious program that encrypts the user’s files. Encryption makes the files unreadable without knowing the encryption password. The attacker offers the user the encryption password if the user is willing to pay a “ransom.”<br><br>
->> <code>Malware</code> <code>analysis</code> ims to learn about such malicious programs using various means:<br>
->> - <code>Static nalysis</code> works by inspecting the malicious program without running it. This usually requires solid knowledge of assembly language (the processor’s instruction set, i.e., the computer’s fundamental instructions).<br>
->> - <code>Dynamic analysis</code> works by running the malware in a controlled environment and monitoring its activities. It lets you observe how the malware behaves when running.<br>
+>> <code>Malware</code> <code>analysis</code> aims to learn about such malicious programs using various means:
+>> - <code>Static analysis</code> works by inspecting the malicious program without running it. This usually requires solid knowledge of assembly language (the processor’s instruction set, i.e., the computer’s fundamental instructions).
+>> - <code>Dynamic analysis</code> works by running the malware in a controlled environment and monitoring its activities. It lets you observe how the malware behaves when running.
 
 <p><em>Answer the questions below</em></p>
 
