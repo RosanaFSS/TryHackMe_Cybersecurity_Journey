@@ -153,12 +153,6 @@ index=* ComputerName=JP-BROWN-WS RuleName=RDP
 
 <img width="1336" height="580" alt="image" src="https://github.com/user-attachments/assets/fb0d1213-c9cf-40a4-b8ec-9ccce56786d3" />
 
-```splunk
-index=* ComputerName=JP-BROWN-WS RuleName=RDP
-|  table ProcessId, ComputerName, _time, SourceIp, SourcePort, ComputerName, DestinationIp, DestinationPort, DestinationHostname
-|  sort by +_time
-```
-
 <br>
 <br>
 <br>
@@ -177,5 +171,37 @@ index=* ComputerName="BKUP-SRV01" "*-OutFile*"
 <br>
 <br>
 <p>6.13. What are the first four file extensions targeted by this script for collection?</em><br>
-<code>2025-11-14 05:19:42</code></p>
+<code>.bak, .backup, .sql, .mdb</code></p>
 
+
+```bash
+# 7z x Artifacts.7z
+```
+
+<img width="853" height="149" alt="image" src="https://github.com/user-attachments/assets/add3a357-ea25-4cf2-96b0-daecf621d947" />
+
+
+<br>
+<br>
+<br>
+<p>6.14. What is the full path to the staged file containing collected files?</em><br>
+<code>C:\Users\bkup-svc\AppData\Local\Temp\sysbackup_20251114.dat</code></p>
+
+
+<img width="850" height="222" alt="image" src="https://github.com/user-attachments/assets/69630319-8718-4b1a-8a61-f5c4e7dc6e7f" />
+
+<br>
+
+<img width="830" height="171" alt="image" src="https://github.com/user-attachments/assets/5eeeed67-740d-45ea-a90d-db0a39c0fee5" />
+
+<br>
+
+<p>
+
+The script is programmed to output the final archive to the $env:TEMP directory.<br>
+Setup-BackupServer.ps1 script dropped in C:\Windows\Temp. When threat actors execute scripts using the SYSTEM account (which is standard practice for remote execution and persistence), the $env:TEMP variable resolves directly to C:\Windows\Temp.<br>
+The script builds the filename starting with sysbackup_, appends the current date in yyyyMMdd format, and changes the final extension to .dat.<br>
+I previously identified that the threat actor successfully logged in and operated on the date 2025-11-14.</p>
+
+
+<img width="346" height="75" alt="image" src="https://github.com/user-attachments/assets/b0eb7e0f-b025-46fe-b3c1-a2903884e6cf" />
