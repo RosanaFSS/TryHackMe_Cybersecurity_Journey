@@ -20,8 +20,8 @@
 <br>
 
 
-<h1><a href="https://man7.org/linux/man-pages/man1/grep.1.html">grep</a></h1>
-<p><a id='A'>Print lines that match <em>PATTERNS</em>.<br>
+<h1><a href="https://man7.org/linux/man-pages/man1/grep.1.html">grep</a><a id='A'></h1>
+<p>Print lines that match <em>PATTERNS</em>.<br>
 
 - [Generic Program Information](#1)<br>
 - [Pattern Syntax](#2)<br>
