@@ -132,6 +132,11 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <p><a id='B'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod</a></h1>
 <p>Change file mode bits<br>
@@ -150,6 +155,11 @@ It uses three octal digits to set permissions for three specific user categories
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <p><a id='C'></p>
 <h1><a href="https://www.man7.org/linux/man-pages/man8/cron.8.html">cron</a></h1>
 <p>Daemon to execute scheduled commands.</p>
@@ -160,6 +170,11 @@ It uses three octal digits to set permissions for three specific user categories
 
 </p></div>
 
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -182,10 +197,20 @@ It uses three octal digits to set permissions for three specific user categories
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <p><a id='E'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/ssh.1.html">ssh</a></h1>
 <p>OpenSSH remote login client.</p>
 
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -197,8 +222,17 @@ It uses three octal digits to set permissions for three specific user categories
 
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p><a id='G'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/touch.1.html">touch</a></h1>
-<p><a id='G'>Create file, or change file timestamps</p>
+<p>Create file, or change file timestamps</p>
 
 
 <p>—</p>
