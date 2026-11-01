@@ -19,8 +19,8 @@
 <br>
 <br>
 
-
-<h1><a href="https://man7.org/linux/man-pages/man1/grep.1.html">grep</a><a id='A'></h1>
+<p><a id='A'></p>
+<h1><a href="https://man7.org/linux/man-pages/man1/grep.1.html">grep</a></h1>
 <p>Print lines that match <em>PATTERNS</em>.<br>
 
 - [Generic Program Information](#1)<br>
@@ -124,8 +124,9 @@
 
 <br>
 <br>
+<p><a id='B'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod</a></h1>
-<p><a id='B'>Change file mode bits<br>
+<p>Change file mode bits<br>
 It uses three octal digits to set permissions for three specific user categories: Owner, Group, and Others.</p>
 
 <div align="left"><p>
@@ -138,8 +139,9 @@ It uses three octal digits to set permissions for three specific user categories
 
 <br>
 <br>
+<p><a id='C'></p>
 <h1><a href="https://www.man7.org/linux/man-pages/man8/cron.8.html">cron</a></h1>
-<p><a id='C>Daemon to execute scheduled commands.</p>
+<p>Daemon to execute scheduled commands.</p>
 
 |Command          |Use|
 |:----------------|:-------------|
@@ -149,8 +151,9 @@ It uses three octal digits to set permissions for three specific user categories
 
 <br>
 <br>
+<p><a id='D'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/whoami.1.html">whoami</a></h1>
-<p><a id='D'>Print effective user name.</p>
+<p>Print effective user name.</p>
 
 <div align="left"><p>
 
@@ -162,8 +165,9 @@ It uses three octal digits to set permissions for three specific user categories
 
 <br>
 <br>
+<p><a id='E'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/ssh.1.html">ssh</a></h1>
-<p><a id='E'>OpenSSH remote login client.</p>
+<p>OpenSSH remote login client.</p>
 
 <br>
 <br>
