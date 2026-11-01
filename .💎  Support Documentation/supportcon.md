@@ -2,7 +2,7 @@
 
 |Linux Command &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                              |Purpose      |
 |:-------------------------------------------|:-------------|
-|[find](#H)                                  |Search for files in a directory hierarchy.<br>|
+|[find](#H)                                  |`Search for files in a directory hierarchy.<br>|
 |[grep](#A)                                  |Print lines that match `patterns`.|
 |[chmod](#B) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Change file mode bits.<br>|
 |[cron](#C)                                  |Daemon to execute `scheduled` commands. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
@@ -253,10 +253,11 @@ It uses three octal digits to set permissions for three specific user categories
 <h1><a href="https://man7.org/linux/man-pages/man1/scp.1.html">scp</a></h1>
 <p>OpenSSH secure file copy.</p>
 
+<br>
 <p><em>Example</em></p>
 
 ```bash
 $ scp user@IPaddress:/home/user/notes.txt ./todo.txt
 ```
 
-<p>—</p>
+
