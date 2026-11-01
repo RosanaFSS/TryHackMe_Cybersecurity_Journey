@@ -1,7 +1,14 @@
-<h3><a href="https://man7.org/linux/man-pages/man1/grep.1.html">grep</a><br><br>
-<a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod</a><br><br>
-<a href="https://www.man7.org/linux/man-pages/man8/cron.8.html">cron</a><br><br>
-<a href="https://man7.org/linux/man-pages/man1/whoami.1.html">whoami</a></h3>
+<h3>
+  
+- [grep](#A)<br>
+- [chmod](#B)<br>
+- [cron](#C)<br>
+- [whoami](#D)<br>
+- [ssh](#E)<br>
+- [echo](#F)<br>
+- [touch](#G)</h3>
+
+
 
 <br>
 <br>
@@ -14,7 +21,7 @@
 
 
 <h1><a href="https://man7.org/linux/man-pages/man1/grep.1.html">grep</a></h1>
-<p>Print lines that match <em>PATTERNS</em>.<br>
+<p><a id='A'>Print lines that match <em>PATTERNS</em>.<br>
 
 - [Generic Program Information](#1)<br>
 - [Pattern Syntax](#2)<br>
@@ -118,20 +125,21 @@
 <br>
 <br>
 <h1><a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod</a></h1>
-<p>Change file mode bits<br>
+<p><a id='B'>Change file mode bits<br>
 It uses three octal digits to set permissions for three specific user categories: Owner, Group, and Others.</p>
 
 <div align="left"><p>
   
 |Owner                                                |Group                                                     |Others                                                                               |
-|:----------------------------------------------------:|:---------------------------------------------------------:|:------------------------------------------------------------------------------------:|
-|`7` &nbsp;&nbsp; Full Access<br>4 (Read) + 2 (Write) + 1 (Execute)|`5` &nbsp;&nbsp; Read and execute<br>4 (Read) + 0 (Write) + 1 (Execute)|`0` &nbsp;&nbsp; No permissions<br>0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0|
+|:----------------------------------------------------|:---------------------------------------------------------|:------------------------------------------------------------------------------------|
+|`6` &nbsp;&nbsp; Read & Write<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `4` (Read) + `2` (Write) + `0` (Execute)<br><br><br>`7` &nbsp;&nbsp; Full Access<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `4` (Read) + `2` (Write) + `1` (Execute)|`4` &nbsp;&nbsp; Read<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `4` (Read) + `0` (Write) + `0` (Execute)<br><br><br>`5` &nbsp;&nbsp; Read & Execute<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `4` (Read) + `0` (Write) + `1` (Execute)|`4` &nbsp;&nbsp; Read<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `4` (Read) + `0` (Write) + `0` (Execute)<br><br><br>`0` &nbsp;&nbsp; No Permissions<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `0` (Read) + `0` (Write) + `0` (Execute)|
 </p></div>
+
 
 <br>
 <br>
 <h1><a href="https://www.man7.org/linux/man-pages/man8/cron.8.html">cron</a></h1>
-<p>Daemon to execute scheduled commands.</p>
+<p><a id='C>Daemon to execute scheduled commands.</p>
 
 |Command          |Use|
 |:----------------|:-------------|
@@ -142,7 +150,7 @@ It uses three octal digits to set permissions for three specific user categories
 <br>
 <br>
 <h1><a href="https://man7.org/linux/man-pages/man1/whoami.1.html">whoami</a></h1>
-<p>Print effective user name.</p>
+<p><a id='D'>Print effective user name.</p>
 
 <div align="left"><p>
 
@@ -151,5 +159,21 @@ It uses three octal digits to set permissions for three specific user categories
 |$ `whoami`<br><br>           |Tells you who you are on the system.<br> <br>                      |Lorem Ypsum<br><br>   |
 
 </p></div>
+
+<br>
+<br>
+<h1><a href="https://man7.org/linux/man-pages/man1/ssh.1.html">ssh</a></h1>
+<p><a id='E'>OpenSSH remote login client.</p>
+
+<br>
+<br>
+<h1><a href="https://man7.org/linux/man-pages/man1/echo.1.html">echo</a></h1>
+<p><a id='F'>Display a line of text</p>
+
+<br>
+<br>
+<h1><a href="https://man7.org/linux/man-pages/man1/touch.1.html">touch</a></h1>
+<p><a id='G'>Create file, or change file timestamps</p>
+
 
 <p>—</p>
