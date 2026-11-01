@@ -1,14 +1,32 @@
 <h3>
-  
+
+- [find](#H)<br>
 - [grep](#A)<br>
 - [chmod](#B)<br>
 - [cron](#C)<br>
-- [whoami](#D)<br>
 - [ssh](#E)<br>
+- [whoami](#D)<br>
 - [echo](#F)<br>
 - [touch](#G)</h3>
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p><a id='H'></p>
+<h1><a href="https://man7.org/linux/man-pages/man1/find.1.html">find</a></h1>
+<p>Search for files in a directory hierarchy.</p>
 
 <br>
 <br>
@@ -218,7 +236,7 @@ It uses three octal digits to set permissions for three specific user categories
 <br>
 <p><a id='F'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/echo.1.html">echo</a></h1>
-<p>Display a line of text</p>
+<p>Display a line of text.</p>
 
 <br>
 <br>
@@ -232,7 +250,7 @@ It uses three octal digits to set permissions for three specific user categories
 <br>
 <p><a id='G'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/touch.1.html">touch</a></h1>
-<p>Create file, or change file timestamps</p>
+<p>Create file, or change file timestamps.</p>
 
 
 <p>—</p>
