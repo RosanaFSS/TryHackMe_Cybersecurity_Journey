@@ -1,13 +1,19 @@
-<h3>
+<div align="center"><p>
 
-- [find](#H)<br>
-- [grep](#A)<br>
-- [chmod](#B)<br>
-- [cron](#C)<br>
-- [ssh](#E)<br>
-- [whoami](#D)<br>
-- [echo](#F)<br>
-- [touch](#G)</h3>
+|Linux Command &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                              |Purpose      |
+|:-------------------------------------------|:-------------|
+|[find](#H)                                  |Search for files in a directory hierarchy.<br>|
+|[grep](#A)                                  |Print lines that match `patterns`.|
+|[chmod](#B) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Change file mode bits.<br>|
+|[cron](#C)                                  |Daemon to execute `scheduled` commands. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|[whoami](#D)                                |Print effective `user name`.|
+|[echo](#F)                                  |Display a line of text.|
+|[touch](#G)                                 |Create file, or change file timestamps.|
+|[cp](#I)                                    |Copy files and directories.|
+[ssh](#E)                                    |`OpenSSH` remote login client.|
+|[scp](#J)                                   |`OpenSSH` secure file copy.|
+
+</p></div>
 
 
 <br>
@@ -27,20 +33,45 @@
 <p><a id='H'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/find.1.html">find</a></h1>
 <p>Search for files in a directory hierarchy.</p>
+<br>
+<p><em>Examples</em><br>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+Permissions & Text Ownership (Executable Status & Group Name)<br>
+
+```bash
+$ find / -type f \( -name filename1 -o -name filename2 -o -name filename3 ... \) -exec ls -l {} \; 2>/dev/null
+```
+
+Numeric Ownership (UID/GID / File owner ID)<br>
+
+```bash
+$ find / -type f \( -name filename1 -o -name filename2 -o -name filename3 ... \) -exec ls -ln {} \; 2>/dev/null
+```
+
+IP address<br>
+
+```bash
+$ find / -type f \( -name filename1 -o -name filename2 -o -name filename3 ... \) -exec grep -lE "([0-9]{1,3}\.){3}[0-9]{1,3}" {} \; 2>/dev/null
+```
+
+SHA1 hash<br>
+
+```bash
+$ find / -type f \( -name filename1 -o -name filename2 -o -name filename3 ... \) -exec sha1sum {} \; 2>/dev/null | grep type_the_hash
+```
+
+Quantity of lines in each file</p>
+
+```bash
+$ find / -type f \( -name filename1 -o -name filename2 -o -name filename3 ... \) -exec wc -l {} \; 2>/dev/null
+```
+
+Display Full Time</p>
+
+```bash
+$ find / -type f -name filename.sh -exec ls --full-time {} \; 2>/dev/null
+-rw-r--r-- 1 root root 325 2026-10-10 06:25:55.000000000 +0000 /bin/filename.sh
+```
 
 <p><a id='A'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/grep.1.html">grep</a></h1>
@@ -145,19 +176,12 @@
 
 </p></div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
+
 <p><a id='B'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod</a></h1>
-<p>Change file mode bits<br>
+<p>Change file mode bits.<br>
 It uses three octal digits to set permissions for three specific user categories: Owner, Group, and Others.</p>
 
 <div align="left"><p>
@@ -168,16 +192,9 @@ It uses three octal digits to set permissions for three specific user categories
 </p></div>
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
+
 <p><a id='C'></p>
 <h1><a href="https://www.man7.org/linux/man-pages/man8/cron.8.html">cron</a></h1>
 <p>Daemon to execute scheduled commands.</p>
@@ -188,16 +205,8 @@ It uses three octal digits to set permissions for three specific user categories
 
 </p></div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
 <p><a id='D'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/whoami.1.html">whoami</a></h1>
 <p>Print effective user name.</p>
@@ -210,47 +219,44 @@ It uses three octal digits to set permissions for three specific user categories
 
 </p></div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
+
 <p><a id='E'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/ssh.1.html">ssh</a></h1>
 <p>OpenSSH remote login client.</p>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
 <p><a id='F'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/echo.1.html">echo</a></h1>
 <p>Display a line of text.</p>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
+
 <p><a id='G'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/touch.1.html">touch</a></h1>
 <p>Create file, or change file timestamps.</p>
 
+
+
+
+<p><a id='I'></p>
+<h1><a href="https://man7.org/linux/man-pages/man1/cp.1.html">cp</a></h1>
+<p>Copy files and directories.</p>
+
+
+
+
+<p><a id='J'></p>
+<h1><a href="https://man7.org/linux/man-pages/man1/scp.1.html">scp</a></h1>
+<p>OpenSSH secure file copy.</p>
+
+<p><em>Example</em></p>
+
+```bash
+$ scp user@IPaddress:/home/user/notes.txt ./todo.txt
+```
 
 <p>—</p>
