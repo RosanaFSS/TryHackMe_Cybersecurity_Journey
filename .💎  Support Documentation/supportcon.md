@@ -18,6 +18,11 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <p><a id='A'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/grep.1.html">grep</a></h1>
@@ -124,6 +129,9 @@
 
 <br>
 <br>
+<br>
+<br>
+<br>
 <p><a id='B'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/chmod.1.html">chmod</a></h1>
 <p>Change file mode bits<br>
@@ -139,6 +147,9 @@ It uses three octal digits to set permissions for three specific user categories
 
 <br>
 <br>
+<br>
+<br>
+<br>
 <p><a id='C'></p>
 <h1><a href="https://www.man7.org/linux/man-pages/man8/cron.8.html">cron</a></h1>
 <p>Daemon to execute scheduled commands.</p>
@@ -149,6 +160,9 @@ It uses three octal digits to set permissions for three specific user categories
 
 </p></div>
 
+<br>
+<br>
+<br>
 <br>
 <br>
 <p><a id='D'></p>
@@ -165,14 +179,21 @@ It uses three octal digits to set permissions for three specific user categories
 
 <br>
 <br>
+<br>
+<br>
+<br>
 <p><a id='E'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/ssh.1.html">ssh</a></h1>
 <p>OpenSSH remote login client.</p>
 
 <br>
 <br>
+<br>
+<br>
+<br>
+<p><a id='F'></p>
 <h1><a href="https://man7.org/linux/man-pages/man1/echo.1.html">echo</a></h1>
-<p><a id='F'>Display a line of text</p>
+<p>Display a line of text</p>
 
 <br>
 <br>
