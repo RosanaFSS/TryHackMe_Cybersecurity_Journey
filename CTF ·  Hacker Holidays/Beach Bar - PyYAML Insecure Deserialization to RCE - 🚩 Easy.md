@@ -14,7 +14,7 @@
 
 <div align="left"><p>
 
-|&nbsp;&nbsp;&nbsp; `22`<br>`80`|http &nbsp;&nbsp;&nbsp;<br>ssh|gunicorn<br>OpenSSH 9.6p1 Ubuntu 3ubuntu13.18 (Ubuntu Linux; protocol 2.0)&nbsp;&nbsp;&nbsp;                                                                       |
+|&nbsp;&nbsp;&nbsp; `22`<br>`80`|ssh<br>http &nbsp;&nbsp;&nbsp;|OpenSSH 9.6p1 Ubuntu 3ubuntu13.18 (Ubuntu Linux; protocol 2.0)&nbsp;&nbsp;&nbsp;<br>gunicorn                                                                       |
 |--------------------------------------------------------------------------------------:|:---------------------------------------------|:---------------------------------------------|
 
 </p></div>
